@@ -32,7 +32,7 @@ const Layout = ({ children }: Props) => {
 
   return (
     <Container>
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Sidebar></Sidebar>
       <ContentBox></ContentBox>
     </Container>

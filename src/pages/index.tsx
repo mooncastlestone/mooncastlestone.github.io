@@ -16,7 +16,3 @@ const IndexPage = () => (
 )
 
 export default IndexPage
-
-const Container = styled.div`
-border: 1px solid red;
-`
