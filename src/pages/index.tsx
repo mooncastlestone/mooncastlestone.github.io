@@ -4,6 +4,7 @@ import Blog from "../components/Blog"
 import Seo from "../components/Seo"
 import { css } from "@emotion/react"
 import Nav from "../components/Nav"
+import '../../css/style.css'
 
 const IndexPage = () => (
   <div css={Container}>

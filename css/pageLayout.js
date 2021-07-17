@@ -16,6 +16,8 @@ export const Box = css`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-decoration: none;
+  color: black;
 `
 
 export const Title = css`

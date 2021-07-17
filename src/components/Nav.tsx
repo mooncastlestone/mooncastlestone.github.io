@@ -15,7 +15,7 @@ const Nav = () => {
           alt="A Gatsby astronaut"
           css={Image}
         />
-        <span>Moon.log</span>
+        <Link css={Home} to="/">Moon.log</Link>
       </div>
       <div css={RightBox}>
         <Link css={Category} to="/">
@@ -24,7 +24,9 @@ const Nav = () => {
         <Link css={Category} to="/portfolio">
           Portfolio
         </Link>
-        <span css={Category}>About</span>
+        <Link css={Category} to="/about">
+          About
+        </Link>
       </div>
     </div>
   )
@@ -36,7 +38,8 @@ const Container = css`
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0 0.3rem 0;
+
 `
 
 const LeftBox = css`
@@ -48,6 +51,9 @@ const LeftBox = css`
 
 const RightBox = css`
   width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const Image = css`
@@ -56,4 +62,15 @@ const Image = css`
 
 const Category = css`
   padding-right: 1rem;
+  text-decoration: none;
+  color: #616161;
+
+  &:hover {
+    color: black;
+  }
+`
+
+const Home = css`
+  text-decoration: none;
+  color: black;
 `

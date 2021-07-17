@@ -5,12 +5,13 @@ import Header from "./Header"
 import { css } from "@emotion/react"
 import { Box, Container, ContentBox, Title } from "../../css/pageLayout"
 import { StaticImage } from "gatsby-plugin-image"
+import ContentList from './ContentList'
 
 const Blog = () => {
   return (
     <div css={Container}>
       <div css={[Box]}>
-        <span css={Title}>BLOG</span>
+        <span css={Title}>Blog</span>
       </div>
       <div css={Box}>
         <StaticImage
@@ -22,37 +23,12 @@ const Blog = () => {
           css={Image}
         />
       </div>
-      <div css={Box}>
-        <div css={ContentBox}>
-          <Link css={Content} to="/javascript">
-            Javasript
-          </Link>
-          <Link css={Content} to="/react">
-            React
-          </Link>
-          <Link css={Content} to="/gatsby">
-            Gatsby
-          </Link>
-        </div>
-      </div>
+      <ContentList />
     </div>
   )
 }
 
 export default Blog
-
-const Content = css`
-  border: 1px solid black;
-  width: 13rem;
-  height: 15rem;
-  text-align: center;
-  text-decoration: none;
-  color: black;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`
 
 const Image = css`
   margin-top: 2rem;
