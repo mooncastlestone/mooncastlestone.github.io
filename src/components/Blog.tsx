@@ -3,33 +3,62 @@ import PropTypes, { string } from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Header from "./Header"
 import { css } from "@emotion/react"
-import { Box, Container, Title } from "../../css/pageLayout"
 import { StaticImage } from "gatsby-plugin-image"
-import ContentList from './ContentList'
+import ContentList from "./ContentList"
 
 const Blog = () => {
   return (
     <div css={Container}>
-      <div css={[Box]}>
-        <span css={Title}>Blog</span>
+      <span css={Title}>Blog</span>
+      <div>
+        <div css={CategoryBox}>
+          <span>01</span>
+          <Link to="/javascript" css={Category}>Javascript</Link>
+        </div>
+        <div css={CategoryBox}>
+          <span>02</span>
+          <Link to="/react" css={Category}>React</Link>
+        </div>
+        <div css={CategoryBox}>
+          <span>03</span>
+          <Link to="/gatsby" css={Category}>Gatsby</Link>
+        </div>
+        <div css={CategoryBox}>
+          <span>04</span>
+          <span css={Category}>Tech interview</span>
+        </div>
       </div>
-      <div css={Box}>
-        <StaticImage
-          src="../images/book.png"
-          width={150}
-          quality={100}
-          formats={["auto", "webp", "avif"]}
-          alt="A Gatsby astronaut"
-          css={Image}
-        />
-      </div>
-      <ContentList />
     </div>
   )
 }
 
 export default Blog
 
-const Image = css`
-  margin-top: 2rem;
+ const Container = css`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 8rem 0 0 15rem;
+  flex-direction: column;
+  
+`
+ const Title = css`
+  font-size: 2.5rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.2rem;
+  width: 7%;
+  margin-left: 2rem;
+  color: #616161;
+`
+
+const CategoryBox = css`
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+`
+const Category = css`
+  font-size: 2rem;
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #616161;
 `

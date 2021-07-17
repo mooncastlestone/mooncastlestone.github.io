@@ -12,8 +12,9 @@ export const CategoryBox = css`
   background: white;
   display: grid;
   grid-template-rows: 0.6fr 0.4fr;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 0.2s ease-in-out;
+  border-radius: 3%;
 
   &: hover {
     transform: translateY(-8px);
@@ -22,6 +23,8 @@ export const CategoryBox = css`
 
 export const CategoryImg = css`
   object-fit: cover;
+  border-radius: 3% 3% 0 0;
+  border-bottom: 1px solid #E0E0E0
 `
 
 export const CategoryText = css`
