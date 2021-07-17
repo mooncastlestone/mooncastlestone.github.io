@@ -15,7 +15,7 @@ export const Box = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  flex-direction: column;
 `
 
 export const Title = css`
@@ -29,4 +29,9 @@ export const ContentBox = css`
   display: flex;
   width: 50%;
   justify-content: space-between;
+`
+
+export const Description = css`
+  margin-top: 1rem;
+  color: #757575;
 `

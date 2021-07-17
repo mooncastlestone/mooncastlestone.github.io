@@ -3,12 +3,8 @@ import PropTypes, { string } from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Header from "./Header"
 import { css } from "@emotion/react"
-import {Box, Container, ContentBox, Title} from "../../css/pageLayout"
-
-interface props {
-  children: any
-  pageTitle?: string
-}
+import { Box, Container, ContentBox, Title } from "../../css/pageLayout"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Blog = () => {
   return (
@@ -16,12 +12,27 @@ const Blog = () => {
       <div css={[Box]}>
         <span css={Title}>BLOG</span>
       </div>
-      <div css={Box}>이미지</div>
+      <div css={Box}>
+        <StaticImage
+          src="../images/book.png"
+          width={150}
+          quality={100}
+          formats={["auto", "webp", "avif"]}
+          alt="A Gatsby astronaut"
+          css={Image}
+        />
+      </div>
       <div css={Box}>
         <div css={ContentBox}>
-        <Link css={Content} to="/javascript">Javasript</Link>
-        <Link css={Content} to="/react">React</Link>
-        <Link css={Content} to="/gatsby">Gatsby</Link>
+          <Link css={Content} to="/javascript">
+            Javasript
+          </Link>
+          <Link css={Content} to="/react">
+            React
+          </Link>
+          <Link css={Content} to="/gatsby">
+            Gatsby
+          </Link>
         </div>
       </div>
     </div>
@@ -43,3 +54,6 @@ const Content = css`
   }
 `
 
+const Image = css`
+  margin-top: 2rem;
+`
