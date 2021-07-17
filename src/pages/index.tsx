@@ -1,20 +1,22 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
-import Layout from "../components/Layout"
+import Blog from "../components/Blog"
 import Seo from "../components/Seo"
-import styled from "@emotion/styled"
-import Sidebar from "../components/Sidebar"
-import { Container } from "../../css/emotion"
+import { css } from "@emotion/react"
+import Nav from "../components/Nav"
+import Layout from "../components/Layout"
 
 const IndexPage = () => (
   <div css={Container}>
-    <Layout>
+    <Nav />
       <Seo title="Home" />
-      <p>안녕하세요. 여기는 메인페이지입니다.</p>
-    </Layout>
+      <Blog></Blog>
   </div>
 )
 
 export default IndexPage
+
+export const Container = css`
+  width: 100%;
+  height: 100vh;
+`
