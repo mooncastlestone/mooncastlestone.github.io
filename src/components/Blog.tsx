@@ -1,10 +1,7 @@
 import * as React from "react"
 import PropTypes, { string } from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import Header from "./Header"
 import { css } from "@emotion/react"
-import { StaticImage } from "gatsby-plugin-image"
-import ContentList from "./ContentList"
 
 const Blog = () => {
   return (
@@ -21,12 +18,16 @@ const Blog = () => {
         </div>
         <div css={CategoryBox}>
           <span>03</span>
-          <Link to="/gatsby" css={Category}>Gatsby</Link>
+          <Link to="/react-native" css={Category}>React Native</Link>
         </div>
         <div css={CategoryBox}>
           <span>04</span>
-          <span css={Category}>Tech interview</span>
+          <Link to="/gatsby" css={Category}>Gatsby</Link>
         </div>
+        {/* <div css={CategoryBox}>
+          <span>05</span>
+          <span css={Category}>Tech interview</span>
+        </div> */}
       </div>
     </div>
   )
@@ -49,6 +50,7 @@ export default Blog
   width: 7%;
   margin-left: 2rem;
   color: #616161;
+  font-family: "Athiti";
 `
 
 const CategoryBox = css`
@@ -61,4 +63,5 @@ const Category = css`
   margin-left: 1rem;
   text-decoration: none;
   color: #616161;
-`
+  font-family: "Athiti";
+  `

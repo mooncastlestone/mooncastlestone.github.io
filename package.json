@@ -7,6 +7,8 @@
   "dependencies": {
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@fontsource/athiti": "^4.5.0",
+    "@fontsource/open-sans": "^4.5.0",
     "gatsby": "^3.9.1",
     "gatsby-plugin-emotion": "^6.9.0",
     "gatsby-plugin-gatsby-cloud": "^2.9.1",

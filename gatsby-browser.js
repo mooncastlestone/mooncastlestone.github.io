@@ -1,3 +1,5 @@
+import "@fontsource/open-sans"
+import "@fontsource/athiti";
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
