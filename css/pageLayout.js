@@ -7,6 +7,7 @@ export const Container = css`
   grid-template-rows: 0.1fr 0.2fr 0.6fr;
   align-items: center;
   margin-top: 3rem;
+  justify-content: center;
 `
 
 export const Box = css`
@@ -25,12 +26,6 @@ export const Title = css`
   border-bottom: 1px solid black;
   padding-bottom: 0.5rem;
   text-align: center;
-`
-
-export const ContentBox = css`
-  display: flex;
-  width: 50%;
-  justify-content: space-between;
 `
 
 export const Description = css`

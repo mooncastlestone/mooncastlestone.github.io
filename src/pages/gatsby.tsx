@@ -1,6 +1,6 @@
 import React from "react"
 import Nav from "../components/Nav"
-import { Box, Container, ContentBox, Title, Description } from "../../css/pageLayout"
+import { Box, Container, Title, Description } from "../../css/pageLayout"
 
 const gatsbyPage = () => {
   return (
@@ -15,7 +15,7 @@ const gatsbyPage = () => {
         </div>
         <div css={Box}>이미지</div>
         <div css={Box}>
-          <div css={ContentBox}></div>
+          <div></div>
         </div>
       </div>
     </>

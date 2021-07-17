@@ -3,7 +3,6 @@ import Nav from "../components/Nav"
 import {
   Box,
   Container,
-  ContentBox,
   Title,
   Description,
 } from "../../css/pageLayout"
@@ -22,7 +21,7 @@ const ReactPage = () => {
         </div>
         <div css={Box}>이미지</div>
         <div css={Box}>
-          <div css={ContentBox}></div>
+          <div></div>
         </div>
       </div>
     </>

@@ -3,7 +3,7 @@ import PropTypes, { string } from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Header from "./Header"
 import { css } from "@emotion/react"
-import { Box, Container, ContentBox, Title } from "../../css/pageLayout"
+import { Box, Container, Title } from "../../css/pageLayout"
 import { StaticImage } from "gatsby-plugin-image"
 import ContentList from './ContentList'
 
