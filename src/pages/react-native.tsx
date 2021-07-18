@@ -3,6 +3,7 @@ import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../css/pageLayout"
 import { css } from "@emotion/react"
 import { PageNum } from "../../css/postList"
+import Preparing from '../components/Preparing'
 
 const ReactNativePage = () => {
   return (
@@ -16,7 +17,7 @@ const ReactNativePage = () => {
           </div>
         </div>
         <div css={Box}>
-          <div></div>
+          <Preparing />
         </div>
         <span css={PageNum}>03</span>
       </div>

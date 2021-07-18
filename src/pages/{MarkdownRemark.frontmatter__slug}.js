@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Nav from "../components/Nav"
-import {css} from "gatsby"
+import {css, Link} from "gatsby"
 import {Container, CategoryName, postBox, Description} from "../../css/post"
 
 export default function Template({
@@ -9,14 +9,14 @@ export default function Template({
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+  const url = frontmatter.slug.split('/')[1]
 
-  console.log(frontmatter.slug.split('/')[1])
   return (
     <>
       <Nav />
       <div css={Container}>
         <div css={postBox}>
-          <div css={CategoryName}>{frontmatter.slug.split('/')[1]}</div>
+          <Link to={`/${url}`} css={CategoryName}>{url}</Link>
           <h1>{frontmatter.title}</h1>
           <div css={Description} dangerouslySetInnerHTML={{ __html: html }} />
         </div>

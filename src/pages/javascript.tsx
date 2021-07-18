@@ -12,6 +12,7 @@ import {
   PageNum,
 } from "../../css/postList"
 import { Link } from "gatsby"
+import Preparing from "../components/Preparing"
 
 const JavascriptPage = () => {
   return (
@@ -24,6 +25,7 @@ const JavascriptPage = () => {
             자바스크립트(ES6) 관련된 개념들을 정리하였습니다.
           </div>
         </div>
+        <Preparing />
         <div css={Box}></div>
         <span css={PageNum}>01</span>
       </div>

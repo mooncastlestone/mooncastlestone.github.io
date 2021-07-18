@@ -1,7 +1,8 @@
 import React from "react"
 import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../css/pageLayout"
-import {PageNum} from "../../css/postList"
+import { PageNum } from "../../css/postList"
+import Preparing from "../components/Preparing"
 
 const GatsbyPage = () => {
   return (
@@ -14,7 +15,7 @@ const GatsbyPage = () => {
             Gatsby 공식 문서를 참고하면서 관련 개념들을 정리하였습니다.
           </div>
         </div>
-        <div css={Box}>이미지</div>
+        <Preparing />
         <div css={Box}>
           <div></div>
         </div>

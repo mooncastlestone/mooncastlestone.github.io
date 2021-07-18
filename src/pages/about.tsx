@@ -2,6 +2,7 @@ import * as React from "react"
 import Blog from "../components/Blog"
 import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../css/pageLayout"
+import Preparing from "../components/Preparing"
 
 const AboutPage = () => {
   return (
@@ -12,7 +13,7 @@ const AboutPage = () => {
           <div css={Title}>About</div>
           <div css={Description}>Seong Seok Moon</div>
         </div>
-        <div css={Box}>준비중입니다</div>
+        <Preparing />
         <div css={Box}>
           <div></div>
         </div>

@@ -1,6 +1,7 @@
 import * as React from "react"
 import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../css/pageLayout"
+import Preparing from '../components/Preparing'
 
 const PortfolioPage = () => {
   return (
@@ -11,7 +12,7 @@ const PortfolioPage = () => {
           <div css={Title}>Portfolio</div>
           <div css={Description}>개발자 문성석의 포트폴리오입니다.</div>
         </div>
-        <div css={Box}>준비중입니다</div>
+        <Preparing />
         <div css={Box}>
           <div></div>
         </div>

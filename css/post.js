@@ -9,6 +9,11 @@ export const Container = css`
 
 export const CategoryName = css`
   color: #3949ab;
+  text-decoration: none;
+
+  &: hover {
+    text-decoration: underline
+  }
 `
 
 export const postBox = css`
