@@ -3,11 +3,11 @@ import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import { PageNum } from "../../styles/postList"
 import Preparing from "../components/Preparing"
+import Layout from '../components/Layout'
 
 const GatsbyPage = () => {
   return (
-    <>
-      <Nav />
+    <Layout>
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>Gatsby</div>
@@ -21,7 +21,7 @@ const GatsbyPage = () => {
         </div>
         <span css={PageNum}>04</span>
       </div>
-    </>
+    </Layout>
   )
 }
 

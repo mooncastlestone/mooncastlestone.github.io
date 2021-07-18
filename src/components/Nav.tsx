@@ -2,10 +2,15 @@ import React from "react"
 import { css } from "@emotion/react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import useTheme from "../hook/useTheme"
-import ThemeSwitch from "../components/ThemeSwitch"
+import ThemeSwitch from "./ThemeSwitch"
+import THEME, { Theme } from "../../styles/theme"
 
-const Nav = () => {
+interface NavProps {
+  onToggle: () => void
+  theme: "dark" | "light"
+}
+
+const Nav = ({ theme, onToggle }: NavProps) => {
   return (
     <div css={Container}>
       <div css={LeftBox}>
@@ -17,20 +22,21 @@ const Nav = () => {
           alt="A Gatsby astronaut"
           css={Image}
         />
-        <Link css={Home} to="/">
+        <Link css={Home(THEME[theme])} to="/">
           Moon.log
         </Link>
       </div>
       <div css={RightBox}>
-        <Link css={Category} to="/">
+        <Link css={Category(THEME[theme])} to="/">
           Blog
         </Link>
-        <Link css={Category} to="/portfolio">
+        <Link css={Category(THEME[theme])} to="/portfolio">
           Portfolio
         </Link>
-        <Link css={Category} to="/about">
+        <Link css={Category(THEME[theme])} to="/about">
           About
         </Link>
+        <ThemeSwitch checked={theme === "dark"} toggleSwitch={onToggle} />
       </div>
     </div>
   )
@@ -41,7 +47,7 @@ export default Nav
 const Container = css`
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 0.1px solid #e0e0e0;
   padding: 0.5rem 0 0.3rem 0;
 `
 
@@ -53,7 +59,7 @@ const LeftBox = css`
 `
 
 const RightBox = css`
-  width: 15%;
+  width: 18%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,17 +69,17 @@ const Image = css`
   margin-right: 0.4rem;
 `
 
-const Category = css`
+const Category = (theme:Theme) => css`
   padding-right: 1rem;
   text-decoration: none;
-  color: #616161;
+  color: ${theme.fontColor};
 
   &:hover {
     color: black;
   }
 `
 
-const Home = css`
+const Home = (theme: Theme) => css`
   text-decoration: none;
-  color: black;
+  color: ${theme.fontColor};
 `

@@ -4,11 +4,11 @@ import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import { PageNum } from "../../styles/postList"
 import { css } from "@emotion/react"
 import Preparing from "../components/Preparing"
+import Layout from "../components/Layout"
 
 const ReactPage = () => {
   return (
-    <>
-      <Nav />
+    <Layout>
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>React</div>
@@ -22,7 +22,7 @@ const ReactPage = () => {
         </div>
         <span css={PageNum}>02</span>
       </div>
-    </>
+    </Layout>
   )
 }
 

@@ -4,7 +4,7 @@ import {Theme} from "./theme";
 
 const GlobalStyle = (theme :Theme) => (css`
   body {
-    background-color: ${theme.bgColor}
+    background-color: ${theme.bgColor};
   }
 `)
 

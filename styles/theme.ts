@@ -12,7 +12,7 @@ interface ThemeGroup {
 
 export const light: Theme = {
   bgColor: "#fff",
-  fontColor: "#000",
+  fontColor: "#616161",
 }
 
 /**
@@ -20,7 +20,7 @@ export const light: Theme = {
  */
 
 export const dark: Theme = {
-  bgColor: "#000",
+  bgColor: "#303242",
   fontColor: "#eee",
 }
 

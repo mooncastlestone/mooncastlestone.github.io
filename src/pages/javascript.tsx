@@ -2,22 +2,14 @@ import React from "react"
 import Nav from "../components/Nav"
 import { css } from "@emotion/react"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
-import {
-  PostContainer,
-  PostNum,
-  PostBox,
-  PostTitle,
-  PostDate,
-  PostDes,
-  PageNum,
-} from "../../styles/postList"
+import { PageNum } from "../../styles/postList"
 import { Link } from "gatsby"
 import Preparing from "../components/Preparing"
+import Layout from '../components/Layout'
 
 const JavascriptPage = () => {
   return (
-    <>
-      <Nav />
+    <Layout>
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>Javascript</div>
@@ -29,7 +21,7 @@ const JavascriptPage = () => {
         <div css={Box}></div>
         <span css={PageNum}>01</span>
       </div>
-    </>
+    </Layout>
   )
 }
 

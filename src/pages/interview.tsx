@@ -12,11 +12,11 @@ import {
 } from "../../styles/postList"
 import { Link } from "gatsby"
 import { css } from "@emotion/react"
+import Layout from '../components/Layout'
 
 const TechInterviewPage = () => {
   return (
-    <>
-      <Nav />
+    <Layout>
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>Tech Interview</div>
@@ -41,7 +41,7 @@ const TechInterviewPage = () => {
         </div>
         <span css={PageNum}>05</span>
       </div>
-    </>
+    </Layout>
   )
 }
 export default TechInterviewPage
