@@ -5,11 +5,11 @@ import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import { PageNum } from "../../styles/postList"
 import { Link } from "gatsby"
 import Preparing from "../components/Preparing"
-import Layout from '../components/Layout'
+import Layout from "../components/Layout"
 
 const JavascriptPage = () => {
   return (
-    <Layout>
+    <Layout pageTitle="javascript">
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>Javascript</div>

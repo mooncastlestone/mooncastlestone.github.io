@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 
 const GatsbyPage = () => {
   return (
-    <Layout>
+    <Layout pageTitle="gatsby">
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>Gatsby</div>

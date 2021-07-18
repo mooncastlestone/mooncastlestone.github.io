@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 
 const ReactNativePage = () => {
   return (
-    <Layout>
+    <Layout pageTitle="react-native">
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>React Native</div>

@@ -8,7 +8,7 @@ import Layout from "../components/Layout"
 
 const ReactPage = () => {
   return (
-    <Layout>
+    <Layout pageTitle="react">
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>React</div>

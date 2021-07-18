@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 
 const AboutPage = () => {
   return (
-    <Layout>
+    <Layout pageTitle="about">
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>About</div>

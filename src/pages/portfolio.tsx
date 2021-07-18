@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 
 const PortfolioPage = () => {
   return (
-    <Layout>
+    <Layout pageTitle="portfolio">
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>Portfolio</div>

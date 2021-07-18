@@ -12,11 +12,11 @@ import {
 } from "../../styles/postList"
 import { Link } from "gatsby"
 import { css } from "@emotion/react"
-import Layout from '../components/Layout'
+import Layout from "../components/Layout"
 
 const TechInterviewPage = () => {
   return (
-    <Layout>
+    <Layout pageTitle="interview">
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title}>Tech Interview</div>
