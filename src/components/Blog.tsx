@@ -9,25 +9,33 @@ const Blog = () => {
       <span css={Title}>Blog</span>
       <div>
         <div css={CategoryBox}>
-          <span>01</span>
-          <Link to="/javascript" css={Category}>Javascript</Link>
+          <span css={Number}>01</span>
+          <Link to="/javascript" css={Category}>
+            Javascript
+          </Link>
         </div>
         <div css={CategoryBox}>
-          <span>02</span>
-          <Link to="/react" css={Category}>React</Link>
+          <span css={Number}>02</span>
+          <Link to="/react" css={Category}>
+            React
+          </Link>
         </div>
         <div css={CategoryBox}>
-          <span>03</span>
-          <Link to="/react-native" css={Category}>React Native</Link>
+          <span css={Number}>03</span>
+          <Link to="/react-native" css={Category}>
+            React Native
+          </Link>
         </div>
         <div css={CategoryBox}>
-          <span>04</span>
-          <Link to="/gatsby" css={Category}>Gatsby</Link>
+          <span css={Number}>04</span>
+          <Link to="/gatsby" css={Category}>
+            Gatsby
+          </Link>
         </div>
-        {/* <div css={CategoryBox}>
+        <div css={CategoryBox}>
           <span>05</span>
-          <span css={Category}>Tech interview</span>
-        </div> */}
+          <Link to="/interview" css={Category}>Tech Interview</Link>
+        </div>
       </div>
     </div>
   )
@@ -35,18 +43,16 @@ const Blog = () => {
 
 export default Blog
 
- const Container = css`
+const Container = css`
   width: 100%;
   height: 100vh;
   display: flex;
   padding: 8rem 0 0 15rem;
   flex-direction: column;
-  
 `
- const Title = css`
+const Title = css`
   font-size: 2.5rem;
-  border-bottom: 1px solid black;
-  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #BDBDBD;
   width: 7%;
   margin-left: 2rem;
   color: #616161;
@@ -64,4 +70,8 @@ const Category = css`
   text-decoration: none;
   color: #616161;
   font-family: "Athiti";
-  `
+`
+
+const Number = css`
+  font-family: "Athiti";
+`

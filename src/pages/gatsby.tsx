@@ -2,7 +2,7 @@ import React from "react"
 import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../css/pageLayout"
 
-const gatsbyPage = () => {
+const GatsbyPage = () => {
   return (
     <>
       <Nav />
@@ -22,4 +22,4 @@ const gatsbyPage = () => {
   )
 }
 
-export default gatsbyPage
+export default GatsbyPage

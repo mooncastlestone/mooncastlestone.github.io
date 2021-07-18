@@ -1,24 +1,26 @@
 import * as React from "react"
 import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../css/pageLayout"
+import { Link } from 'gatsby'
 
-const PortfolioPage = () => {
+const TechInterviewPage = () => {
   return (
     <>
       <Nav />
       <div css={Container}>
         <div css={[Box]}>
-          <div css={Title}>Portfolio</div>
+          <div css={Title}>Tech Interview</div>
           <div css={Description}>
-            개발자 문성석의 포트폴리오입니다.
+            기술 면접을 준비하며 정리한 개념들을 정리하였습니다.
           </div>
         </div>
-        <div css={Box}>준비중입니다</div>
         <div css={Box}>
-          <div></div>
+          <div>
+              <Link to="/interview/post-1">브라우저 동작 원리</Link>
+          </div>
         </div>
       </div>
     </>
   )
 }
-export default PortfolioPage
+export default TechInterviewPage

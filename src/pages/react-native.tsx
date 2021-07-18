@@ -14,7 +14,6 @@ const ReactNativePage = () => {
             React Native 개발을 진행하면서 공부한 것들을 정리하였습니다.
           </div>
         </div>
-        <div css={Box}>이미지</div>
         <div css={Box}>
           <div></div>
         </div>
