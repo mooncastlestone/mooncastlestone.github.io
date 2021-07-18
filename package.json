@@ -10,6 +10,8 @@
     "@fontsource/athiti": "^4.5.0",
     "@fontsource/open-sans": "^4.5.0",
     "gatsby": "^3.9.1",
+    "gatsby-emotion-dark-mode": "^1.1.1",
+    "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-emotion": "^6.9.0",
     "gatsby-plugin-gatsby-cloud": "^2.9.1",
     "gatsby-plugin-image": "^1.9.0",
@@ -25,6 +27,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-switch": "^6.0.0",
     "typescript": "^4.3.5"
   },
   "devDependencies": {

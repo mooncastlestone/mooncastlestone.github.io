@@ -1,6 +1,6 @@
 import * as React from "react"
 import Nav from "../components/Nav"
-import { Box, Container, Title, Description } from "../../css/pageLayout"
+import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import Preparing from '../components/Preparing'
 
 const PortfolioPage = () => {

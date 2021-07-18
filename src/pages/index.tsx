@@ -4,13 +4,12 @@ import Blog from "../components/Blog"
 import Seo from "../components/Seo"
 import { css } from "@emotion/react"
 import Nav from "../components/Nav"
-import '../../css/style.css'
+import "../../styles/style.css"
 
 const IndexPage = () => (
   <div css={Container}>
-    <Nav />
-      <Seo title="Home" />
-      <Blog></Blog>
+    <Seo title="Home" />
+    <Blog></Blog>
   </div>
 )
 

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Nav from "../components/Nav"
 import {css, Link} from "gatsby"
-import {Container, CategoryName, postBox, Description} from "../../css/post"
+import {Container, CategoryName, postBox, Description} from "../../styles/post"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.

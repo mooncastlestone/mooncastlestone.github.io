@@ -1,8 +1,8 @@
 import React from "react"
 import Nav from "../components/Nav"
-import { Box, Container, Title, Description } from "../../css/pageLayout"
+import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import { css } from "@emotion/react"
-import { PageNum } from "../../css/postList"
+import { PageNum } from "../../styles/postList"
 import Preparing from '../components/Preparing'
 
 const ReactNativePage = () => {

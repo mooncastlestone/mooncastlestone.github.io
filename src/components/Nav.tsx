@@ -2,6 +2,8 @@ import React from "react"
 import { css } from "@emotion/react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import useTheme from "../hook/useTheme"
+import ThemeSwitch from "../components/ThemeSwitch"
 
 const Nav = () => {
   return (
@@ -15,7 +17,9 @@ const Nav = () => {
           alt="A Gatsby astronaut"
           css={Image}
         />
-        <Link css={Home} to="/">Moon.log</Link>
+        <Link css={Home} to="/">
+          Moon.log
+        </Link>
       </div>
       <div css={RightBox}>
         <Link css={Category} to="/">
@@ -39,7 +43,6 @@ const Container = css`
   justify-content: space-between;
   border-bottom: 1px solid #e0e0e0;
   padding: 0.5rem 0 0.3rem 0;
-
 `
 
 const LeftBox = css`

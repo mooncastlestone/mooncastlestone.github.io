@@ -1,6 +1,6 @@
 import * as React from "react"
 import Nav from "../components/Nav"
-import { Box, Container, Title, Description } from "../../css/pageLayout"
+import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import {
   PostContainer,
   PostNum,
@@ -9,7 +9,7 @@ import {
   PostDate,
   PostDes,
   PageNum,
-} from "../../css/postList"
+} from "../../styles/postList"
 import { Link } from "gatsby"
 import { css } from "@emotion/react"
 
