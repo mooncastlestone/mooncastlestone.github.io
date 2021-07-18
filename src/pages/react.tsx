@@ -1,6 +1,7 @@
 import React from "react"
 import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../css/pageLayout"
+import { PageNum } from "../../css/postList"
 import { css } from "@emotion/react"
 
 const ReactPage = () => {
@@ -18,6 +19,7 @@ const ReactPage = () => {
         <div css={Box}>
           <div></div>
         </div>
+        <span css={PageNum}>02</span>
       </div>
     </>
   )

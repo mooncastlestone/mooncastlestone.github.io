@@ -47,7 +47,7 @@ const Container = css`
   width: 100%;
   height: 100vh;
   display: flex;
-  padding: 8rem 0 0 15rem;
+  padding: 5rem 0 0 15rem;
   flex-direction: column;
 `
 const Title = css`

@@ -8,6 +8,7 @@ export const Container = css`
   align-items: center;
   margin-top: 3rem;
   justify-content: center;
+  position: relative;
 `
 
 export const Box = css`

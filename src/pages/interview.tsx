@@ -1,7 +1,17 @@
 import * as React from "react"
 import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../css/pageLayout"
-import { Link } from 'gatsby'
+import {
+  PostContainer,
+  PostNum,
+  PostBox,
+  PostTitle,
+  PostDate,
+  PostDes,
+  PageNum,
+} from "../../css/postList"
+import { Link } from "gatsby"
+import { css } from "@emotion/react"
 
 const TechInterviewPage = () => {
   return (
@@ -15,10 +25,21 @@ const TechInterviewPage = () => {
           </div>
         </div>
         <div css={Box}>
-          <div>
-              <Link to="/interview/post-1">브라우저 동작 원리</Link>
+          <div css={PostContainer}>
+            <div css={PostNum}>01</div>
+            <div css={PostBox}>
+              <Link css={PostTitle} to="/interview/post-1">
+                브라우저 동작 원리
+              </Link>
+              <div css={PostDes}>
+                사용자가 웹사이트를 선택하여 들어갔을 때, 브라우저가 어떻게
+                동작이 되어 사용자에게 보여지는 지에 대해서 정리하였습니다.
+              </div>
+              <div css={PostDate}>최종 수정일 : 2021-07-18</div>
+            </div>
           </div>
         </div>
+        <span css={PageNum}>05</span>
       </div>
     </>
   )
