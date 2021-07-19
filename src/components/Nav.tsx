@@ -17,6 +17,7 @@ const Nav = ({ theme, onToggle }: NavProps) => {
             src="../images/moon_off.png"
             width={30}
             quality={100}
+            placeholder="blurred"
             formats={["auto", "webp", "avif"]}
             alt="A Gatsby astronaut"
             css={Image}
@@ -28,6 +29,7 @@ const Nav = ({ theme, onToggle }: NavProps) => {
             quality={100}
             formats={["auto", "webp", "avif"]}
             alt="A Gatsby astronaut"
+            placeholder="blurred"
             css={Image}
           />
         )}
@@ -52,6 +54,7 @@ const Nav = ({ theme, onToggle }: NavProps) => {
             quality={100}
             formats={["auto", "webp", "avif"]}
             alt="A Gatsby astronaut"
+            placeholder="blurred"
             css={Image}
             onClick={onToggle}
           />
@@ -62,6 +65,7 @@ const Nav = ({ theme, onToggle }: NavProps) => {
             quality={100}
             formats={["auto", "webp", "avif"]}
             alt="A Gatsby astronaut"
+            placeholder="blurred"
             css={Image}
             onClick={onToggle}
           />
@@ -105,7 +109,7 @@ const Category = (theme: Theme) => css`
   color: ${theme.fontColor};
 
   &:hover {
-    color: #9E9E9E;
+    color: #9e9e9e;
   }
 `
 

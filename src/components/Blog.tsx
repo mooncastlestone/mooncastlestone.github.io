@@ -3,9 +3,7 @@ import Seo from "../components/Seo"
 import "../../styles/style.css"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { css } from "@emotion/react"
-import useTheme from "../hooks/useTheme"
 import THEME, { Theme } from "../../styles/theme"
-import Layout from "../components/Layout"
 
 interface BlogProps {
   theme: "dark" | "light"

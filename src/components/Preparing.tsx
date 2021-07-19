@@ -16,6 +16,7 @@ const Preparing = () => {
           quality={100}
           formats={["auto", "webp", "avif"]}
           alt="A Gatsby astronaut"
+          placeholder="blurred"
           css={Image}
         />
         <div css={TextBox}>

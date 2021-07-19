@@ -10,7 +10,9 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-emotion`,
-    "gatsby-plugin-dark-mode",
+    `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
