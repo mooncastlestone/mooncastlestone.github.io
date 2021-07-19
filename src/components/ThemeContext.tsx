@@ -9,14 +9,17 @@ export const ThemeContext = createContext<ThemeContext>({} as ThemeContext)
 export const ThemeProvider = ({ children }: any) => {
   const initialState: ThemeType =
     (window.localStorage.getItem("app_theme") as ThemeType) || "light"
-  const [theme, setTheme] = useState<ThemeType>(initialState)
+
+  const [themeMode, setThemeMode] = useState<ThemeType>(initialState)
+
   const onToggle = () => {
-    const newTheme = theme === "light" ? "dark" : "light"
+    const newTheme = themeMode === "light" ? "dark" : "light"
     window.localStorage.setItem("app_theme", newTheme)
-    setTheme(newTheme)
+    setThemeMode(newTheme)
   }
+
   return (
-    <ThemeContext.Provider value={[theme, onToggle]}>
+    <ThemeContext.Provider value={[themeMode, onToggle]}>
       {children}
     </ThemeContext.Provider>
   )

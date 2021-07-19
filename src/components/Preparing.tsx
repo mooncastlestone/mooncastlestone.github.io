@@ -1,8 +1,13 @@
 import { css } from '@emotion/react';
 import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from './ThemeContext';
+import THEME, {Theme} from "../../styles/theme"
 
 const Preparing = () => {
+    const [themeMode] = useContext(ThemeContext)
+    const theme = THEME[themeMode]
+
     return (
         <div>
             <StaticImage
@@ -14,8 +19,8 @@ const Preparing = () => {
           css={Image}
         />
         <div css={TextBox}>
-            <span css={Text} style={{fontWeight: 'bold'}}>컨텐츠 준비중</span>
-            <span css={Text}>입니다.</span>
+            <span css={Text(theme)} style={{fontWeight: 'bold'}}>컨텐츠 준비중</span>
+            <span css={Text(theme)}>입니다.</span>
         </div>
         </div>
     )
@@ -33,8 +38,8 @@ const TextBox = css`
     width: 105%;
 `
 
-const Text = css`
+const Text = (theme:Theme) => css`
     font-size: 1.5rem;
-    color: #757575;
+    color: ${theme.fontColor}
 `
 

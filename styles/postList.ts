@@ -1,4 +1,5 @@
 import { css } from "@emotion/react"
+import { Theme } from "./theme"
 
 export const PostContainer = css`
   display: flex;
@@ -6,9 +7,9 @@ export const PostContainer = css`
   height: 7rem;
   margin-top: 5rem;
 `
-export const PostNum = css`
-    color: #757575
-    font-size: 1.2rem;
+export const PostNum = (theme: Theme) => css`
+  font-size: 1.2rem;
+  color: ${theme.fontColor};
 `
 
 export const PostBox = css`
@@ -18,27 +19,27 @@ export const PostBox = css`
   justify-content: space-between;
 `
 
-export const PostTitle = css`
+export const PostTitle = (theme: Theme) => css`
   text-decoration: none;
-  color: black;
   font-size: 1.2rem;
+  color: ${theme.postTitle};
 
   &:hover {
     text-decoration: underline;
   }
 `
 
-export const PostDes = css`
-  color: #757575;
+export const PostDes = (theme: Theme) => css`
+  color: ${theme.fontColor};
 `
 
-export const PostDate = css`
+export const PostDate = (theme: Theme) => css`
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: #9e9e9e;
+  color: ${theme.fontColor};
 `
 
-export const PageNum = css`
+export const PageNum = () => css`
   position: fixed;
   bottom: 0;
   right: 0;

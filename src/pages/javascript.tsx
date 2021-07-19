@@ -7,20 +7,18 @@ import { Link } from "gatsby"
 import Preparing from "../components/Preparing"
 import Layout from "../components/Layout"
 import THEME, { Theme, ThemeGroup } from "../../styles/theme"
-import useTheme from "../hooks/useTheme"
 import { ThemeContext } from "../components/ThemeContext"
 
 const JavascriptPage = () => {
-  const [theme] = useContext(ThemeContext)
-
-  console.log(theme)
+  const [themeMode] = useContext(ThemeContext)
+  const theme = THEME[themeMode]
 
   return (
     <Layout pageTitle="javascript">
       <div css={Container}>
         <div css={[Box]}>
-          <div css={Title(THEME[theme])}>Javascript</div>
-          <div css={Description(THEME[theme])}>
+          <div css={Title(theme)}>Javascript</div>
+          <div css={Description(theme)}>
             자바스크립트(ES6) 관련된 개념들을 정리하였습니다.
           </div>
         </div>

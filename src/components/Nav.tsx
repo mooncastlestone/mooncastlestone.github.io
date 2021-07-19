@@ -2,7 +2,6 @@ import React from "react"
 import { css } from "@emotion/react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import ThemeSwitch from "./ThemeSwitch"
 import THEME, { Theme } from "../../styles/theme"
 interface NavProps {
   onToggle: () => void
@@ -97,6 +96,7 @@ const RightBox = css`
 
 const Image = css`
   margin-right: 0.4rem;
+  cursor: pointer;
 `
 
 const Category = (theme: Theme) => css`
@@ -105,7 +105,7 @@ const Category = (theme: Theme) => css`
   color: ${theme.fontColor};
 
   &:hover {
-    color: black;
+    color: #9E9E9E;
   }
 `
 
