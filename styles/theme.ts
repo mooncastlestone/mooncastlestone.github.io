@@ -2,7 +2,7 @@ export interface Theme {
   bgColor: string
   fontColor: string
 }
-interface ThemeGroup {
+export interface ThemeGroup {
   light: Theme
   dark: Theme
 }
@@ -11,7 +11,7 @@ interface ThemeGroup {
  */
 
 export const light: Theme = {
-  bgColor: "#fff",
+  bgColor: "#EEF2F5",
   fontColor: "#616161",
 }
 

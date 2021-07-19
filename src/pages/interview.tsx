@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useContext } from "react"
 import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import {
@@ -13,14 +13,19 @@ import {
 import { Link } from "gatsby"
 import { css } from "@emotion/react"
 import Layout from "../components/Layout"
+import THEME, { Theme, ThemeGroup } from "../../styles/theme"
+import { ThemeContext } from "../components/ThemeContext"
 
 const TechInterviewPage = () => {
+  const [theme] = useContext(ThemeContext)
+  // const cssProps = THEME[theme]
+
   return (
     <Layout pageTitle="interview">
       <div css={Container}>
         <div css={[Box]}>
-          <div css={Title}>Tech Interview</div>
-          <div css={Description}>
+          <div css={Title(THEME[theme])}>Tech Interview</div>
+          <div css={Description(THEME[theme])}>
             기술 면접을 준비하며 정리한 개념들을 정리하였습니다.
           </div>
         </div>

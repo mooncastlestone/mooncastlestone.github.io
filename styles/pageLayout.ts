@@ -1,4 +1,6 @@
 import { css } from "@emotion/react"
+import THEME, { Theme } from "../styles/theme"
+
 
 export const Container = css`
   width: 100%;
@@ -22,14 +24,18 @@ export const Box = css`
   color: black;
 `
 
-export const Title = css`
+export const Title = (theme:Theme) => css`
   font-size: 2.5rem;
   border-bottom: 1px solid black;
   padding-bottom: 0.5rem;
   text-align: center;
+
+  color: ${theme.fontColor}
 `
 
-export const Description = css`
+export const Description = (theme:Theme) => css`
   margin-top: 1rem;
   color: #757575;
+  color: ${theme.fontColor}
+
 `
