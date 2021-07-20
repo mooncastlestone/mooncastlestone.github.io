@@ -6,3 +6,19 @@ body {
   margin: 0;
   background: white;
 }
+
+code {
+  /* background-color: rgba(117, 117, 117, 0.15); */
+  border-radius: 3px;
+  font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
+    "Liberation Mono", Menlo, Courier, monospace;
+  padding: 0.3rem;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  color: rgb(250, 164, 164);
+  font-size: 1rem;
+}
+
+em {
+  padding: 0 0.3rem 0 0.3rem;
+}

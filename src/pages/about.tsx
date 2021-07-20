@@ -5,6 +5,7 @@ import Preparing from "../components/Preparing"
 import Layout from "../components/Layout"
 import THEME, { Theme, ThemeGroup } from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
+import { StaticImage } from 'gatsby-plugin-image'
 
 const AboutPage = () => {
   const [theme] = useContext(ThemeContext)
@@ -18,7 +19,15 @@ const AboutPage = () => {
         </div>
         <Preparing />
         <div css={Box}>
-          <div></div>
+          {/* <div>안녕하세요. Typescript를 사용한 React 개발을 좋아하는 개발자 문성석입니다.</div>
+          <StaticImage
+            src="../images/desktop.jpeg"
+            width={400}
+            quality={100}
+            formats={["auto", "webp", "avif"]}
+            alt="A Gatsby astronaut"
+            placeholder="blurred"
+          /> */}
         </div>
       </div>
     </Layout>

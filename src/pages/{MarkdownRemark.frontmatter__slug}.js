@@ -25,14 +25,17 @@ export default function Template({
   return (
     <Layout>
       <div css={Container}>
-        <div css={postBox}>
-          <Link to={`/${url}`} css={CategoryName(theme)}>
-            {url}
-          </Link>
-          <h1 css={Title(theme)}>{frontmatter.title}</h1>
-          <div css={Description(theme)} dangerouslySetInnerHTML={{ __html: html }} />
+          <div css={postBox}>
+            <Link to={`/${url}`} css={CategoryName(theme)}>
+              {url}
+            </Link>
+            <h1 css={Title(theme)}>{frontmatter.title}</h1>
+            <div
+              css={Description(theme)}
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          </div>
         </div>
-      </div>
     </Layout>
   )
 }

@@ -3,7 +3,8 @@ import {Theme} from "./theme"
 
 export const Container = css`
   display: flex;
-  height: 100vh;
+  width: 100%;
+  height: 100vw;
   flex-direction: column;
   align-items: center;
 `
@@ -19,6 +20,7 @@ export const CategoryName = (theme:Theme) => css`
 
 export const postBox = css`
     padding: 3rem 0 0 0;
+    width: 60%;
 `
 
 export const Title = (theme:Theme) => css`
@@ -26,8 +28,9 @@ export const Title = (theme:Theme) => css`
 `
 
 export const Description = (theme:Theme) => css`
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 2rem;
-    color: ${theme.fontColor}
+    color: ${theme.fontColor};
+    line-height: 2rem;
 
 `
