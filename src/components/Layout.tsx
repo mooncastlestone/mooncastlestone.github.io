@@ -13,18 +13,17 @@ interface Props {
 }
 
 const Layout = ({ pageTitle, children }: Props) => {
-  
   const [theme, onToggle] = useContext(ThemeContext)
 
   return (
     <>
       <Global styles={GlobalStyle(THEME[theme])} />
-      <Nav />
-      {pageTitle === "home" ? (
-        <Blog />
-      ) : (
-        <div css={childrenContainer}>{children}</div>
-      )}
+        <Nav />
+        {pageTitle === "home" ? (
+          <Blog />
+        ) : (
+          <div css={childrenContainer}>{children}</div>
+        )}
     </>
   )
 }

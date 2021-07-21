@@ -1,8 +1,8 @@
 export interface Theme {
   bgColor: string
   fontColor: string
-  postTitle?: string
-  categoryTitle?:string
+  postTitle: string
+  categoryTitle:string
 }
 export interface ThemeGroup {
   light: Theme
