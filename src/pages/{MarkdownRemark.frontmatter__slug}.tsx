@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import Nav from "../components/Nav"
-import { css, Link } from "gatsby"
+import { Link } from "gatsby"
 import {
   Container,
   CategoryName,
@@ -15,7 +15,7 @@ import THEME from "../../styles/theme"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
-}) {
+}:any) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const url = frontmatter.slug.split("/")[1]

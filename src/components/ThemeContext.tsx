@@ -7,8 +7,12 @@ type ThemeContext = [ThemeType, () => void]
 export const ThemeContext = createContext<ThemeContext>({} as ThemeContext)
 
 export const ThemeProvider = ({ children }: any) => {
-  const initialState: ThemeType =
-    (window.localStorage.getItem("app_theme") as ThemeType) || "light"
+  let initialState:ThemeType = 'light'
+
+  if(typeof window !== 'undefined') {
+    initialState =
+      (window.localStorage.getItem("app_theme") as ThemeType) || "light"
+  }
 
   const [themeMode, setThemeMode] = useState<ThemeType>(initialState)
 
