@@ -1,7 +1,13 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+import "@fontsource/open-sans"
+import "@fontsource/athiti"
 
-// You can delete this file if you're not using it
+import React from "react"
+import { ThemeProvider } from "./src/components/ThemeContext"
+require('gatsby-remark-vscode/styles.css');
+
+
+
+
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider>{element}</ThemeProvider>
+)
