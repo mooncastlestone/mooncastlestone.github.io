@@ -24,6 +24,7 @@
     "gatsby-plugin-sharp": "^3.10.0",
     "gatsby-plugin-typescript": "^3.9.0",
     "gatsby-remark-highlight-code": "^3.0.0",
+    "gatsby-remark-image-attributes": "^1.0.0",
     "gatsby-remark-images": "^5.7.0",
     "gatsby-remark-prismjs": "^5.6.0",
     "gatsby-remark-vscode": "^3.3.0",

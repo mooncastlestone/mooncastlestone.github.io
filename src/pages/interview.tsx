@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import {
   PostContainer,
@@ -11,14 +10,13 @@ import {
   PageNum,
 } from "../../styles/postList"
 import { Link } from "gatsby"
-import { css } from "@emotion/react"
 import Layout from "../components/Layout"
-import THEME, { Theme, ThemeGroup } from "../../styles/theme"
+import themeGroup from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
 
 const TechInterviewPage = () => {
   const [themeMode] = useContext(ThemeContext)
-  const theme = THEME[themeMode]
+  const theme = themeGroup[themeMode]
 
   return (
     <Layout pageTitle="interview">

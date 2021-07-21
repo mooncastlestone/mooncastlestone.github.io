@@ -1,9 +1,8 @@
 import React, { useContext } from "react"
 import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
-import Preparing from "../components/Preparing"
 import Layout from "../components/Layout"
-import THEME, { Theme, ThemeGroup } from "../../styles/theme"
+import themeGroup from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
 import {
   PostContainer,
@@ -18,7 +17,7 @@ import { Link } from "gatsby"
 
 const GatsbyPage = () => {
   const [themeMode] = useContext(ThemeContext)
-  const theme = THEME[themeMode]
+  const theme = themeGroup[themeMode]
 
   return (
     <Layout pageTitle="gatsby">
@@ -38,7 +37,8 @@ const GatsbyPage = () => {
                 Gatsby 프로젝트에 단위 테스트 세팅하기
               </Link>
               <div css={PostDes(theme)}>
-                Gatsby에 Jest 테스팅 프레임워크를 사용한 세팅 과정에 대해서 정리하였습니다.
+                Gatsby에 Jest 테스팅 프레임워크를 사용한 세팅 과정에 대해서
+                정리하였습니다.
               </div>
               <div css={PostDate(theme)}>최종 수정일 : 2021-07-18</div>
             </div>

@@ -8,20 +8,13 @@ export interface ThemeGroup {
   light: Theme
   dark: Theme
 }
-/**
- * @light theme
- */
 
 export const light: Theme = {
   bgColor: "#EEF2F5",
   fontColor: "#616161",
   postTitle: "black",
-  categoryTitle: "#5C6BC0"
+  categoryTitle: "#5C6BC0",
 }
-
-/**
- * @dark theme
- */
 
 export const dark: Theme = {
   bgColor: "#303242",
@@ -30,9 +23,9 @@ export const dark: Theme = {
   categoryTitle: "#9FA8DA"
 }
 
-const mode: ThemeGroup = {
+const themeGroup: ThemeGroup = {
   light,
   dark,
 }
 
-export default mode
+export default themeGroup

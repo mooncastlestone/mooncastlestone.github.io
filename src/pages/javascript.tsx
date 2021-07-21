@@ -6,12 +6,12 @@ import { PageNum } from "../../styles/postList"
 import { Link } from "gatsby"
 import Preparing from "../components/Preparing"
 import Layout from "../components/Layout"
-import THEME, { Theme, ThemeGroup } from "../../styles/theme"
+import themeGroup from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
 
 const JavascriptPage = () => {
   const [themeMode] = useContext(ThemeContext)
-  const theme = THEME[themeMode]
+  const theme = themeGroup[themeMode]
 
   return (
     <Layout pageTitle="javascript">

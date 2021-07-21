@@ -3,10 +3,10 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 type props = {
-  siteTitle: string;
+  siteTitle: string
 }
 
-const Header = ({ siteTitle }:props) => (
+const Header = ({ siteTitle }: props) => (
   <header
     style={{
       background: `rebeccapurple`,

@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import Nav from "./Nav"
 import GlobalStyle from "../../styles/globalStyle"
 import { css, Global } from "@emotion/react"
@@ -14,13 +13,18 @@ interface Props {
 }
 
 const Layout = ({ pageTitle, children }: Props) => {
+  
   const [theme, onToggle] = useContext(ThemeContext)
 
   return (
     <>
       <Global styles={GlobalStyle(THEME[theme])} />
       <Nav />
-      {pageTitle === "home" ? <Blog /> : <div>{children}</div>}
+      {pageTitle === "home" ? (
+        <Blog />
+      ) : (
+        <div css={childrenContainer}>{children}</div>
+      )}
     </>
   )
 }
@@ -30,3 +34,7 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+const childrenContainer = css`
+  margin-top: 4rem;
+`

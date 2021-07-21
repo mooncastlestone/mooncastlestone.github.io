@@ -1,7 +1,6 @@
 import React, { useContext } from "react"
-import Seo from "../components/Seo"
 import "../../styles/style.css"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import { css } from "@emotion/react"
 import THEME, { Theme } from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"

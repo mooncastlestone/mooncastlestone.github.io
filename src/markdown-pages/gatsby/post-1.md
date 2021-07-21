@@ -40,9 +40,6 @@ npm install --save-dev jest babel-jest react-test-renderer babel-preset-gatsby i
 4. babel-preset-gatsby
 5. identity-obj-proxy
 ```
-
-<br>
-
 ## 단위 테스트 설정을 위한 파일들
 
 ### 1. jest.config.js
@@ -118,13 +115,10 @@ module.exports = {
   StaticQuery: jest.fn(),
   useStaticQuery: jest.fn(),
 }
-```
-
+``` 
 ## 테스트 시작하기
 
 위의 설정들을 마친 후 `package.json` 에 들어가보면 scripts에 test가 생성되어있다.
-
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/86609ea5-cf1a-434a-8af2-6a5567f65a06/_2021-07-16__6.42.50.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/86609ea5-cf1a-434a-8af2-6a5567f65a06/_2021-07-16__6.42.50.png)
 
 지금은 gatsby에서 default로 설정한 `에러 메시지`가 들어가있는데 이것을 아래와 같이 설정하면 테스트를 시작할 준비가 완료된다 !
 
@@ -132,6 +126,7 @@ module.exports = {
 "test": "jest"
 ```
 
-아래는 작성한 테스트가 정상적으로 동작하는 모습이다!
+아래는 작성한 테스트가 정상적으로 동작하는 모습이다
 
-![test](./book.png)
+![test](./result.png '#width=400px')
+

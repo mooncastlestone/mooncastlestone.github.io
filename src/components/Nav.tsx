@@ -10,7 +10,7 @@ const Nav = () => {
   const theme = THEME[themeMode]
 
   return (
-    <div css={Container}>
+    <div css={Container(theme)}>
       <div css={LeftBox}>
         {themeMode === "light" ? (
           <StaticImage
@@ -77,11 +77,19 @@ const Nav = () => {
 
 export default Nav
 
-const Container = css`
+const Container = (theme: Theme) => css`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   border-bottom: 0.1px solid #e0e0e0;
   padding: 0.5rem 0 0.3rem 0;
+  background: ${theme.bgColor};
+  opacity: 0.8;
+  backdrop-filter: blur(10px);
+  z-index: 1;
 `
 
 const LeftBox = css`
