@@ -3,9 +3,11 @@ import { Theme } from "./theme"
 
 export const PostContainer = css`
   display: flex;
-  width: 70%;
-  height: 7rem;
+  width: 40rem;
+  height: 6rem;
   margin-top: 5rem;
+  padding: 0 3rem 0 3rem;
+
 `
 export const PostNum = (theme: Theme) => css`
   font-size: 1.2rem;
@@ -31,10 +33,10 @@ export const PostTitle = (theme: Theme) => css`
 
 export const PostDes = (theme: Theme) => css`
   color: ${theme.fontColor};
+  margin-top: -1rem;
 `
 
 export const PostDate = (theme: Theme) => css`
-  margin-top: 1rem;
   font-size: 0.9rem;
   color: ${theme.fontColor};
 `

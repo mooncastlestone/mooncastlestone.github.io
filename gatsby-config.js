@@ -46,6 +46,20 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+              plugins: [
+                {
+                  resolve: `gatsby-remark-vscode`,
+                  options: {
+                    theme: `One Dark Pro`, // From package.json: contributes.themes[0].label
+                    extensions: ["material-theme"],
+                  },
+                },
+              ],
+            },
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               // Class prefix for <pre> tags containing syntax highlighting;

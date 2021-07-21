@@ -47,7 +47,7 @@ npm install --save-dev jest babel-jest react-test-renderer babel-preset-gatsby i
 
 ### 1. jest.config.js
 
-Gatsby는 자체 Babel configuration을 사용하기 때문에, 수동적으로 Jest가 <code class="jest">babel-jest</code>를 사용하게 설정해야한다.
+Gatsby는 자체 Babel configuration을 사용하기 때문에, 수동적으로 Jest가 <code>babel-jest</code>를 사용하게 설정해야한다.
 
 ```javascript
 module.exports = {

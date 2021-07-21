@@ -3,7 +3,8 @@ import "@fontsource/athiti"
 
 import React from "react"
 import { ThemeProvider } from "./src/components/ThemeContext"
-require("prismjs/themes/prism-tomorrow.css")
+require('gatsby-remark-vscode/styles.css');
+
 
 
 
