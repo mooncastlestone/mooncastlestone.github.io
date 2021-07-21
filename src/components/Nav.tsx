@@ -1,18 +1,18 @@
-import React from "react"
+import React, { useContext } from "react"
 import { css } from "@emotion/react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import THEME, { Theme } from "../../styles/theme"
-interface NavProps {
-  onToggle: () => void
-  theme: "dark" | "light"
-}
+import { ThemeContext } from "../components/ThemeContext"
 
-const Nav = ({ theme, onToggle }: NavProps) => {
+const Nav = () => {
+  const [themeMode, onToggle] = useContext(ThemeContext)
+  const theme = THEME[themeMode]
+
   return (
     <div css={Container}>
       <div css={LeftBox}>
-        {theme === "light" ? (
+        {themeMode === "light" ? (
           <StaticImage
             src="../images/moon_off.png"
             width={30}
@@ -33,21 +33,21 @@ const Nav = ({ theme, onToggle }: NavProps) => {
             css={Image}
           />
         )}
-        <Link css={Home(THEME[theme])} to="/">
+        <Link css={Home(theme)} to="/">
           Moon.log
         </Link>
       </div>
       <div css={RightBox}>
-        <Link css={Category(THEME[theme])} to="/">
+        <Link css={Category(theme)} to="/">
           Blog
         </Link>
-        <Link css={Category(THEME[theme])} to="/portfolio">
+        <Link css={Category(theme)} to="/portfolio">
           Portfolio
         </Link>
-        <Link css={Category(THEME[theme])} to="/about">
+        <Link css={Category(theme)} to="/about">
           About
         </Link>
-        {theme === "light" ? (
+        {themeMode === "light" ? (
           <StaticImage
             src="../images/sun.png"
             width={25}

@@ -134,4 +134,4 @@ module.exports = {
 
 아래는 작성한 테스트가 정상적으로 동작하는 모습이다!
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c6e6a56-58b0-46d6-a3b0-167a22d741e7/_2021-07-16__6.38.42.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c6e6a56-58b0-46d6-a3b0-167a22d741e7/_2021-07-16__6.38.42.png)
+![test](./book.png)

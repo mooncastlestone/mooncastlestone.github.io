@@ -1,47 +1,46 @@
-import * as React from "react"
+import React, { useContext } from "react"
 import Seo from "../components/Seo"
 import "../../styles/style.css"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { css } from "@emotion/react"
 import THEME, { Theme } from "../../styles/theme"
+import { ThemeContext } from "../components/ThemeContext"
 
-interface BlogProps {
-  theme: "dark" | "light"
-  onToggle: () => void
-}
+const Blog = () => {
+  const [themeMode, onToggle] = useContext(ThemeContext)
+  const theme = THEME[themeMode]
 
-const Blog = ({ theme, onToggle }: BlogProps) => {
   return (
     <div css={Container}>
-      <span css={Title(THEME[theme])}>Blog</span>
+      <span css={Title(theme)}>Blog</span>
       <div>
         <div css={CategoryBox}>
-          <span css={Number(THEME[theme])}>01</span>
-          <Link to="/javascript" css={Category(THEME[theme])}>
+          <span css={Number(theme)}>01</span>
+          <Link to="/javascript" css={Category(theme)}>
             Javascript
           </Link>
         </div>
         <div css={CategoryBox}>
-          <span css={Number(THEME[theme])}>02</span>
-          <Link to="/react" css={Category(THEME[theme])}>
+          <span css={Number(theme)}>02</span>
+          <Link to="/react" css={Category(theme)}>
             React
           </Link>
         </div>
         <div css={CategoryBox}>
-          <span css={Number(THEME[theme])}>03</span>
-          <Link to="/react-native" css={Category(THEME[theme])}>
+          <span css={Number(theme)}>03</span>
+          <Link to="/react-native" css={Category(theme)}>
             React Native
           </Link>
         </div>
         <div css={CategoryBox}>
-          <span css={Number(THEME[theme])}>04</span>
-          <Link to="/gatsby" css={Category(THEME[theme])}>
+          <span css={Number(theme)}>04</span>
+          <Link to="/gatsby" css={Category(theme)}>
             Gatsby
           </Link>
         </div>
         <div css={CategoryBox}>
-          <span css={Number(THEME[theme])}>05</span>
-          <Link to="/interview" css={Category(THEME[theme])}>
+          <span css={Number(theme)}>05</span>
+          <Link to="/interview" css={Category(theme)}>
             Tech Interview
           </Link>
         </div>
