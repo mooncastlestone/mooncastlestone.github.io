@@ -128,5 +128,5 @@ module.exports = {
 
 아래는 작성한 테스트가 정상적으로 동작하는 모습이다
 
-![test](./result.png '#width=400px')
+![test](./images/result.png '#width=400px')
 

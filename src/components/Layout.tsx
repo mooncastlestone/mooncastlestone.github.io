@@ -3,9 +3,10 @@ import PropTypes from "prop-types"
 import Nav from "./Nav"
 import GlobalStyle from "../../styles/globalStyle"
 import { css, Global } from "@emotion/react"
-import { default as THEME } from "../../styles/theme"
+import themeGroup from "../../styles/theme"
 import Blog from "./Blog"
 import { ThemeContext } from "../components/ThemeContext"
+import { graphql, useStaticQuery } from 'gatsby'
 
 interface Props {
   children?: any
@@ -13,12 +14,12 @@ interface Props {
 }
 
 const Layout = ({ pageTitle, children }: Props) => {
-  
-  const [theme, onToggle] = useContext(ThemeContext)
+  const [themeMode, onToggle] = useContext(ThemeContext)
+  const theme = themeGroup[themeMode]
 
   return (
     <>
-      <Global styles={GlobalStyle(THEME[theme])} />
+      <Global styles={GlobalStyle(theme)} />
       <Nav />
       {pageTitle === "home" ? (
         <Blog />
