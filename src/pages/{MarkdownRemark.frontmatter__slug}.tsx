@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import { graphql } from "gatsby"
-import Nav from "../components/Nav"
 import { Link } from "gatsby"
 import {
   Container,
@@ -13,10 +12,8 @@ import Layout from "../components/Layout"
 import { ThemeContext } from "../components/ThemeContext"
 import THEME from "../../styles/theme"
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}:any) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+export default function Template({ data }: any) {
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const url = frontmatter.slug.split("/")[1]
   const [themeMode] = useContext(ThemeContext)
@@ -25,17 +22,17 @@ export default function Template({
   return (
     <Layout>
       <div css={Container}>
-          <div css={postBox}>
-            <Link to={`/${url}`} css={CategoryName(theme)}>
-              {url}
-            </Link>
-            <h1 css={Title(theme)}>{frontmatter.title}</h1>
-            <div
-              css={Description(theme)}
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </div>
+        <div css={postBox}>
+          <Link to={`/${url}`} css={CategoryName(theme)}>
+            {url}
+          </Link>
+          <h1 css={Title(theme)}>{frontmatter.title}</h1>
+          <div
+            css={Description(theme)}
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </div>
+      </div>
     </Layout>
   )
 }

@@ -1,12 +1,16 @@
 import { css } from "@emotion/react"
 import { Theme } from "./theme"
 
+export const postListContainer = css`
+  margin-top: 2rem;
+`
+
 export const PostContainer = css`
   display: flex;
-  width: 40rem;
+  width: 42rem;
   height: 6rem;
-  margin-top: 5rem;
-  padding: 0 3rem 0 3rem;
+  margin-top: 3rem;
+  padding: 0 3rem 0rem 3rem;
 
 `
 export const PostNum = (theme: Theme) => css`
