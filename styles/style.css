@@ -20,7 +20,7 @@ code {
 }
 
 pre {
-  background:hsla(0, 0%, 0%, 0.12)
+  background: hsla(0, 0%, 0%, 0.12);
 }
 
 em {
@@ -28,12 +28,12 @@ em {
 }
 
 mark {
-  background-color: #acacac;
-  color: gray;
+  background-color: rgba(0, 0, 0, 0);
+  color: #448AFF;
   font-size: 1rem;
   padding: 0.2rem 0.4rem 0.2rem 0.4rem;
   border-radius: 10%;
-  border: 1px solid #BDBDBD;
+  border: 1px solid #448AFF;
 }
 
 small {
@@ -500,6 +500,11 @@ td:first-child {
 th:last-child,
 td:last-child {
   padding-right: 0;
+}
+
+a {
+  text-decoration: none;
+  color:rgb(84, 161, 233)
 }
 
 @media only screen and (max-width: 480px) {

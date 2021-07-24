@@ -33,7 +33,6 @@ const AboutPage = () => {
             있습니다 :) UI, UX에 관심이 있어 프론트엔드 개발자의 길을 걸어가고
             있습니다.
           </p>
-          <br></br>
           <p css={IntroText(theme)}>
             개발 공부를 하면서 느꼈던 것 중 하나는 결과도 중요하지만, 과정이 더
             중요하다는 것이었습니다. 그 과정 속에서 중요하고 가치 있는 것들을
@@ -69,7 +68,7 @@ export default AboutPage
 const Image = css`
   width: 32rem;
   height: 18rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 `
 
 const IntroBox = css`
@@ -83,6 +82,7 @@ const IntroBox = css`
 
 const IntroText = (theme: Theme) => css`
   color: ${theme.fontColor};
+  margin-bottom: 0.5rem;
 `
 
 const UnderLine = (theme: Theme) => css`

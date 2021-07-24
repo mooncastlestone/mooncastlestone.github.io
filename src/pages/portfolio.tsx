@@ -15,9 +15,7 @@ const PortfolioPage = () => {
       <div css={Container}>
         <div css={[Box]}>
           <div css={Title(theme)}>Portfolio</div>
-          <div css={Description(theme)}>
-            개발자 문성석의 포트폴리오입니다.
-          </div>
+          <div css={Description(theme)}>개발자 문성석의 포트폴리오입니다.</div>
         </div>
         <Preparing />
         <div css={Box}>

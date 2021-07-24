@@ -20,7 +20,7 @@ export const CategoryName = (theme:Theme) => css`
 
 export const postBox = css`
     padding: 3rem 0 0 0;
-    width: 50%;
+    width: 55%;
 `
 
 export const Title = (theme:Theme) => css`

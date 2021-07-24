@@ -12,6 +12,19 @@ type CategoryProps = {
   postData: any
 }
 
+type frontmatterType = {
+  date: string
+  description: string
+  slug: string
+  title: string
+}
+
+type postType = {
+  frontmatter: frontmatterType
+  html: string
+  id: string
+}
+
 const categoryList = [
   "Javascript",
   "React",
@@ -23,7 +36,17 @@ const categoryList = [
 const Category = ({ title, description, postData }: CategoryProps) => {
   const [themeMode] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
-  const postList = postData.allMarkdownRemark.nodes
+  const postList: postType[] = postData.allMarkdownRemark.nodes
+
+  const sortedPostList = postList.sort((a, b) => {
+    const aSlug = a.frontmatter.slug.split("/")[2]
+    const bSlug = b.frontmatter.slug.split("/")[2]
+
+    const aIndex = Number(aSlug[aSlug.length - 1])
+    const bIndex = Number(bSlug[bSlug.length - 1])
+
+    return bIndex - aIndex
+  })
 
   return (
     <div css={Container}>
@@ -32,11 +55,11 @@ const Category = ({ title, description, postData }: CategoryProps) => {
         <div css={Description(theme)}>{description}</div>
       </div>
       <div css={postListContainer}>
-        {postList.length !== 0 ? (
-          postList.map((el: any, idx: number) => (
+        {sortedPostList.length !== 0 ? (
+          sortedPostList.map((el: postType, idx: number) => (
             <Post
               key={el.id}
-              num={idx + 1}
+              slug={el.frontmatter.slug}
               title={el.frontmatter.title}
               description={el.frontmatter.description}
               date={el.frontmatter.date}

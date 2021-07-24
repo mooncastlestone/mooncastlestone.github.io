@@ -34,5 +34,4 @@ const ReactPage = () => {
   )
 }
 
-
 export default ReactPage

@@ -12,18 +12,22 @@ import { ThemeContext } from "../components/ThemeContext"
 import { Link } from "gatsby"
 
 type PostProps = {
-  num: number
+  slug: string
   title: string
   description: string
   date: string
 }
 
-const Post = ({ num, title, description, date }: PostProps) => {
+const Post = ({ slug, title, description, date }: PostProps) => {
   const [themeMode] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
+  const postNum = slug.split('/')[2]
+  const num = postNum[postNum.length-1]
+  console.log(num)
+
   return (
     <div css={PostContainer}>
-      <div css={PostNum(theme)}>{String(num)}</div>
+      <div css={PostNum(theme)}>{`-`}</div>
       <div css={PostBox}>
         <Link css={PostTitle(theme)} to={`/gatsby/post-${num}`}>
           {title}

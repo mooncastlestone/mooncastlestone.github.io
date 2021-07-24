@@ -1,5 +1,4 @@
 import React from "react"
-import Nav from "../components/Nav"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
 import Category from "../components/Category"
