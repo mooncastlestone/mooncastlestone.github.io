@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[219],{3477:function(t,a,e){"use strict";e.r(a);e(7294);var s=e(5980),r=e(2358),u=e(5444),n=e(3964);a.default=function(){var t=(0,u.K2)("874585218");return(0,n.tZ)(s.Z,{pageTitle:"gatsby"},(0,n.tZ)(r.Z,{title:"Gatsby",description:"Gatsby 공식 문서를 참고하면서 관련 개념들을 정리하였습니다.",postData:t}))}}}]);
+//# sourceMappingURL=component---src-pages-gatsby-tsx-156fa814b3656146b437.js.map
