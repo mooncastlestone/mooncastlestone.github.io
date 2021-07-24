@@ -24,7 +24,8 @@ export const postBox = css`
 `
 
 export const Title = (theme:Theme) => css`
-  color: ${theme.fontColor}
+  color: ${theme.fontColor};
+  margin-top: 0.5rem;
 `
 
 export const Description = (theme:Theme) => css`

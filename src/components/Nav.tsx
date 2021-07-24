@@ -2,12 +2,12 @@ import React, { useContext } from "react"
 import { css } from "@emotion/react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import THEME, { Theme } from "../../styles/theme"
+import themeGroup, {Theme} from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
 
 const Nav = () => {
   const [themeMode, onToggle] = useContext(ThemeContext)
-  const theme = THEME[themeMode]
+  const theme = themeGroup[themeMode]
 
   return (
     <div css={Container(theme)}>

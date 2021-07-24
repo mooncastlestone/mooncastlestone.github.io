@@ -1,51 +1,45 @@
-import React, { useContext } from "react"
-import Nav from "../components/Nav"
+import React, { useContext, useState } from "react"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import Layout from "../components/Layout"
 import themeGroup from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
-import {
-  PostContainer,
-  PostNum,
-  PostBox,
-  PostTitle,
-  PostDate,
-  PostDes,
-  PageNum,
-} from "../../styles/postList"
-import { Link } from "gatsby"
+import { PageNum, PostContainer, postListContainer } from "../../styles/postList"
+import Post from "../components/Post"
 
 const GatsbyPage = () => {
   const [themeMode] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
+  const [postList, setPostList] = useState([
+    {
+      num: "1",
+      title: "Gatsby 프로젝트에 단위 테스트 세팅하기",
+      description:
+        "Gatsby에 Jest 테스팅 프레임워크를 사용한 세팅 과정에 대해서 정리하였습니다.",
+      date: "July 18th, 2021",
+    }
+  ])
 
   return (
     <Layout pageTitle="gatsby">
       <div css={Container}>
-        <div css={[Box]}>
+        <div css={Box}>
           <div css={Title(theme)}>Gatsby</div>
           <div css={Description(theme)}>
-            Gatsby 공식 문서를 참고하면서 관련 개념들을 정리하였습니다.
+            Gatsby를 활용한 블로그 제작 과정들을 정리하였습니다.
           </div>
         </div>
-        {/* <Preparing /> */}
-        <div css={Box}>
-          <div css={PostContainer}>
-            <div css={PostNum(theme)}>01</div>
-            <div css={PostBox}>
-              <Link css={PostTitle(theme)} to="/gatsby/post-1">
-                Gatsby 프로젝트에 단위 테스트 세팅하기
-              </Link>
-              <div css={PostDes(theme)}>
-                Gatsby에 Jest 테스팅 프레임워크를 사용한 세팅 과정에 대해서
-                정리하였습니다.
-              </div>
-              <div css={PostDate(theme)}>최종 수정일 : 2021-07-18</div>
-            </div>
-          </div>
+        <div css={postListContainer}>
+          {postList.map(el => (
+            <Post
+              num={el.num}
+              title={el.title}
+              description={el.description}
+              date={el.date}
+            ></Post>
+          ))}
         </div>
-        <span css={PageNum}>04</span>
       </div>
+      <span css={PageNum}>04</span>
     </Layout>
   )
 }

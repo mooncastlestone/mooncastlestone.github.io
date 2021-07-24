@@ -13,6 +13,7 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import themeGroup from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
+import Preparing from "../components/Preparing"
 
 const TechInterviewPage = () => {
   const [themeMode] = useContext(ThemeContext)
@@ -27,7 +28,8 @@ const TechInterviewPage = () => {
             기술 면접을 준비하며 정리한 개념들을 정리하였습니다.
           </div>
         </div>
-        <div css={Box}>
+        <Preparing />
+        {/* <div css={Box}>
           <div css={PostContainer}>
             <div css={PostNum(theme)}>01</div>
             <div css={PostBox}>
@@ -41,7 +43,7 @@ const TechInterviewPage = () => {
               <div css={PostDate(theme)}>최종 수정일 : 2021-07-18</div>
             </div>
           </div>
-        </div>
+        </div> */}
         <span css={PageNum}>05</span>
       </div>
     </Layout>

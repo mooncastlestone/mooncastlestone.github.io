@@ -5,17 +5,15 @@ import THEME, { Theme } from "../styles/theme"
 export const Container = css`
   width: 100%;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 0.1fr 0.2fr 0.6fr;
   align-items: center;
   margin-top: 3rem;
-  justify-content: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
 `
 
 export const Box = css`
   width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

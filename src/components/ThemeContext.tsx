@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react"
+import React, { useState, createContext, useEffect } from "react"
 
 type ThemeType = "light" | "dark"
 
@@ -7,12 +7,9 @@ type ThemeContext = [ThemeType, () => void]
 export const ThemeContext = createContext<ThemeContext>({} as ThemeContext)
 
 export const ThemeProvider = ({ children }: any) => {
-  let initialState:ThemeType = 'light'
+  const [loading, setLoading] = useState(true)
 
-  if(typeof window !== 'undefined') {
-    initialState =
-      (window.localStorage.getItem("app_theme") as ThemeType) || "light"
-  }
+  let initialState: ThemeType = "light"
 
   const [themeMode, setThemeMode] = useState<ThemeType>(initialState)
 
@@ -22,9 +19,20 @@ export const ThemeProvider = ({ children }: any) => {
     setThemeMode(newTheme)
   }
 
+  useEffect(() => {
+    initialState =
+    (window.localStorage.getItem("app_theme") as ThemeType) || "light"
+    setLoading(false)
+    setThemeMode(initialState)
+  },[])
+
   return (
-    <ThemeContext.Provider value={[themeMode, onToggle]}>
-      {children}
-    </ThemeContext.Provider>
+    <>
+      {loading ? null : (
+        <ThemeContext.Provider value={[themeMode, onToggle]}>
+          {children}
+        </ThemeContext.Provider>
+      )}
+    </>
   )
 }
