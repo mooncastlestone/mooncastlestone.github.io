@@ -1,31 +1,36 @@
-import React, { useContext } from "react"
+import React from "react"
 import Nav from "../components/Nav"
-import { css } from "@emotion/react"
-import { Box, Container, Title, Description } from "../../styles/pageLayout"
-import { PageNum } from "../../styles/postList"
-import { Link } from "gatsby"
-import Preparing from "../components/Preparing"
+import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
-import themeGroup from "../../styles/theme"
-import { ThemeContext } from "../components/ThemeContext"
+import Category from "../components/Category"
 
 const JavascriptPage = () => {
-  const [themeMode] = useContext(ThemeContext)
-  const theme = themeGroup[themeMode]
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(
+        filter: { frontmatter: { slug: { regex: "/javascript/" } } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            title
+            date
+            slug
+            description
+          }
+          html
+        }
+      }
+    }
+  `)
 
   return (
     <Layout pageTitle="javascript">
-      <div css={Container}>
-        <div css={[Box]}>
-          <div css={Title(theme)}>Javascript</div>
-          <div css={Description(theme)}>
-            자바스크립트(ES6) 관련된 개념들을 정리하였습니다.
-          </div>
-        </div>
-        <Preparing />
-        <div css={Box}></div>
-        <span css={PageNum}>01</span>
-      </div>
+      <Category
+        title="Javascript"
+        description="자바스크립트(ES6) 관련된 개념들을 정리하였습니다."
+        postData={data}
+      ></Category>
     </Layout>
   )
 }

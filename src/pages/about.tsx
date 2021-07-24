@@ -1,7 +1,5 @@
 import React, { useContext } from "react"
-import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
-import Preparing from "../components/Preparing"
 import Layout from "../components/Layout"
 import themeGroup, { Theme } from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
@@ -39,7 +37,8 @@ const AboutPage = () => {
           <p css={IntroText(theme)}>
             개발 공부를 하면서 느꼈던 것 중 하나는 결과도 중요하지만, 과정이 더
             중요하다는 것이었습니다. 그 과정 속에서 중요하고 가치 있는 것들을
-            정리하여 사람들에게 공유하고 싶은 마음에 이 블로그를 만들게 되었습니다.
+            정리하여 사람들에게 공유하고 싶은 마음에 이 블로그를 만들게
+            되었습니다.
           </p>
           <div css={UnderLine(theme)}></div>
           <p css={IntroText(theme)}>
