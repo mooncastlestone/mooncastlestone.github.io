@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { css } from "@emotion/react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import themeGroup, {Theme} from "../../styles/theme"
+import themeGroup, { Theme } from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
 
 const Nav = () => {
@@ -82,27 +82,27 @@ const Container = (theme: Theme) => css`
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border-bottom: 0.1px solid #e0e0e0;
   padding: 0.5rem 0 0.3rem 0;
   background: ${theme.bgColor};
   opacity: 0.8;
   backdrop-filter: blur(10px);
   z-index: 1;
+
+  @media (max-width: 375px) {
+  }
 `
 
 const LeftBox = css`
-  width: 10%;
   display: flex;
-  justify-content: center;
   align-items: center;
 `
 
 const RightBox = css`
-  width: 16%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 `
 
@@ -119,9 +119,17 @@ const Category = (theme: Theme) => css`
   &:hover {
     color: #9e9e9e;
   }
+
+  @media (max-width: 420px) {
+    font-size: 0.8rem;
+  }
 `
 
 const Home = (theme: Theme) => css`
   text-decoration: none;
   color: ${theme.fontColor};
+
+  @media (max-width: 420px) {
+    font-size: 0.8rem;
+  }
 `

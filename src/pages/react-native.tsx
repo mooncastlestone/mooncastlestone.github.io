@@ -29,6 +29,7 @@ const ReactNativePage = () => {
         title="React Native"
         description="React Native를 사용하면서 공부한 것들을 정리하였습니다."
         postData={data}
+        link="react-native"
       ></Category>
     </Layout>
   )
