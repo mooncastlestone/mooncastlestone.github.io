@@ -29,6 +29,7 @@ const GatsbyPage = () => {
         title="Gatsby"
         description="Gatsby 공식 문서를 참고하면서 관련 개념들을 정리하였습니다."
         postData={data}
+        link="gatsby"
       ></Category>
     </Layout>
   )

@@ -10,6 +10,7 @@ type CategoryProps = {
   title: string
   description: string
   postData: any
+  link: string
 }
 
 type frontmatterType = {
@@ -33,7 +34,7 @@ const categoryList = [
   "Tech Interview",
 ]
 
-const Category = ({ title, description, postData }: CategoryProps) => {
+const Category = ({ title, description, postData, link }: CategoryProps) => {
   const [themeMode] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
   const postList: postType[] = postData.allMarkdownRemark.nodes
@@ -63,6 +64,7 @@ const Category = ({ title, description, postData }: CategoryProps) => {
               title={el.frontmatter.title}
               description={el.frontmatter.description}
               date={el.frontmatter.date}
+              link={link}
             ></Post>
           ))
         ) : (
