@@ -29,8 +29,11 @@ const TechInterviewPage = () => {
         title="Tech Interview"
         description="기술 면접을 준비하며 정리한 개념들을 정리하였습니다."
         postData={data}
+        link={"interview"}
       ></Category>
     </Layout>
   )
 }
 export default TechInterviewPage
+
+

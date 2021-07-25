@@ -20,9 +20,9 @@ description: "Gatsby 프로젝트에 TDD를 사용해보고 싶어 세팅하는 
 
 즉, 개발자가 작성하는 <u>**모든 함수와 메소드에 대한 테스트 케이스를 작성하는 절차**</u>라고 생각하면 된다.
 
-개츠비에서는 자체적인 유닛 테스팅을 위한 기능들을 지원하지는 않지만, 몇가지 단계를 거친다면 테스트를 진행할 수 있다. 그러나, 테스팅 과정에서 <code>Jest</code> 관련 표준 설정이 제대로 작동하지 않는 몇 가지 기능들이 있다고 한다. 관련된 설정 방법 또한 공식 문서에서 확인할 수 있었다.
+개츠비에서는 자체적인 유닛 테스팅을 위한 기능들을 지원하지는 않지만, 몇가지 단계를 거친다면 테스트를 진행할 수 있다. 그러나, 테스팅 과정에서 <u>**Jest**</u> 관련 표준 설정이 제대로 작동하지 않는 몇 가지 기능들이 있다고 한다. 관련된 설정 방법 또한 공식 문서에서 확인할 수 있었다.
 
-\*<code>Jest</code>는 페이스북에서 만든 리액트를 위한 가장 유명한 테스팅 프레임워크이다.
+<mark>Jest</mark> 는 페이스북에서 만든 리액트를 위한 가장 유명한 테스팅 프레임워크이다.
 자바스크립트 유닛 테스팅 목적으로 만들어진 프레임워크이지만, 리액트에도 동작하는 기능들이 많다고 한다.
 <br></br>
 
@@ -45,7 +45,7 @@ npm install --save-dev jest babel-jest react-test-renderer babel-preset-gatsby i
 
 ### 1. jest.config.js
 
-Gatsby는 자체 Babel configuration을 사용하기 때문에, 수동적으로 Jest가 <code>babel-jest</code>를 사용하게 설정해야한다.
+Gatsby는 자체 Babel configuration을 사용하기 때문에, 수동적으로 Jest가 <mark>babel-jest</mark> 를 사용하게 설정해야한다.
 
 ```javascript
 module.exports = {
@@ -119,9 +119,9 @@ module.exports = {
 ``` 
 ## 테스트 시작하기
 
-위의 설정들을 마친 후 `package.json` 에 들어가보면 scripts에 test가 생성되어있다.
+위의 설정들을 마친 후 <mark>package.json</mark> 에 들어가보면 scripts에 test가 생성되어있다.
 
-지금은 gatsby에서 default로 설정한 `에러 메시지`가 들어가있는데 이것을 아래와 같이 설정하면 테스트를 시작할 준비가 완료된다 !
+지금은 gatsby에서 default로 설정한 <mark>에러 메시지</mark> 가 들어가있는데 이것을 아래와 같이 설정하면 테스트를 시작할 준비가 완료된다 !
 
 ```jsx
 "test": "jest"

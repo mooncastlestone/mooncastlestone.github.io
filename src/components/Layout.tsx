@@ -7,7 +7,7 @@ import themeGroup from "../../styles/theme"
 import Blog from "./Blog"
 import { ThemeContext } from "../components/ThemeContext"
 
-interface Props {
+type Props = {
   children?: any
   pageTitle?: string
 }

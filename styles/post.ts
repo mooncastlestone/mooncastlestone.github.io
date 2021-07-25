@@ -21,11 +21,19 @@ export const CategoryName = (theme:Theme) => css`
 export const postBox = css`
     padding: 3rem 0 0 0;
     width: 55%;
+
+    @media(max-width: 768px) {
+      width: 80%;
+    }
 `
 
 export const Title = (theme:Theme) => css`
   color: ${theme.fontColor};
   margin-top: 0.5rem;
+
+  @media(max-width: 420px) {
+    font-size: 1.8rem;
+  }
 `
 
 export const Description = (theme:Theme) => css`
@@ -33,5 +41,9 @@ export const Description = (theme:Theme) => css`
     margin-top: 2rem;
     color: ${theme.fontColor};
     line-height: 2rem;
+
+    @media(max-width: 420px) {
+      font-size: 1rem;
+    }
 
 `

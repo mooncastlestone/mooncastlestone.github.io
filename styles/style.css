@@ -512,3 +512,17 @@ a {
     font-size: 100%;
   }
 }
+
+@media(max-width: 420px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}

@@ -29,6 +29,7 @@ const ReactPage = () => {
         title="React"
         description="SPA(Single Page Application) 개발을 진행하면서 공부한 것들을 정리하였습니다."
         postData={data}
+        link={'react'}
       ></Category>
     </Layout>
   )

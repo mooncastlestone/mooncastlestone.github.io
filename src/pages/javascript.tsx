@@ -29,6 +29,7 @@ const JavascriptPage = () => {
         title="Javascript"
         description="자바스크립트(ES6) 관련된 개념들을 정리하였습니다."
         postData={data}
+        link={'javascript'}
       ></Category>
     </Layout>
   )
