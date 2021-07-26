@@ -16,6 +16,7 @@
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-emotion": "^6.9.0",
     "gatsby-plugin-gatsby-cloud": "^2.9.1",
+    "gatsby-plugin-google-gtag": "^3.10.0",
     "gatsby-plugin-image": "^1.9.0",
     "gatsby-plugin-manifest": "^3.9.0",
     "gatsby-plugin-mdx": "^2.10.0",
