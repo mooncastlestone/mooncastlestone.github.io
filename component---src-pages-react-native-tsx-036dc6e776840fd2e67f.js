@@ -1,2 +1,0 @@
-(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[928],{9697:function(t,e,a){"use strict";a.r(e);a(7294);var r=a(5980),s=a(2358),i=a(5444),u=a(3964);e.default=function(){var t=(0,i.K2)("3487991919");return(0,u.tZ)(r.Z,{pageTitle:"react-native"},(0,u.tZ)(s.Z,{title:"React Native",description:"React Native를 사용하면서 공부한 것들을 정리하였습니다.",postData:t}))}}}]);
-//# sourceMappingURL=component---src-pages-react-native-tsx-036dc6e776840fd2e67f.js.map

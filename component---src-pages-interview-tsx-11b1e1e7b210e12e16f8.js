@@ -1,2 +1,0 @@
-(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[378],{4220:function(t,e,a){"use strict";a.r(e);a(7294);var r=a(5444),s=a(5980),i=a(2358),n=a(3964);e.default=function(){var t=(0,r.K2)("3331244682");return(0,n.tZ)(s.Z,{pageTitle:"interview"},(0,n.tZ)(i.Z,{title:"Tech Interview",description:"기술 면접을 준비하며 정리한 개념들을 정리하였습니다.",postData:t}))}}}]);
-//# sourceMappingURL=component---src-pages-interview-tsx-11b1e1e7b210e12e16f8.js.map

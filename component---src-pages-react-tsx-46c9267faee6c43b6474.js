@@ -1,2 +1,0 @@
-(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[487],{8548:function(t,e,a){"use strict";a.r(e);a(7294);var r=a(5980),s=a(2358),i=a(5444),n=a(3964);e.default=function(){var t=(0,i.K2)("3487991919");return(0,n.tZ)(r.Z,{pageTitle:"react"},(0,n.tZ)(s.Z,{title:"React",description:"SPA(Single Page Application) 개발을 진행하면서 공부한 것들을 정리하였습니다.",postData:t}))}}}]);
-//# sourceMappingURL=component---src-pages-react-tsx-46c9267faee6c43b6474.js.map
