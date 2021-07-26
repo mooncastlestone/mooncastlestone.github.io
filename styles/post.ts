@@ -48,5 +48,6 @@ export const Description = (theme: Theme) => css`
 `
 
 export const CommentBox = () => css`
+  margin-bottom: 3rem;
 `
 
