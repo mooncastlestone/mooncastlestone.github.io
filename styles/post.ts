@@ -46,3 +46,7 @@ export const Description = (theme: Theme) => css`
     font-size: 1.1rem;
   }
 `
+
+export const CommentBox = () => css`
+`
+

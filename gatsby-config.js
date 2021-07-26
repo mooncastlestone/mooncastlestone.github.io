@@ -16,6 +16,12 @@ module.exports = {
     `gatsby-remark-images`,
     `gatsby-plugin-gatsby-cloud`,
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-F2JN9J8VQN"],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
