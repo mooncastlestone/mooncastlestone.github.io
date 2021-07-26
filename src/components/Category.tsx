@@ -34,7 +34,7 @@ const categoryList = [
   "Tech Interview",
 ]
 
-const Category = ({ title, description, postData, link}: CategoryProps) => {
+const Category = ({ title, description, postData, link }: CategoryProps) => {
   const [themeMode] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
   const postList: postType[] = postData.allMarkdownRemark.nodes

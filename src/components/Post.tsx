@@ -22,8 +22,8 @@ type PostProps = {
 const Post = ({ slug, title, description, date, link }: PostProps) => {
   const [themeMode] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
-  const postNum = slug.split('/')[2]
-  const num = postNum[postNum.length-1]
+  const postNum = slug.split("/")[2]
+  const num = postNum[postNum.length - 1]
 
   return (
     <div css={PostContainer}>

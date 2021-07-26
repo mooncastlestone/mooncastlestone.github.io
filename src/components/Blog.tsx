@@ -57,10 +57,9 @@ const Container = () => css`
   padding: 6rem 0 0 10rem;
   flex-direction: column;
 
-  @media(max-width:500px) {
+  @media (max-width: 500px) {
     padding: 4rem 0 0 3rem;
   }
-
 `
 const Title = (theme: Theme) => css`
   font-size: 2.5rem;
@@ -71,7 +70,7 @@ const Title = (theme: Theme) => css`
 
   color: ${theme.fontColor};
 
-  @media(max-width:375px) {
+  @media (max-width: 375px) {
     font-size: 2rem;
     width: 4rem;
   }
@@ -88,7 +87,7 @@ const Category = (theme: Theme) => css`
   font-family: "Athiti";
   color: ${theme.fontColor};
 
-  @media(max-width:375px) {
+  @media (max-width: 375px) {
     font-size: 1.8rem;
   }
 `
