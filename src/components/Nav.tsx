@@ -85,7 +85,7 @@ const Container = (theme: Theme) => css`
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 0.1px solid #e0e0e0;
-  padding: 0.5rem 0 0.3rem 0;
+  padding: 0.5rem 1rem 0.3rem 1rem;
   background: ${theme.bgColor};
   opacity: 0.8;
   backdrop-filter: blur(10px);

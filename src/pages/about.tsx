@@ -69,20 +69,38 @@ const Image = css`
   width: 32rem;
   height: 18rem;
   margin-top: 1rem;
+
+  @media (max-width: 420px) {
+    width: 100%;
+    height: 15rem;
+  }
 `
 
 const IntroBox = css`
-  width: 50vw;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
   text-decoration: none;
   padding: 2rem 5rem 0 5rem;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media (max-width: 420px) {
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+  }
 `
 
 const IntroText = (theme: Theme) => css`
   color: ${theme.fontColor};
   margin-bottom: 0.5rem;
+
+  @media (max-width: 420px) {
+    font-size: 0.9rem;
+  }
 `
 
 const UnderLine = (theme: Theme) => css`

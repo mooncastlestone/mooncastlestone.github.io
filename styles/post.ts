@@ -37,12 +37,12 @@ export const Title = (theme: Theme) => css`
 `
 
 export const Description = (theme: Theme) => css`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-top: 2rem;
   color: ${theme.fontColor};
   line-height: 2rem;
 
   @media (max-width: 420px) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 `
