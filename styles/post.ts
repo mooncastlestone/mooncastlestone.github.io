@@ -29,7 +29,11 @@ export const postBox = css`
 
 export const Title = (theme: Theme) => css`
   color: ${theme.fontColor};
+<<<<<<< HEAD
   margin-top: 1.2rem;
+=======
+  margin-top: 1rem;
+>>>>>>> f3a5c24ae4041e5d3f4fc5a3153e1e2583cd9a6a
 
   @media (max-width: 425px) {
     font-size: 1.8rem;

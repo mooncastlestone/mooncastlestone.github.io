@@ -25,13 +25,11 @@ description: "Gatsby 프로젝트에 TDD를 사용해보고 싶어 세팅하는 
 자바스크립트 유닛 테스팅 목적으로 만들어진 프레임워크이지만, 리액트에도 동작하는 기능들이 많다고 한다.
 <br></br>
 
-## Dependencies 설치 명령어
+## Jest, 패키지 설치
 
 ```javascript
 npm install --save-dev jest babel-jest react-test-renderer babel-preset-gatsby identity-obj-proxy
 ```
-
-먼저 Jest와 몇가지 필수 패키지들을 설치한다.
 
 ```javascript
 1. jest
@@ -40,6 +38,8 @@ npm install --save-dev jest babel-jest react-test-renderer babel-preset-gatsby i
 4. babel-preset-gatsby
 5. identity-obj-proxy
 ```
+<br>
+
 ## 단위 테스트 설정을 위한 파일들
 
 ### 1. jest.config.js
@@ -125,8 +125,9 @@ module.exports = {
 ```jsx
 "test": "jest"
 ```
-<br></br>
 ***
+<br>
+
 ## Reference
 [Gatsby - Unit Testing](https://www.gatsbyjs.com/docs/how-to/testing/unit-testing/)
 <br></br>

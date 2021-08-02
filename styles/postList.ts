@@ -17,7 +17,6 @@ export const PostContainer = css`
   margin-top: 3rem;
   padding: 0 3rem 0rem 3rem;
 
-
   @media (max-width: 425px) {
     padding: 0rem;
     width: 100%;

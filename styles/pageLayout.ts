@@ -9,7 +9,6 @@ export const Container = css`
   display: flex;
   flex-direction: column;
 
-
   @media(max-width:425px) {
     padding: 0 2rem 0 2rem;
   }
