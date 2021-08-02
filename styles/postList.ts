@@ -68,7 +68,7 @@ export const PostDate = (theme: Theme) => css`
   }
 `
 
-export const PageNum = () => css`
+export const CategoryNum = () => css`
   position: fixed;
   bottom: 0;
   right: 0;

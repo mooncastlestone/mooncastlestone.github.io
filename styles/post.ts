@@ -20,7 +20,7 @@ export const CategoryName = (theme: Theme) => css`
 
 export const postBox = css`
   padding: 3rem 0 0 0;
-  width: 55%;
+  width: 45%;
 
   @media (max-width: 768px) {
     width: 80%;
@@ -29,24 +29,25 @@ export const postBox = css`
 
 export const Title = (theme: Theme) => css`
   color: ${theme.fontColor};
-  margin-top: 0.5rem;
+  margin-top: 1.2rem;
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     font-size: 1.8rem;
   }
 `
 
 export const Description = (theme: Theme) => css`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 2rem;
   color: ${theme.fontColor};
   line-height: 2rem;
 
-  @media (max-width: 420px) {
-    font-size: 1.1rem;
+  @media (max-width: 425px) {
+    font-size: 1rem;
   }
 `
 
 export const CommentBox = () => css`
+margin-bottom: 3rem;
 `
 
