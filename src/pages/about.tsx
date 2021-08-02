@@ -70,7 +70,7 @@ const Image = css`
   height: 18rem;
   margin-top: 1rem;
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     width: 100%;
     height: 15rem;
   }
@@ -88,7 +88,7 @@ const IntroBox = css`
     width: 80%;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     width: 100%;
     padding: 2rem 0 2rem 0;
   }
@@ -98,7 +98,7 @@ const IntroText = (theme: Theme) => css`
   color: ${theme.fontColor};
   margin-bottom: 0.5rem;
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     font-size: 0.9rem;
   }
 `

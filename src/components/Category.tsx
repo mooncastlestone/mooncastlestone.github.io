@@ -1,11 +1,15 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useState } from "react"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
-import { CategoryNum, postListContainer } from "../../styles/postList"
+import {
+  CategoryNum,
+  postListContainer,
+  PageNum,
+  PageNumsBox,
+} from "../../styles/postList"
 import themeGroup from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
 import Preparing from "../components/Preparing"
 import Post from "../components/Post"
-import { css } from "@emotion/react"
 
 type CategoryProps = {
   title: string
@@ -39,8 +43,6 @@ const Category = ({ title, description, postData, link }: CategoryProps) => {
   const [themeMode] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
   const postList: postType[] = postData.allMarkdownRemark.nodes
-  const [currentPageNum, setCurrentPageNum] = useState(1)
-  const [currentPosts, setCurrentPosts] = useState([0, 1, 2])
 
   const sortedPostList = postList.sort((a, b) => {
     const aSlug = a.frontmatter.slug.split("/")[2]
@@ -52,20 +54,26 @@ const Category = ({ title, description, postData, link }: CategoryProps) => {
     return bIndex - aIndex
   })
 
+  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPosts, setCurrentPosts] = useState(sortedPostList.slice(0, 3))
+
   const handleMakePage = () => {
     let pageNums = Math.ceil(sortedPostList.length / 3)
     let result = []
     for (let i = 1; i <= pageNums; i++) {
       result.push(i)
     }
-
     return result
   }
 
-  const handleChangePage = (el:number) => {
+  const handleChangePage = (el: number) => {
     let num = el * 3
-    setCurrentPosts([num - 3, num - 2, num - 1])
-    setCurrentPageNum(el)
+    setCurrentPage(el)
+    setCurrentPosts([
+      sortedPostList[num - 3],
+      sortedPostList[num - 2],
+      sortedPostList[num - 1],
+    ])
   }
 
   return (
@@ -76,8 +84,10 @@ const Category = ({ title, description, postData, link }: CategoryProps) => {
       </div>
       <div css={postListContainer}>
         {sortedPostList.length !== 0 ? (
-          sortedPostList.map((el: postType, idx: number) => {
-            return idx === currentPosts[idx] ? (
+          currentPosts.map((el: postType) =>
+            el === undefined ? (
+              <div></div>
+            ) : (
               <Post
                 key={el.id}
                 slug={el.frontmatter.slug}
@@ -86,18 +96,34 @@ const Category = ({ title, description, postData, link }: CategoryProps) => {
                 date={el.frontmatter.date}
                 link={link}
               ></Post>
-            ) : null
-          })
+            )
+          )
         ) : (
           <Preparing />
         )}
         {handleMakePage().length !== 1 ? (
           <div css={PageNumsBox}>
-            {handleMakePage().map((el, idx) => (
-              <span css={PageNum} key={idx + 1} onClick={(() => handleChangePage(el))}>
-                {el}
-              </span>
-            ))}
+            {handleMakePage().map((el, idx) =>
+              el === currentPage ? (
+                <span
+                  style={{ fontWeight: "bold" }}
+                  css={PageNum(theme)}
+                  key={idx + 1}
+                  onClick={() => handleChangePage(el)}
+                >
+                  {el}
+                </span>
+              ) : (
+                <span
+                  style={{ fontWeight: "lighter" }}
+                  css={PageNum(theme)}
+                  key={idx + 1}
+                  onClick={() => handleChangePage(el)}
+                >
+                  {el}
+                </span>
+              )
+            )}
           </div>
         ) : null}
       </div>
@@ -108,13 +134,3 @@ const Category = ({ title, description, postData, link }: CategoryProps) => {
 }
 
 export default Category
-
-const PageNumsBox = css`
-  text-align: center;
-  margin-top: 3rem;
-`
-
-const PageNum = css`
-  margin-right: 1rem;
-  cursor: pointer;
-`
