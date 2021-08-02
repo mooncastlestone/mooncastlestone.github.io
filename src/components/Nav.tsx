@@ -124,7 +124,7 @@ const Category = (theme: Theme) => css`
     color: #9e9e9e;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     font-size: 0.8rem;
   }
 `
@@ -133,7 +133,7 @@ const Home = (theme: Theme) => css`
   text-decoration: none;
   color: ${theme.fontColor};
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     font-size: 0.8rem;
   }
 `

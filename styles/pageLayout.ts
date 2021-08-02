@@ -9,7 +9,7 @@ export const Container = css`
   display: flex;
   flex-direction: column;
 
-  @media(max-width:420px) {
+  @media(max-width:425px) {
     padding: 0 2rem 0 2rem;
   }
 `
@@ -31,7 +31,7 @@ export const Title = (theme: Theme) => css`
   color: ${theme.fontColor};
   border-bottom: 1px solid ${theme.fontColor};
 
-  @media(max-width:420px) {
+  @media(max-width:425px) {
     font-size: 2rem;
   }
 `
@@ -40,7 +40,7 @@ export const Description = (theme: Theme) => css`
   margin-top: 1rem;
   color: ${theme.fontColor};
   
-  @media(max-width:420px) {
+  @media(max-width:425px) {
     font-size: 0.8rem;
   }
 

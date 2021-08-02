@@ -29,9 +29,9 @@ export const postBox = css`
 
 export const Title = (theme: Theme) => css`
   color: ${theme.fontColor};
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     font-size: 1.8rem;
   }
 `
@@ -42,7 +42,7 @@ export const Description = (theme: Theme) => css`
   color: ${theme.fontColor};
   line-height: 2rem;
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     font-size: 1.1rem;
   }
 `
