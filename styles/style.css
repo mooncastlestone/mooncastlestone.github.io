@@ -29,11 +29,11 @@ em {
 
 mark {
   background-color: rgba(0, 0, 0, 0);
-  color: #448AFF;
+  color: #448aff;
   font-size: 1rem;
   padding: 0.2rem 0.4rem 0.2rem 0.4rem;
   border-radius: 10%;
-  border: 1px solid #448AFF;
+  border: 1px solid #448aff;
 }
 
 small {
@@ -92,8 +92,9 @@ hr {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 1%, 62%, 0.582);
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  background: #E0E0E0;
   border: none;
   height: 1px;
 }
@@ -234,8 +235,8 @@ h3 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
-  line-height: 1.1;
+  font-size: 1.25rem;
+  line-height: 1.4;
 }
 h4 {
   margin-left: 0;
@@ -351,9 +352,8 @@ p {
   padding-right: 0;
   padding-top: 0;
   line-height: 2rem;
-  margin-bottom:0;
+  margin-bottom: 0;
 }
-
 
 table {
   margin-left: 0;
@@ -370,14 +370,13 @@ table {
   width: 100%;
 }
 blockquote {
-  margin-left: 1.45rem;
-  margin-right: 1.45rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
   margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
+  padding: 1rem 1rem 0.5rem 1rem;
   margin-bottom: 1.45rem;
+  border-left: 1px solid #536dfe;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 form {
   margin-left: 0;
@@ -506,7 +505,7 @@ td:last-child {
 
 a {
   text-decoration: none;
-  color:rgb(84, 161, 233)
+  color: rgb(84, 161, 233);
 }
 
 @media only screen and (max-width: 480px) {
@@ -515,7 +514,7 @@ a {
   }
 }
 
-@media(max-width: 420px) {
+@media (max-width: 420px) {
   h1 {
     font-size: 1.8rem;
   }

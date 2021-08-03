@@ -17,10 +17,6 @@ GraphQL은 Structed Query Language와 마찬가지로 **쿼리 언어**이며, 2
 
 쿼리에 대해서 정확하게 설명할 수 있게 생각이 나지 않아 쿼리부터 먼저 다시 검색을 해보았다.
 <br></br>
-<<<<<<< HEAD
-=======
-
->>>>>>> 31f282d8cb9f41294d219dc961e36a1961eca6ca
 ## 쿼리란?
 
 구글에 따르면 우선 query라는 단어 자체가 질문, 문의하다라는 뜻을 가지고 있다. 
@@ -49,6 +45,8 @@ mySQL은 백엔드 시스템에서 작성되어서 데이터베이스로부터 �
 ## Gatsby에서의 GraphQL
 
 Gatsby에서는 **data layer**라고 하는 사이트 어디에서든지 데이터를 요청 받아올 수 있는 강력한 기능을 제공한다.
+
+<br>
 
 ![dataLayer](./images/dataLayer.png)
 <br></br>

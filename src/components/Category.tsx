@@ -1,6 +1,11 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
-import { PageNum, postListContainer } from "../../styles/postList"
+import {
+  CategoryNum,
+  postListContainer,
+  PageNum,
+  PageNumsBox,
+} from "../../styles/postList"
 import themeGroup from "../../styles/theme"
 import { ThemeContext } from "../components/ThemeContext"
 import Preparing from "../components/Preparing"
@@ -49,6 +54,28 @@ const Category = ({ title, description, postData, link }: CategoryProps) => {
     return bIndex - aIndex
   })
 
+  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPosts, setCurrentPosts] = useState(sortedPostList.slice(0, 3))
+
+  const handleMakePage = () => {
+    let pageNums = Math.ceil(sortedPostList.length / 3)
+    let result = []
+    for (let i = 1; i <= pageNums; i++) {
+      result.push(i)
+    }
+    return result
+  }
+
+  const handleChangePage = (el: number) => {
+    let num = el * 3
+    setCurrentPage(el)
+    setCurrentPosts([
+      sortedPostList[num - 3],
+      sortedPostList[num - 2],
+      sortedPostList[num - 1],
+    ])
+  }
+
   return (
     <div css={Container}>
       <div css={Box}>
@@ -57,22 +84,51 @@ const Category = ({ title, description, postData, link }: CategoryProps) => {
       </div>
       <div css={postListContainer}>
         {sortedPostList.length !== 0 ? (
-          sortedPostList.map((el: postType, idx: number) => (
-            <Post
-              key={el.id}
-              slug={el.frontmatter.slug}
-              title={el.frontmatter.title}
-              description={el.frontmatter.description}
-              date={el.frontmatter.date}
-              link={link}
-            ></Post>
-          ))
+          currentPosts.map((el: postType) =>
+            el === undefined ? (
+              <div></div>
+            ) : (
+              <Post
+                key={el.id}
+                slug={el.frontmatter.slug}
+                title={el.frontmatter.title}
+                description={el.frontmatter.description}
+                date={el.frontmatter.date}
+                link={link}
+              ></Post>
+            )
+          )
         ) : (
           <Preparing />
         )}
+        {handleMakePage().length !== 1 ? (
+          <div css={PageNumsBox}>
+            {handleMakePage().map((el, idx) =>
+              el === currentPage ? (
+                <span
+                  style={{ fontWeight: "bold" }}
+                  css={PageNum(theme)}
+                  key={idx + 1}
+                  onClick={() => handleChangePage(el)}
+                >
+                  {el}
+                </span>
+              ) : (
+                <span
+                  style={{ fontWeight: "lighter" }}
+                  css={PageNum(theme)}
+                  key={idx + 1}
+                  onClick={() => handleChangePage(el)}
+                >
+                  {el}
+                </span>
+              )
+            )}
+          </div>
+        ) : null}
       </div>
 
-      <span css={PageNum}>{"0" + (categoryList.indexOf(title) + 1)}</span>
+      <span css={CategoryNum}>{"0" + (categoryList.indexOf(title) + 1)}</span>
     </div>
   )
 }

@@ -33,7 +33,8 @@ export const PostBox = css`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 6rem;
+  height: 5.7rem;
+  position: relative;
 `
 
 export const PostTitle = (theme: Theme) => css`
@@ -52,7 +53,7 @@ export const PostTitle = (theme: Theme) => css`
 
 export const PostDes = (theme: Theme) => css`
   color: ${theme.fontColor};
-  margin-top: -1rem;
+  margin-top: -0.8rem;
 
   @media (max-width: 425px) {
     font-size: 0.9rem;
@@ -68,7 +69,7 @@ export const PostDate = (theme: Theme) => css`
   }
 `
 
-export const PageNum = () => css`
+export const CategoryNum = () => css`
   position: fixed;
   bottom: 0;
   right: 0;
@@ -81,3 +82,13 @@ export const PageNum = () => css`
   }
 `
 
+export const PageNumsBox = css`
+  text-align: center;
+  margin-top: 3rem;
+`
+
+export const PageNum = (theme:Theme) => css`
+  margin-right: 1rem;
+  cursor: pointer;
+  color: ${theme.fontColor}
+`
