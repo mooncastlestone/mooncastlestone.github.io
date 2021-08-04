@@ -1,15 +1,15 @@
 import React, { useContext, useState } from "react"
-import { Box, Container, Title, Description } from "../../styles/pageLayout"
+import { Box, Container, Title, Description } from "../../../styles/pageLayout"
 import {
+  CategoryContainer,
   CategoryNum,
-  postListContainer,
   PageNum,
   PageNumsBox,
-} from "../../styles/postList"
-import themeGroup from "../../styles/theme"
-import { ThemeContext } from "../components/ThemeContext"
-import Preparing from "../components/Preparing"
-import Post from "../components/Post"
+} from "./Category.style"
+import themeGroup from "../../theme/theme"
+import { ThemeContext } from "../../theme/ThemeContext"
+import Preparing from "../Preparing"
+import Post from "../Post"
 
 type CategoryProps = {
   title: string
@@ -82,7 +82,7 @@ const Category = ({ title, description, postData, link }: CategoryProps) => {
         <div css={Title(theme)}>{title}</div>
         <div css={Description(theme)}>{description}</div>
       </div>
-      <div css={postListContainer}>
+      <div css={CategoryContainer}>
         {sortedPostList.length !== 0 ? (
           currentPosts.map((el: postType) =>
             el === undefined ? (

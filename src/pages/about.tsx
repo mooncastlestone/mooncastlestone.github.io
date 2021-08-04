@@ -1,8 +1,8 @@
 import React, { useContext } from "react"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import Layout from "../components/Layout"
-import themeGroup, { Theme } from "../../styles/theme"
-import { ThemeContext } from "../components/ThemeContext"
+import themeGroup, { Theme } from "../theme/theme"
+import { ThemeContext } from "../theme/ThemeContext"
 import { StaticImage } from "gatsby-plugin-image"
 import { css } from "@emotion/react"
 
