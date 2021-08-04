@@ -1,11 +1,11 @@
 import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import Nav from "./Nav"
-import GlobalStyle from "../../styles/globalStyle"
+import Nav from "../Nav"
+import GlobalStyle from "../../../styles/globalStyle"
 import { css, Global } from "@emotion/react"
-import themeGroup from "../../styles/theme"
-import Blog from "./Blog"
-import { ThemeContext } from "../components/ThemeContext"
+import themeGroup from "../../theme/theme"
+import Blog from "../DefaultPage/index"
+import { ThemeContext } from "../../theme/ThemeContext"
 
 interface Props {
   children?: any

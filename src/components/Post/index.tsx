@@ -6,9 +6,9 @@ import {
   PostTitle,
   PostDate,
   PostDes,
-} from "../../styles/postList"
-import themeGroup from "../../styles/theme"
-import { ThemeContext } from "../components/ThemeContext"
+} from "./Post.style"
+import themeGroup from "../../theme/theme"
+import { ThemeContext } from "../../theme/ThemeContext"
 import { Link } from "gatsby"
 
 type PostProps = {
