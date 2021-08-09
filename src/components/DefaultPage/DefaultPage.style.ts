@@ -18,7 +18,6 @@ export const Title = (theme: Theme) => css`
   width: 5rem;
   margin-left: 2rem;
   font-family: "Athiti";
-
   color: ${theme.fontColor};
 
   @media (max-width: 375px) {

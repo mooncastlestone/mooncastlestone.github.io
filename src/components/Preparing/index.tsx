@@ -15,7 +15,7 @@ const Preparing = () => {
         width={500}
         quality={100}
         formats={["auto", "webp", "avif"]}
-        alt="A Gatsby astronaut"
+        alt="preparing"
         placeholder="blurred"
         css={Image}
       />
