@@ -1,10 +1,10 @@
 ---
-slug: "/interview/post-2/"
+slug: "/web-network/post-2/"
 date: "2020-07-25"
 title: "HTTP와 HTTPS의 차이점"
 description: "HTTP와 HTTPS의 차이점에 대해서 정리하였습니다."
 ---
-
+<hr></hr>
 HTTP와 HTTPS의 가장 큰 차이점은 보안 소켓 계층의 유무이다.
 
 보안 소켓 계층에 대해서 정리하기 전에 우선 HTTP가 어떤 것인지부터 정리를 해보자.

@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import THEME, { Theme } from "../styles/theme"
+import THEME, { Theme } from "../src/theme/theme"
 
 export const Container = css`
   width: 100%;

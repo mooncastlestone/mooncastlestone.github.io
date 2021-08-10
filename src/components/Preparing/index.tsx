@@ -1,8 +1,8 @@
 import { css } from "@emotion/react"
 import { StaticImage } from "gatsby-plugin-image"
 import React, { useContext } from "react"
-import { ThemeContext } from "./ThemeContext"
-import THEME, { Theme } from "../../styles/theme"
+import { ThemeContext } from "../../theme/ThemeContext"
+import THEME, { Theme } from "../../theme/theme"
 
 const Preparing = () => {
   const [themeMode] = useContext(ThemeContext)
@@ -11,11 +11,11 @@ const Preparing = () => {
   return (
     <div>
       <StaticImage
-        src="../images/preparing.png"
+        src="../../images/preparing.png"
         width={500}
         quality={100}
         formats={["auto", "webp", "avif"]}
-        alt="A Gatsby astronaut"
+        alt="preparing"
         placeholder="blurred"
         css={Image}
       />

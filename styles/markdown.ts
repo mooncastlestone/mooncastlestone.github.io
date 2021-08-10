@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { Theme } from "./theme"
+import { Theme } from "../src/theme/theme"
 
 export const Container = css`
   display: flex;
@@ -28,9 +28,8 @@ export const postBox = css`
 `
 
 export const Title = (theme: Theme) => css`
-  color: ${theme.postTitle};
+  color: ${theme.mdFontColor};
   margin-top: 1rem;
-  font-size: 3rem;
 
   @media (max-width: 425px) {
     font-size: 1.8rem;
@@ -40,7 +39,7 @@ export const Title = (theme: Theme) => css`
 export const Description = (theme: Theme) => css`
   font-size: 1.1rem;
   margin-top: 2rem;
-  color: ${theme.fontColor};
+  color: ${theme.mdFontColor};
   line-height: 2rem;
 
   @media (max-width: 425px) {
@@ -49,6 +48,5 @@ export const Description = (theme: Theme) => css`
 `
 
 export const CommentBox = () => css`
-margin-bottom: 3rem;
+  margin-bottom: 3rem;
 `
-

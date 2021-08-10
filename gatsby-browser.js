@@ -3,7 +3,7 @@ import "@fontsource/athiti"
 
 import Helmet from "react-helmet"
 import React from "react"
-import { ThemeProvider } from "./src/components/ThemeContext"
+import { ThemeProvider } from "./src/theme/ThemeContext"
 import favicon from "./src/images/moon_off.png"
 
 require("gatsby-remark-vscode/styles.css")

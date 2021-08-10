@@ -8,10 +8,10 @@ import {
   Description,
   Title,
   CommentBox,
-} from "../../styles/post"
+} from "../../styles/markdown"
 import Layout from "../components/Layout"
-import { ThemeContext } from "../components/ThemeContext"
-import THEME from "../../styles/theme"
+import { ThemeContext } from "../theme/ThemeContext"
+import THEME from "../theme/theme"
 import Utterances from "../components/Utterances"
 
 export default function Template({ data }: any) {
@@ -51,6 +51,7 @@ export const pageQuery = graphql`
   query ($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
+      tableOfContents
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         slug

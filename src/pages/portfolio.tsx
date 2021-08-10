@@ -1,10 +1,9 @@
 import React, { useContext } from "react"
-import Nav from "../components/Nav"
 import { Box, Container, Title, Description } from "../../styles/pageLayout"
 import Preparing from "../components/Preparing"
 import Layout from "../components/Layout"
-import themeGroup from "../../styles/theme"
-import { ThemeContext } from "../components/ThemeContext"
+import themeGroup from "../theme/theme"
+import { ThemeContext } from "../theme/ThemeContext"
 
 const PortfolioPage = () => {
   const [themeMode] = useContext(ThemeContext)
