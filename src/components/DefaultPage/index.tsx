@@ -46,8 +46,8 @@ const Blog = () => {
         </div>
         <div css={CategoryBox}>
           <span css={Number(theme)}>05</span>
-          <Link to="/interview" css={Category(theme)}>
-            Tech Interview
+          <Link to="/web-network" css={Category(theme)}>
+            Web & Network
           </Link>
         </div>
       </div>

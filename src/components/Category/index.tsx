@@ -36,7 +36,7 @@ const categoryList = [
   "React",
   "React Native",
   "Gatsby",
-  "Tech Interview",
+  "Web & Network",
 ]
 
 const Category = ({ title, description, postData, link }: CategoryProps) => {

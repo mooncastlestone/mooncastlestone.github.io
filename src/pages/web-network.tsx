@@ -7,7 +7,7 @@ const TechInterviewPage = () => {
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(
-        filter: { frontmatter: { slug: { regex: "/interview/" } } }
+        filter: { frontmatter: { slug: { regex: "/web-network/" } } }
       ) {
         nodes {
           id
@@ -24,12 +24,12 @@ const TechInterviewPage = () => {
   `)
 
   return (
-    <Layout pageTitle="interview">
+    <Layout pageTitle="web-network">
       <Category
-        title="Tech Interview"
-        description="기술 면접을 준비하며 정리한 개념들을 정리하였습니다."
+        title="Web & Network"
+        description="웹과 네트워크에 대해서 정리하였습니다."
         postData={data}
-        link="interview"
+        link="web-network"
       ></Category>
     </Layout>
   )

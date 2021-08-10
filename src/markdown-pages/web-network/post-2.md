@@ -1,5 +1,5 @@
 ---
-slug: "/interview/post-2/"
+slug: "/web-network/post-2/"
 date: "2020-07-25"
 title: "HTTP와 HTTPS의 차이점"
 description: "HTTP와 HTTPS의 차이점에 대해서 정리하였습니다."

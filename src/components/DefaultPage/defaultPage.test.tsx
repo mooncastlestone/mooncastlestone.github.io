@@ -22,7 +22,7 @@ describe("<DefaultPage />", () => {
     utils.getByText("Javascript")
     utils.getByText("React")
     utils.getByText("React Native")
-    utils.getByText("Tech Interview")
+    utils.getByText("Web & Network")
     utils.getByText("Gatsby")
   })
 })
