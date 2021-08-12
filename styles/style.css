@@ -565,5 +565,5 @@ ul li::marker {
 }
 
 .custom-class {
-  border: none;
+  display: none;
 }

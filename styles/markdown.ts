@@ -59,6 +59,10 @@ right: 0;
 width: 17rem;
 padding: 0 2rem 0 1rem;
 
+@media (max-width: 1000px) {
+  display: none;
+}
+
 `
 
 export const TocBox = (theme:Theme) => css`
