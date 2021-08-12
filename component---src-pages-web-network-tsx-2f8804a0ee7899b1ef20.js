@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[597],{4956:function(t,e,a){"use strict";a.r(e);a(7294);var r=a(5444),n=a(941),s=a(9350),u=a(3964);e.default=function(){var t=(0,r.K2)("364578515");return(0,u.tZ)(n.Z,{pageTitle:"web-network"},(0,u.tZ)(s.Z,{title:"Web & Network",description:"웹과 네트워크에 대해서 정리하였습니다.",postData:t,link:"web-network"}))}}}]);
+//# sourceMappingURL=component---src-pages-web-network-tsx-2f8804a0ee7899b1ef20.js.map
