@@ -8,18 +8,22 @@ import {
   Description,
   Title,
   CommentBox,
+  TocContainer,
+  TocBox,
 } from "../../styles/markdown"
 import Layout from "../components/Layout"
 import { ThemeContext } from "../theme/ThemeContext"
 import THEME from "../theme/theme"
 import Utterances from "../components/Utterances"
+import TableOfContents from "../components/TOC"
 
 export default function Template({ data }: any) {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html, tableOfContents } = markdownRemark
   const url = frontmatter.slug.split("/")[1]
   const [themeMode] = useContext(ThemeContext)
   const theme = THEME[themeMode]
+  
 
   return (
     <>
@@ -29,6 +33,9 @@ export default function Template({ data }: any) {
             <Link to={`/${url}`} css={CategoryName(theme)}>
               {url}
             </Link>
+            <div css={TocContainer(theme)}>
+                <TableOfContents items={tableOfContents} />
+            </div>
             <h1 css={Title(theme)}>{frontmatter.title}</h1>
             <div
               css={Description(theme)}
