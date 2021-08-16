@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { css } from "@emotion/react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -13,12 +13,16 @@ import {
   RightBox,
 } from "./Nav.style"
 
-const Nav = () => {
+type NavProps = {
+  isClosed: Boolean
+}
+
+const Nav = ({ isClosed }: NavProps) => {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
 
   return (
-    <div css={Container(theme)}>
+    <div css={Container({ theme, isClosed })}>
       <div css={LeftBox}>
         {themeMode === "light" ? (
           <StaticImage

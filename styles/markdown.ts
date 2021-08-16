@@ -50,3 +50,21 @@ export const Description = (theme: Theme) => css`
 export const CommentBox = () => css`
   margin-bottom: 3rem;
 `
+
+export const TocContainer = (theme: Theme) => css`
+position: fixed;
+border-left: 1px solid #BDBDBD;
+top: 1;
+right: 0;
+width: 17rem;
+padding: 0 2rem 0 1rem;
+
+@media (max-width: 1000px) {
+  display: none;
+}
+
+`
+
+export const TocBox = (theme:Theme) => css`
+
+`
