@@ -37,7 +37,7 @@ const Layout = ({ pageTitle, children }: Props) => {
   return (
     <>
       <Global styles={GlobalStyle(theme)} />
-      <Nav isClosed={isClosed} />
+      <Nav isClosed={isClosed}/>
       {pageTitle === "home" ? (
         <Blog />
       ) : (

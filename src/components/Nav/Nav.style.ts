@@ -1,13 +1,12 @@
 import { Theme } from "../../theme/theme"
-import { jsx, css, keyframes } from "@emotion/react"
-import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 
 type ContainerProps = {
   theme: Theme
-  isClosed: Boolean
+  isClosed: boolean
 }
 
-export const Container = (props: ContainerProps) => css`
+export const NavStyle = (props: ContainerProps) => css`
   position: fixed;
   top: 0;
   left: 0;
@@ -20,53 +19,44 @@ export const Container = (props: ContainerProps) => css`
   opacity: 0.8;
   backdrop-filter: blur(10px);
   z-index: 1;
+  transform: ${!props.isClosed ? null : "translateY(-50px)"};
 
-  transition: 0.5s ease-in-out;
-  transform: ${!props.isClosed ? null : "translateY(-50px)"}
-   
-`
-
-export const LeftBox = css`
-  display: flex;
-  align-items: center;
-`
-
-export const RightBox = css`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-`
-
-export const Image = css`
-  margin-right: 0.4rem;
-  cursor: pointer;
-`
-
-export const Category = (theme: Theme) => css`
-  padding-right: 1rem;
-  text-decoration: none;
-  color: ${theme.fontColor};
-
-  &:hover {
-    color: #9e9e9e;
+  .image {
+    margin-right: 0.4rem;
+    cursor: pointer;
   }
 
-  @media (max-width: 425px) {
-    font-size: 0.8rem;
+  .left-box {
+    display: flex;
+    align-items: center;
   }
-`
 
-export const Home = (theme: Theme) => css`
-  text-decoration: none;
-  color: ${theme.fontColor};
-
-  @media (max-width: 425px) {
-    font-size: 0.8rem;
+  .right-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
-`
 
-export const MoveUp = keyframes`
-  from , to{
-    transform: translate3d(0, -30px, 0)
+  .home-title {
+    text-decoration: none;
+    color: ${props.theme.fontColor};
+
+    @media (max-width: 425px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .category {
+    padding-right: 1rem;
+    text-decoration: none;
+    color: ${props.theme.fontColor};
+
+    &:hover {
+      color: #9e9e9e;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 0.8rem;
+    }
   }
 `

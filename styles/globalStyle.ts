@@ -5,7 +5,6 @@ import {Theme} from "../src/theme/theme";
 const GlobalStyle = (theme :Theme) => (css`
   body {
     background-color: ${theme.bgColor};
-
   }
 `)
 

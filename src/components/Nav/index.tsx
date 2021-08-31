@@ -1,29 +1,21 @@
-import React, { useContext, useEffect, useState } from "react"
-import { css } from "@emotion/react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import themeGroup, { Theme } from "../../theme/theme"
+import themeGroup from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
-import {
-  Category,
-  Container,
-  Home,
-  Image,
-  LeftBox,
-  RightBox,
-} from "./Nav.style"
+import { NavStyle } from "./Nav.style"
 
 type NavProps = {
-  isClosed: Boolean;
+  isClosed: boolean
 }
 
-const Nav = ({isClosed}:NavProps) => {
+const Nav = ({ isClosed }: NavProps) => {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
 
   return (
-    <div css={Container({theme, isClosed})}>
-      <div css={LeftBox}>
+    <div css={NavStyle({ theme, isClosed })}>
+      <div className="left-box">
         {themeMode === "light" ? (
           <StaticImage
             src="../../images/moon_off.png"
@@ -32,7 +24,7 @@ const Nav = ({isClosed}:NavProps) => {
             placeholder="blurred"
             formats={["auto", "webp", "avif"]}
             alt="A Gatsby astronaut"
-            css={Image}
+            className="image"
           />
         ) : (
           <StaticImage
@@ -42,21 +34,21 @@ const Nav = ({isClosed}:NavProps) => {
             formats={["auto", "webp", "avif"]}
             alt="A Gatsby astronaut"
             placeholder="blurred"
-            css={Image}
+            className="image"
           />
         )}
-        <Link css={Home(theme)} to="/">
+        <Link className="home-title" to="/">
           Moon.log
         </Link>
       </div>
-      <div css={RightBox}>
-        <Link css={Category(theme)} to="/">
+      <div className="right-box">
+        <Link className="category" to="/">
           Blog
         </Link>
-        <Link css={Category(theme)} to="/portfolio">
+        <Link className="category" to="/portfolio">
           Portfolio
         </Link>
-        <Link css={Category(theme)} to="/about">
+        <Link className="category" to="/about">
           About
         </Link>
         {themeMode === "light" ? (
@@ -67,7 +59,7 @@ const Nav = ({isClosed}:NavProps) => {
             formats={["auto", "webp", "avif"]}
             alt="A Gatsby astronaut"
             placeholder="blurred"
-            css={Image}
+            className="image"
             onClick={onToggle}
           />
         ) : (
@@ -78,7 +70,7 @@ const Nav = ({isClosed}:NavProps) => {
             formats={["auto", "webp", "avif"]}
             alt="A Gatsby astronaut"
             placeholder="blurred"
-            css={Image}
+            className="image"
             onClick={onToggle}
           />
         )}
