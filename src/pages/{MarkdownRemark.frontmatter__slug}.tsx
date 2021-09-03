@@ -34,7 +34,7 @@ export default function Template({ data }: any) {
               {url}
             </Link>
             <div css={TocContainer(theme)}>
-                <TableOfContents items={tableOfContents} />
+                {/* <TableOfContents items={tableOfContents} /> */}
             </div>
             <h1 css={Title(theme)}>{frontmatter.title}</h1>
             <div
