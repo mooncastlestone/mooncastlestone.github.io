@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[597],{4956:function(t,e,a){"use strict";a.r(e);a(7294);var r=a(5444),n=a(8270),s=a(2786),u=a(3964);e.default=function(){var t=(0,r.K2)("364578515");return(0,u.tZ)(n.Z,{pageTitle:"web-network"},(0,u.tZ)(s.Z,{postData:t,link:"web-network"}))}}}]);
+//# sourceMappingURL=component---src-pages-web-network-tsx-aefc247c50ed12efba62.js.map
