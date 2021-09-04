@@ -8,10 +8,6 @@ type ContainerProps = {
 }
 
 export const Container = (props: ContainerProps) => css`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: 0.1px solid #e0e0e0;
@@ -21,7 +17,7 @@ export const Container = (props: ContainerProps) => css`
   backdrop-filter: blur(10px);
   z-index: 1;
 
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   transform: ${!props.isClosed ? null : "translateY(-50px)"}
    
 `

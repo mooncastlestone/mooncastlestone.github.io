@@ -4,8 +4,9 @@ import Nav from "../Nav"
 import GlobalStyle from "../../../styles/globalStyle"
 import { css, Global } from "@emotion/react"
 import themeGroup from "../../theme/theme"
-import Blog from "../DefaultPage/index"
+import SideBar from "../SideBar/index"
 import { ThemeContext } from "../../theme/ThemeContext"
+import DarkmodeToggle from "../DarkmodeToggle"
 
 type Props = {
   children?: any
@@ -37,9 +38,10 @@ const Layout = ({ pageTitle, children }: Props) => {
   return (
     <>
       <Global styles={GlobalStyle(theme)} />
-      <Nav isClosed={isClosed} />
+      <DarkmodeToggle />
+      {/* <SideBar/> */}
       {pageTitle === "home" ? (
-        <Blog />
+        <SideBar />
       ) : (
         <div css={childrenContainer}>{children}</div>
       )}
