@@ -10,9 +10,14 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import { Link } from 'gatsby'
 
-const SideBar = () => {
+type SideBarProps = {
+  pageTitle?: string;
+}
+
+const SideBar = ({pageTitle}:SideBarProps) => {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = THEME[themeMode]
+  const [currentPage, setCurrentPage] = useState(`/${pageTitle}`)
 
   return (
     <div css={Container(theme)}>
@@ -33,10 +38,10 @@ const SideBar = () => {
             <FontAwesomeIcon icon={faEnvelope} className="icon" />
           </a>
         </div>
-        <CategoryTitle link="/javascript">Javascript</CategoryTitle>
-        <CategoryTitle link="/react">React</CategoryTitle>
-        <CategoryTitle link="/study">Study</CategoryTitle>
-        <CategoryTitle link="/personal">Personal</CategoryTitle>
+        <CategoryTitle currentPage={currentPage} link="/javascript">Javascript</CategoryTitle>
+        <CategoryTitle currentPage={currentPage} link="/react">React</CategoryTitle>
+        <CategoryTitle currentPage={currentPage} link="/study">Study</CategoryTitle>
+        <CategoryTitle currentPage={currentPage} link="/personal">Personal</CategoryTitle>
         {/* <CategoryTitle link="/about">About</CategoryTitle> */}
       </div>
     </div>

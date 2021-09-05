@@ -40,7 +40,7 @@ const Layout = ({ pageTitle, children }: Props) => {
       <Global styles={GlobalStyle(theme)} />
       <DarkmodeToggle />
       <div>
-        <SideBar />
+        <SideBar pageTitle={pageTitle}/>
         {pageTitle === "home" ? (
           <div css={childrenContainer}>
             <PostList postData={data} link="home"></PostList>

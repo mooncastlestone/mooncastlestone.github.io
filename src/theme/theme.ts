@@ -2,7 +2,7 @@ export interface Theme {
   bgColor: string
   fontColor: string
   postTitle: string
-  categoryTitle: string
+  hoverEvent: string
   mdFontColor: string
 }
 export interface ThemeGroup {
@@ -14,7 +14,7 @@ export const light: Theme = {
   bgColor: "#ECEFF1",
   fontColor: "#616161",
   postTitle: "black",
-  categoryTitle: "#5C6BC0",
+  hoverEvent: "#7986CB",
   mdFontColor: "black",
 }
 
@@ -22,7 +22,7 @@ export const dark: Theme = {
   bgColor: "#303242",
   fontColor: "#eee",
   postTitle: "#eee",
-  categoryTitle: "#9FA8DA",
+  hoverEvent: "#7986CB",
   mdFontColor: "#eee",
 }
 

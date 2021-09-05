@@ -50,7 +50,7 @@ export const Container = (theme: Theme) => css`
     transition: 0.3s ease-in;
 
     &:hover {
-      color: #607D8B;
+      color: ${theme.hoverEvent};
     }
   }
 `

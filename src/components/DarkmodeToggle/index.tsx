@@ -43,9 +43,9 @@ function DarkmodeToggle() {
 export default DarkmodeToggle
 
 const Wrapper = css`
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    position: fixed;
+    top: 1rem;
+    right: 0.7rem;
 
   .image {
     margin-right: 0.4rem;

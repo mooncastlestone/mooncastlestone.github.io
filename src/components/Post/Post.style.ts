@@ -28,7 +28,7 @@ export const PostContainer = (theme: Theme) => css`
     transition: 0.2s ease-in-out;
 
     &:hover {
-      color: #607D8B
+      color: ${theme.hoverEvent};
     }
 
     @media (max-width: 425px) {

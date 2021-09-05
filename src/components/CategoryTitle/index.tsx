@@ -7,13 +7,14 @@ import { css } from "@emotion/react"
 type CategoryTitleProps = {
   link: string
   children: string
+  currentPage: string
 }
 
-function CategoryTitle({ link, children }: CategoryTitleProps) {
+function CategoryTitle({ link, children, currentPage }: CategoryTitleProps) {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = THEME[themeMode]
   return (
-    <div css={Wrapper(theme)}>
+    <div css={Wrapper(theme, currentPage, link)}>
       <Link className="title" to={link}>
         {children}
       </Link>
@@ -23,21 +24,23 @@ function CategoryTitle({ link, children }: CategoryTitleProps) {
 
 export default CategoryTitle
 
-export const Wrapper = (theme: Theme) => css`
+export const Wrapper = (theme: Theme, currentPage: string, link: string) => css`
   margin-top: 0.8rem;
 
   .title {
     font-size: 1.2rem;
     text-decoration: none;
     font-family: "Athiti";
-    color: ${theme.fontColor};
+    color: ${currentPage === link ? theme.hoverEvent : theme.fontColor};
+    font-weight: ${currentPage === link ? "1000" : null};
+    // text-decoration: ${currentPage === link ? "underline" : null};
 
     @media (max-width: 375px) {
       font-size: 1.8rem;
     }
 
     &:hover {
-      color: #607d8b;
+      color: ${theme.hoverEvent};
       font-weight: bolder;
     }
   }
