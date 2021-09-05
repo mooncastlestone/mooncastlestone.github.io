@@ -2,20 +2,22 @@ import { css } from "@emotion/react"
 import { Theme } from "../../theme/theme"
 
 export const Container = (theme: Theme) => css`
-  width: 20%;
+  position: fixed;
+  width: 17%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   background: ${theme.bgColor};
   transition: 0.3s ease-in-out;
-  border-right: 0.1px solid #e0e0e0;
+  box-shadow: 1px 0 2px -2px gray;
+
 
   @media (max-width: 500px) {
     padding: 4rem 0 0 3rem;
   }
 
   .sidebar-box {
-    margin-top: 5rem;
+    margin-top: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +36,7 @@ export const Container = (theme: Theme) => css`
   }
 
   .icon-box {
-    width: 30%;
+    width: 35%;
     display: flex;
     justify-content: space-between;
     margin: 1rem 0 1rem 0;
@@ -45,7 +47,7 @@ export const Container = (theme: Theme) => css`
     height: 2rem;
     cursor: pointer;
     color: ${theme.mdFontColor};
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in;
 
     &:hover {
       color: #607D8B;

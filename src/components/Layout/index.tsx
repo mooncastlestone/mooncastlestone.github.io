@@ -1,12 +1,13 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
-import Nav from "../Nav"
 import GlobalStyle from "../../../styles/globalStyle"
 import { css, Global } from "@emotion/react"
 import themeGroup from "../../theme/theme"
 import SideBar from "../SideBar/index"
 import { ThemeContext } from "../../theme/ThemeContext"
 import DarkmodeToggle from "../DarkmodeToggle"
+import PostList from "../PostList"
+import { graphql, useStaticQuery } from "gatsby"
 
 type Props = {
   children?: any
@@ -16,45 +17,47 @@ type Props = {
 const Layout = ({ pageTitle, children }: Props) => {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
-  const [previousY, setPreviousY] = useState(0)
-  const [isClosed, setIsClosed] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      let currentY = window.pageYOffset
-      if (currentY > 100 && previousY < currentY) {
-        setIsClosed(true)
-      } else if (currentY <= 100 || previousY > currentY) {
-        setIsClosed(false)
+  const data = useStaticQuery(graphql`
+    {
+      allMarkdownRemark {
+        nodes {
+          id
+          frontmatter {
+            title
+            date
+            slug
+            description
+          }
+          html
+        }
       }
-      setPreviousY(window.pageYOffset)
     }
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [previousY])
+  `)
 
   return (
     <>
       <Global styles={GlobalStyle(theme)} />
       <DarkmodeToggle />
-      {/* <SideBar/> */}
-      {pageTitle === "home" ? (
+      <div>
         <SideBar />
-      ) : (
-        <div css={childrenContainer}>{children}</div>
-      )}
+        {pageTitle === "home" ? (
+          <div css={childrenContainer}>
+            <PostList postData={data} link="home"></PostList>
+          </div>
+        ) : (
+          <div css={childrenContainer}>{children}</div>
+        )}
+      </div>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
 
 const childrenContainer = css`
   margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 `

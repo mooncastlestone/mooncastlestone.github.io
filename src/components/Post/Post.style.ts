@@ -1,60 +1,58 @@
 import { css } from "@emotion/react"
 import { Theme } from "../../theme/theme"
 
-export const PostContainer = css`
+export const PostContainer = (theme: Theme) => css`
+  width: 90%;
+  height: 7rem;
+  margin-bottom: 3rem;
   display: flex;
-  width: 42rem;
-  margin-top: 3rem;
-  padding: 0 3rem 0rem 3rem;
+  justify-content: space-between;
+  flex-direction: column;
+  box-shadow: 0 1.5px 2px -2px gray;
 
   @media (max-width: 425px) {
     padding: 0rem;
     width: 100%;
     margin-top: 2.5rem;
   }
-`
-export const PostNum = (theme: Theme) => css`
-  font-size: 1.2rem;
-  color: ${theme.fontColor};
-`
 
-export const PostBox = css`
-  padding-left: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 5.7rem;
-  position: relative;
-`
-
-export const PostTitle = (theme: Theme) => css`
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: ${theme.postTitle};
-
-  &:hover {
-    text-decoration: underline;
+  .post {
+    // border: 1px solid red;
+    
   }
 
-  @media (max-width: 425px) {
-    font-size: 1.1rem;
+  .post.title {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: ${theme.postTitle};
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      color: #607D8B
+    }
+
+    @media (max-width: 425px) {
+      font-size: 1.1rem;
+    }
   }
-`
 
-export const PostDes = (theme: Theme) => css`
-  color: ${theme.fontColor};
-  margin-top: -0.8rem;
+  .post.description {
+    color: ${theme.fontColor};
 
-  @media (max-width: 425px) {
+    @media (max-width: 425px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .post.date {
     font-size: 0.9rem;
-  }
-`
+    color: ${theme.fontColor};
+    margin-bottom: 1rem;
+    justify-content: flex-end;
+    display: flex;
 
-export const PostDate = (theme: Theme) => css`
-  font-size: 0.9rem;
-  color: ${theme.fontColor};
-
-  @media (max-width: 425px) {
-    font-size: 0.8rem;
+    @media (max-width: 425px) {
+      font-size: 0.8rem;
+    }
   }
 `

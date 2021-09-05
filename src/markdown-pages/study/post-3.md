@@ -1,6 +1,6 @@
 ---
-slug: "/gatsby/post-3/"
-date: "2020-07-24"
+slug: "/study/post-3/"
+date: "2021-07-24"
 title: "Gatsby + GraphQL 간단 정리"
 description: "GraphQL을 사용하면서 공부했던 것들을 정리하였습니다."
 ---

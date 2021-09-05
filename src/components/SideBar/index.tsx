@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import "../../../styles/style.css"
 import THEME, { Theme } from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
@@ -8,6 +8,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
+import { Link } from 'gatsby'
 
 const SideBar = () => {
   const [themeMode, onToggle] = useContext(ThemeContext)
@@ -16,11 +17,13 @@ const SideBar = () => {
   return (
     <div css={Container(theme)}>
       <div className="sidebar-box">
-        <StaticImage
-          src="https://res.cloudinary.com/dr4ka7tze/image/upload/v1630397760/me_nqhaci.jpg"
-          alt="profile"
-          className="profile"
-        ></StaticImage>
+        <Link to="/"> 
+          <StaticImage
+            src="https://res.cloudinary.com/dr4ka7tze/image/upload/v1630397760/me_nqhaci.jpg"
+            alt="profile"
+            className="profile"
+          ></StaticImage>
+        </Link>
         <div className="intro">FE Developer</div>
         <div className="icon-box">
           <a href="https://github.com/mooon3356">
@@ -34,7 +37,7 @@ const SideBar = () => {
         <CategoryTitle link="/react">React</CategoryTitle>
         <CategoryTitle link="/study">Study</CategoryTitle>
         <CategoryTitle link="/personal">Personal</CategoryTitle>
-        <CategoryTitle link="/about">About</CategoryTitle>
+        {/* <CategoryTitle link="/about">About</CategoryTitle> */}
       </div>
     </div>
   )

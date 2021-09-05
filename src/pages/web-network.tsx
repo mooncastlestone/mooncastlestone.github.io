@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
-import Category from "../components/Category"
+import PostList from "../components/PostList"
 
 const TechInterviewPage = () => {
   const data = useStaticQuery(graphql`
@@ -25,15 +25,11 @@ const TechInterviewPage = () => {
 
   return (
     <Layout pageTitle="web-network">
-      <Category
-        title="Web & Network"
-        description="웹과 네트워크에 대해서 정리하였습니다."
+      <PostList
         postData={data}
         link="web-network"
-      ></Category>
+      ></PostList>
     </Layout>
   )
 }
 export default TechInterviewPage
-
-

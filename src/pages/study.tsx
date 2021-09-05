@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Category from "../components/Category"
+import PostList from "../components/PostList"
 import { graphql, useStaticQuery } from "gatsby"
 
-const ReactNativePage = () => {
+const GatsbyPage = () => {
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(
-        filter: { frontmatter: { slug: { regex: "/react/" } } }
+        filter: { frontmatter: { slug: { regex: "/study/" } } }
       ) {
         nodes {
           id
@@ -24,15 +24,13 @@ const ReactNativePage = () => {
   `)
 
   return (
-    <Layout pageTitle="react-native">
-      <Category
-        title="React Native"
-        description="React Native를 사용하면서 공부한 것들을 정리하였습니다."
+    <Layout pageTitle="study">
+      <PostList
         postData={data}
-        link="react-native"
-      ></Category>
+        link="study"
+      ></PostList>
     </Layout>
   )
 }
 
-export default ReactNativePage
+export default GatsbyPage

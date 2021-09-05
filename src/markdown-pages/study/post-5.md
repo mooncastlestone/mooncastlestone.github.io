@@ -1,6 +1,6 @@
 ---
-slug: "/web-network/post-1/"
-date: "2020-08-03"
+slug: "/study/post-5/"
+date: "2021-08-03"
 title: "브라우저 동작 원리"
 description: "브라우저가 어떻게 동작이 되는지에 대해서 정리하였습니다."
 ---

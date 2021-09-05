@@ -3,7 +3,7 @@ import { Theme } from "../src/theme/theme"
 
 export const Container = css`
   display: flex;
-  width: 100%;
+  width: 83%;
   height: 100vw;
   flex-direction: column;
   align-items: center;
@@ -19,8 +19,7 @@ export const CategoryName = (theme: Theme) => css`
 `
 
 export const postBox = css`
-  padding: 3rem 0 0 0;
-  width: 45%;
+  width: 70%;
 
   @media (max-width: 768px) {
     width: 80%;

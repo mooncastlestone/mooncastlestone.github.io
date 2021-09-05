@@ -9,21 +9,18 @@ const Preparing = () => {
   const theme = THEME[themeMode]
 
   return (
-    <div>
+    <div css={Wrapper(theme)}>
       <StaticImage
         src="../../images/preparing.png"
-        width={500}
         quality={100}
         formats={["auto", "webp", "avif"]}
         alt="preparing"
         placeholder="blurred"
-        css={Image}
+        className="image"
       />
-      <div css={TextBox}>
-        <span css={Text(theme)} style={{ fontWeight: "bold" }}>
-          컨텐츠 준비중
-        </span>
-        <span css={Text(theme)}>입니다.</span>
+      <div className="text-box">
+        <span className="text">컨텐츠 준비중</span>
+        <span className="text">입니다.</span>
       </div>
     </div>
   )
@@ -31,15 +28,27 @@ const Preparing = () => {
 
 export default Preparing
 
-const Image = css``
+const Wrapper = (theme: Theme) => css`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 8rem;
 
-const TextBox = css`
-  text-align: center;
-  margin-top: -1.3rem;
-  width: 105%;
-`
+  .image {
+    width: 30rem;
+  }
 
-const Text = (theme: Theme) => css`
-  font-size: 1.5rem;
-  color: ${theme.fontColor};
+  .text-box {
+    text-align: center;
+    margin-top: -1.3rem;
+    width: 100%;
+
+  }
+
+  .text {
+    font-size: 1.5rem;
+    color: ${theme.fontColor};
+    font-weight: bold;
+  }
 `

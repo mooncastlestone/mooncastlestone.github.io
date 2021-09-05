@@ -13,27 +13,32 @@ function CategoryTitle({ link, children }: CategoryTitleProps) {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = THEME[themeMode]
   return (
-    <Link to={link} css={Category(theme)}>
-      {children}
-    </Link>
+    <div css={Wrapper(theme)}>
+      <Link className="title" to={link}>
+        {children}
+      </Link>
+    </div>
   )
 }
 
 export default CategoryTitle
 
-export const Category = (theme: Theme) => css`
-  font-size: 1.2rem;
-  text-decoration: none;
-  font-family: "Athiti";
-  color: ${theme.fontColor};
-  margin-top: 0.4rem;
+export const Wrapper = (theme: Theme) => css`
+  margin-top: 0.8rem;
 
-  @media (max-width: 375px) {
-    font-size: 1.8rem;
-  }
+  .title {
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-family: "Athiti";
+    color: ${theme.fontColor};
 
-  &:hover {
-      color: black;
+    @media (max-width: 375px) {
+      font-size: 1.8rem;
+    }
+
+    &:hover {
+      color: #607d8b;
       font-weight: bolder;
+    }
   }
 `

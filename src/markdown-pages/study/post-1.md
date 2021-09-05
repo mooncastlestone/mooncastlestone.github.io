@@ -1,6 +1,6 @@
 ---
-slug: "/gatsby/post-1/"
-date: "2020-07-20"
+slug: "/study/post-1/"
+date: "2021-07-20"
 title: "Gatsby 프로젝트에 단위 테스트 세팅하기"
 description: "Gatsby 프로젝트에 TDD를 사용해보고 싶어 세팅하는 방법에 대해서 정리하였습니다."
 ---

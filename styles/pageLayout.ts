@@ -3,11 +3,11 @@ import THEME, { Theme } from "../src/theme/theme"
 
 export const Container = css`
   width: 100%;
-  height: 100%;
   align-items: center;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
+  border: 1px solid black;
 
   @media (max-width: 425px) {
     padding: 0 2rem 0 2rem;

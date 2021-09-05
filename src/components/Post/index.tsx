@@ -1,12 +1,5 @@
 import React, { useContext } from "react"
-import {
-  PostContainer,
-  PostNum,
-  PostBox,
-  PostTitle,
-  PostDate,
-  PostDes,
-} from "./Post.style"
+import { PostContainer } from "./Post.style"
 import themeGroup from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
 import { Link } from "gatsby"
@@ -26,15 +19,12 @@ const Post = ({ slug, title, description, date, link }: PostProps) => {
   const num = postNum[postNum.length - 1]
 
   return (
-    <div css={PostContainer}>
-      <div css={PostNum(theme)}>{`-`}</div>
-      <div css={PostBox}>
-        <Link css={PostTitle(theme)} to={`/${link}/post-${num}`}>
-          {title}
-        </Link>
-        <div css={PostDes(theme)}>{description}</div>
-        <div css={PostDate(theme)}>작성일 : {date}</div>
-      </div>
+    <div css={PostContainer(theme)}>
+      <Link className="post title" to={`/${link}/post-${num}`}>
+        {title}
+      </Link>
+      <div className="post description">{description}</div>
+      <div className="post date">작성일 : {date}</div>
     </div>
   )
 }

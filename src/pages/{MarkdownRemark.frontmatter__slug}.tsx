@@ -1,9 +1,7 @@
 import React, { useContext } from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
 import {
   Container,
-  CategoryName,
   postBox,
   Description,
   Title,
@@ -23,18 +21,14 @@ export default function Template({ data }: any) {
   const url = frontmatter.slug.split("/")[1]
   const [themeMode] = useContext(ThemeContext)
   const theme = THEME[themeMode]
-  
 
   return (
     <>
       <Layout>
         <div css={Container}>
           <div css={postBox}>
-            <Link to={`/${url}`} css={CategoryName(theme)}>
-              {url}
-            </Link>
             <div css={TocContainer(theme)}>
-                {/* <TableOfContents items={tableOfContents} /> */}
+              {/* <TableOfContents items={tableOfContents} /> */}
             </div>
             <h1 css={Title(theme)}>{frontmatter.title}</h1>
             <div

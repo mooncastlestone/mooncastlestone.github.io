@@ -6,6 +6,10 @@ const GlobalStyle = (theme: Theme) => css`
     background-color: ${theme.bgColor};
     transition: 0.3s ease-in-out;
   }
+
+  .home {
+    width: 83%;
+  }
 `
 
 export default GlobalStyle

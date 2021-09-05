@@ -1,6 +1,6 @@
 ---
-slug: "/gatsby/post-2/"
-date: "2020-07-22"
+slug: "/study/post-2/"
+date: "2021-07-22"
 title: "Gatsby를 사용한 블로그 제작 회고"
 description: "Gatsby를 사용한 이 블로그 제작 과정에 대해서 느낀 점들을 정리하였습니다."
 ---

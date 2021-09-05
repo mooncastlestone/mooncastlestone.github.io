@@ -11,7 +11,7 @@ export interface ThemeGroup {
 }
 
 export const light: Theme = {
-  bgColor: "#EEF2F5",
+  bgColor: "#ECEFF1",
   fontColor: "#616161",
   postTitle: "black",
   categoryTitle: "#5C6BC0",

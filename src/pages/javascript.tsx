@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/Layout"
-import Category from "../components/Category"
+import PostList from "../components/PostList"
 
 const JavascriptPage = () => {
   const data = useStaticQuery(graphql`
@@ -25,12 +25,7 @@ const JavascriptPage = () => {
 
   return (
     <Layout pageTitle="javascript">
-      <Category
-        title="Javascript"
-        description="자바스크립트(ES6) 관련된 개념들을 정리하였습니다."
-        postData={data}
-        link="javascript"
-      ></Category>
+      <PostList postData={data} link="javascript"></PostList>
     </Layout>
   )
 }

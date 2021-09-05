@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Category from "../components/Category"
+import PostList from "../components/PostList"
 import { graphql, useStaticQuery } from "gatsby"
 
 const ReactPage = () => {
@@ -25,12 +25,10 @@ const ReactPage = () => {
 
   return (
     <Layout pageTitle="react">
-      <Category
-        title="React"
-        description="SPA(Single Page Application) 개발을 진행하면서 공부한 것들을 정리하였습니다."
+      <PostList
         postData={data}
         link="react"
-      ></Category>
+      ></PostList>
     </Layout>
   )
 }

@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Category from "../components/Category"
+import PostList from "../components/PostList"
 import { graphql, useStaticQuery } from "gatsby"
 
-const GatsbyPage = () => {
+const PersonalPage = () => {
   const data = useStaticQuery(graphql`
     {
       allMarkdownRemark(
-        filter: { frontmatter: { slug: { regex: "/gatsby/" } } }
+        filter: { frontmatter: { slug: { regex: "/personal/" } } }
       ) {
         nodes {
           id
@@ -24,15 +24,13 @@ const GatsbyPage = () => {
   `)
 
   return (
-    <Layout pageTitle="gatsby">
-      <Category
-        title="Gatsby"
-        description="Gatsby 공식 문서를 참고하면서 관련 개념들을 정리하였습니다."
+    <Layout pageTitle="personal">
+      <PostList
         postData={data}
-        link="gatsby"
-      ></Category>
+        link="personal"
+      ></PostList>
     </Layout>
   )
 }
 
-export default GatsbyPage
+export default PersonalPage
