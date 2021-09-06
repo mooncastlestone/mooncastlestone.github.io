@@ -1,7 +1,7 @@
 import { css } from "@emotion/react"
 import { Theme } from "../../theme/theme"
 
-export const PostListContainer = css`
+export const PostListContainer = (theme: Theme, isOpen: boolean) => css`
   width: 83%;
   height: 100%;
   padding: 3rem 0 0 7rem;
@@ -9,5 +9,6 @@ export const PostListContainer = css`
   @media (max-width: 425px) {
     width: 100%;
     margin-top: 0rem;
+    padding: 1rem;
   }
 `

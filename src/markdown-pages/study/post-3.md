@@ -5,17 +5,13 @@ title: "Gatsby + GraphQL 간단 정리"
 description: "GraphQL을 사용하면서 공부했던 것들을 정리하였습니다."
 ---
 
-<hr></hr>
-
 개츠비를 사용하면서 GraphQL을 처음으로 사용을 해보았는데 공부한 내용들을 간단하게 정리를 해보려한다.
-<br></br>
 
 ## GraphQL이란?
 
 GraphQL은 Structed Query Language와 마찬가지로 **쿼리 언어**이며, 2015년 페이스북에서 발표하였다.
 
 쿼리에 대해서 정확하게 설명할 수 있게 생각이 나지 않아 쿼리부터 먼저 다시 검색을 해보았다.
-<br></br>
 
 ## 쿼리란?
 
@@ -28,7 +24,6 @@ mySQL을 배우면서 쿼리문이라는 것을 작성했던 기억이 나는데
 다시 GraphQL로 돌아가보자.
 
 GraphQL도 mySQL과 마찬가지로 쿼리 언어인데, 그렇다면 두 개의 차이점은 어떤 것인지 궁금했다.
-<br></br>
 ## GraphQL과 mySQL의 차이점
 
 mySQL과 GraphQL 모두 쿼리 언어이긴 하지만 두 개의 언어적 구조 차이는 매우 크며, 실전에서 쓰이는 방식 또한 매우 다르다고 한다.
@@ -41,7 +36,6 @@ mySQL은 백엔드 시스템에서 작성되어서 데이터베이스로부터 �
 
 
 서버로부터 데이터를 가져온다고 하는데, 그렇다면 Gatsby에서는 GraphQL이 어떤 식으로 사용이 될까?
-<br></br>
 
 ## Gatsby에서의 GraphQL
 
@@ -54,7 +48,6 @@ Gatsby에서는 **data layer**라고 하는 사이트 어디에서든지 데이�
 개츠비로 만든 사이트가 빌드되기 전, 프로젝트 내의 모든 데이터들이 저장된다. 사진에서 보는바와 같이 Filesystem, CMS, Private API 그리고 Database 안의 데이터들이 개츠비에서 제공하는 GraphQL Data Layer에 저장이 된다.
 
 저장되져있는 데이터들을 사용하고 싶을 땐, 데이터가 필요한 컴포넌트 내부에서 Query문을 작성하여 요청을 보낼 수 있다.
-<br></br>
 
 ## GraphQL에서 데이터들을 필터하는 방법
 
@@ -91,20 +84,15 @@ const data = useStaticQuery(graphql`
     }
   `)
 ```
-<br></br>
-
 ## 마치며
 
 이때까지 항상 개발을 해오면서 서버단에서 쿼리문을 작성하여 데이터를 요청했었는데, 클라이언트쪽에서 작성을 하니 조금 신선했었던 것 같다. 이번 프로젝트에 그렇게 많은 GraphQL 지식이 요구되지는 않아서 깊게 공부하지는 않았는데, 나중에 다시 사용해야될 때가 온다면 공부를 다시 해보고싶다.
-<br></br>
 
-***
 ## Reference
 
 [Query Filters with GraphQL in Gatsby](https://www.gatsbyjs.com/docs/query-filters/)
 
 [Part 4: Query for Data with GraphQL](https://www.gatsbyjs.com/docs/tutorial/part-4/)
-<br></br>
 
 
 

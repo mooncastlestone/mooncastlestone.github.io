@@ -43,14 +43,10 @@ function DarkmodeToggle() {
 export default DarkmodeToggle
 
 const Wrapper = css`
-    position: fixed;
-    top: 1rem;
-    right: 0.7rem;
 
   .image {
     margin-right: 0.4rem;
     cursor: pointer;
   }
-
   
 `

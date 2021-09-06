@@ -1,14 +1,6 @@
 import React, { useContext } from "react"
 import { graphql } from "gatsby"
-import {
-  Container,
-  postBox,
-  Description,
-  Title,
-  CommentBox,
-  TocContainer,
-  TocBox,
-} from "../../styles/markdown"
+import { Container, TocContainer } from "../../styles/markdown"
 import Layout from "../components/Layout"
 import { ThemeContext } from "../theme/ThemeContext"
 import THEME from "../theme/theme"
@@ -25,17 +17,19 @@ export default function Template({ data }: any) {
   return (
     <>
       <Layout>
-        <div css={Container}>
-          <div css={postBox}>
-            <div css={TocContainer(theme)}>
-              {/* <TableOfContents items={tableOfContents} /> */}
+        {/* <TableOfContents items={tableOfContents} /> */}
+        {/* <div css={TocContainer(theme)}></div> */}
+        <div css={Container(theme)}>
+          <div className="post-box">
+            <div className="post-introbox">
+              <h1 className="post-title">{frontmatter.title}</h1>
+              <div className="post-date">{frontmatter.date}</div>
             </div>
-            <h1 css={Title(theme)}>{frontmatter.title}</h1>
             <div
-              css={Description(theme)}
+              className="post-description"
               dangerouslySetInnerHTML={{ __html: html }}
             />
-            <div css={CommentBox}>
+            <div className="comment-box">
               <Utterances
                 repo="mooon3356/mooon3356.github.io"
                 theme="github-light"

@@ -4,10 +4,14 @@ import themeGroup from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
 import Post from "../Post"
 import Preparing from "../Preparing"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
 
 type PostListProps = {
   postData: any
   link: string
+  handleSideBar: React.Dispatch<React.SetStateAction<boolean>>
+  isOpen: boolean
 }
 
 type frontmatterType = {
@@ -23,7 +27,7 @@ type postType = {
   id: string
 }
 
-const PostList = ({ postData, link }: PostListProps) => {
+const PostList = ({ postData, link, handleSideBar, isOpen }: PostListProps) => {
   const [themeMode] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
   const postList: postType[] = postData.allMarkdownRemark.nodes
@@ -40,7 +44,7 @@ const PostList = ({ postData, link }: PostListProps) => {
     })
 
     return (
-      <div css={PostListContainer}>
+      <div css={PostListContainer(theme, isOpen)}>
         {sortedPostList.length !== 0 ? (
           sortedPostList.map((el: postType) => (
             <Post
@@ -66,17 +70,19 @@ const PostList = ({ postData, link }: PostListProps) => {
     })
 
     return (
-      <div css={PostListContainer}>
-        {postList.map(el => (
-          <Post
-            key={el.id}
-            slug={el.frontmatter.slug}
-            title={el.frontmatter.title}
-            description={el.frontmatter.description}
-            date={el.frontmatter.date}
-            link={el.frontmatter.slug.split("/")[1]}
-          ></Post>
-        ))}
+      <div css={PostListContainer(theme, isOpen)}>
+        {postList.map(el =>
+          el.frontmatter.slug ? (
+            <Post
+              key={el.id}
+              slug={el.frontmatter.slug}
+              title={el.frontmatter.title}
+              description={el.frontmatter.description}
+              date={el.frontmatter.date}
+              link={el.frontmatter.slug.split("/")[1]}
+            ></Post>
+          ) : null
+        )}
       </div>
     )
   }

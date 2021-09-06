@@ -33,11 +33,6 @@ export const Wrapper = (theme: Theme, currentPage: string, link: string) => css`
     font-family: "Athiti";
     color: ${currentPage === link ? theme.hoverEvent : theme.fontColor};
     font-weight: ${currentPage === link ? "1000" : null};
-    // text-decoration: ${currentPage === link ? "underline" : null};
-
-    @media (max-width: 375px) {
-      font-size: 1.8rem;
-    }
 
     &:hover {
       color: ${theme.hoverEvent};

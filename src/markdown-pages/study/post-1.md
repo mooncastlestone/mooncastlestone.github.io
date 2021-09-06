@@ -8,11 +8,7 @@ description: "Gatsby 프로젝트에 TDD를 사용해보고 싶어 세팅하는 
 코딩 부트캠프에서 두 차례의 프로젝트를 경험하면서 언젠가 한 번 TDD(**_테스트 주도 개발_**)에 대해서 공부해보고 싶다는 생각이 들었었다. 마침 개츠비를 활용한 개인 블로그를 제작하던 중이었고, 개츠비 공식 문서에서 Unit Test 관련된 정보들이 정리되어 있어서 참고하여 진행해보았다. 아래 글은 Gatsby 프로젝트에 Unit Test를 위한 기본 설정 세팅하는 방법에 대해서 정리하였다.
 
 세팅하는 방법에 앞서 **단위 테스트란 어떤 것인지에 대해서 먼저 알아보자.**
-<br></br>
 ***
-
-<br>
-
 ## 단위 테스트란 ?
 
 단위 테스트(unit test)는 컴퓨터 프로그래밍에서 소스 코드의 특정 모듈이 의도된 대로 정확히 작동하는지 검증하는 절차라고 한다.
@@ -23,8 +19,6 @@ description: "Gatsby 프로젝트에 TDD를 사용해보고 싶어 세팅하는 
 <br></br>
 \***Jest**는 페이스북에서 만든 리액트를 위한 가장 유명한 테스팅 프레임워크이다.
 자바스크립트 유닛 테스팅 목적으로 만들어진 프레임워크이지만, 리액트에도 동작하는 기능들이 많다고 한다.
-<br></br>
-
 ## Jest, 패키지 설치
 
 ```javascript
@@ -38,8 +32,6 @@ npm install --save-dev jest babel-jest react-test-renderer babel-preset-gatsby i
 4. babel-preset-gatsby
 5. identity-obj-proxy
 ```
-<br>
-
 ## 단위 테스트 설정을 위한 파일들
 
 ### 1. jest.config.js
@@ -126,8 +118,5 @@ module.exports = {
 "test": "jest"
 ```
 ***
-<br>
-
 ## Reference
 [Gatsby - Unit Testing](https://www.gatsbyjs.com/docs/how-to/testing/unit-testing/)
-<br></br>

@@ -12,15 +12,16 @@ import { Link } from 'gatsby'
 
 type SideBarProps = {
   pageTitle?: string;
+  isOpen: boolean;
 }
 
-const SideBar = ({pageTitle}:SideBarProps) => {
+const SideBar = ({pageTitle, isOpen}:SideBarProps) => {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = THEME[themeMode]
   const [currentPage, setCurrentPage] = useState(`/${pageTitle}`)
 
   return (
-    <div css={Container(theme)}>
+    <div css={Container(theme, isOpen)}>
       <div className="sidebar-box">
         <Link to="/"> 
           <StaticImage

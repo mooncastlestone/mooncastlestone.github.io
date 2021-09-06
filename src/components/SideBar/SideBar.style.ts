@@ -1,7 +1,7 @@
-import { css } from "@emotion/react"
+import { css, keyframes } from "@emotion/react"
 import { Theme } from "../../theme/theme"
 
-export const Container = (theme: Theme) => css`
+export const Container = (theme: Theme, isOpen: boolean) => css`
   position: fixed;
   width: 17%;
   height: 100vh;
@@ -10,11 +10,6 @@ export const Container = (theme: Theme) => css`
   background: ${theme.bgColor};
   transition: 0.3s ease-in-out;
   box-shadow: 1px 0 2px -2px gray;
-
-
-  @media (max-width: 500px) {
-    padding: 4rem 0 0 3rem;
-  }
 
   .sidebar-box {
     margin-top: 3rem;
@@ -32,7 +27,7 @@ export const Container = (theme: Theme) => css`
   }
 
   .intro {
-    color: ${theme.fontColor}
+    color: ${theme.fontColor};
   }
 
   .icon-box {
@@ -53,4 +48,13 @@ export const Container = (theme: Theme) => css`
       color: ${theme.hoverEvent};
     }
   }
+
+  @media (max-width: 425px) {
+    width: 80%;
+    position: ${!isOpen ? "absolute" : null};
+    left: ${!isOpen ? "-23rem" : "0rem"};
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: left 0.3s ease;
 `

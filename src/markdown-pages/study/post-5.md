@@ -4,7 +4,6 @@ date: "2021-08-03"
 title: "브라우저 동작 원리"
 description: "브라우저가 어떻게 동작이 되는지에 대해서 정리하였습니다."
 ---
-<hr></hr>
 이번에는 '브라우저는 어떻게 동작이 되는가?'에 대해서 정리해보려한다.
 <br></br>
 
@@ -81,15 +80,11 @@ description: "브라우저가 어떻게 동작이 되는지에 대해서 정리�
 2. 받아온 HTML과 CSS 파일을 파싱을 통하여 트리 구조로 변환한다.
 3. 변환된 DOM 트리와 CSSOM 트리를 합하여 렌더 트리를 형성하고 렌더링한다.
 
-***
-
 ## reference
 [브라우저는 어떻게 동작하는가?](https://d2.naver.com/helloworld/59361)
 
 [렌더 트리](https://onlydev.tistory.com/9)
 
 [DOM은 정확히 무엇일까?](https://wit.nts-corp.com/2019/02/14/5522)
-
-<br>
 
 
