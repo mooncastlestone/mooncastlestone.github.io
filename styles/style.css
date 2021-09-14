@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: Noto Sans KR;
 }
 
 body {
@@ -19,7 +20,7 @@ code {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   color: rgb(84, 161, 233);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.3rem;
 }
 
@@ -437,7 +438,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: 0.6rem;
+  margin-top: 1rem;
 }
 ol li {
   padding-left: 0;
@@ -531,6 +532,10 @@ a {
 
   h3 {
     font-size: 1.1rem;
+  }
+
+  code {
+    font-size: 0.8rem;
   }
 }
 

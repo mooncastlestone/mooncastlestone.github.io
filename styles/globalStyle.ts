@@ -31,7 +31,7 @@ const GlobalStyle = (theme: Theme, isOpen: boolean) => css`
     left: -1rem;
     color: ${theme.fontColor};
   }
-
+  
   @media (max-width: 425px) {
     .menu-icon {
       position: fixed;

@@ -89,7 +89,6 @@ Redux를 사용하여 특정한 공간에 state를 저장하면, 다이렉트로
 - **Single source of truth**
 동일한 데이터는 항상 **같은 곳**에서 데이터를 가지고 온다.
  데이터를 저장하는 하나뿐인 스토어가 있다.
- 
 - **State is read-only**
  기존에는 setState를 사용하여 state 값을 변경해줬었다.
  Redux에서는 Action이라는 함수를 이용하여 state 값을 변경해준다.
