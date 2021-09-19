@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[764],{8580:function(t,a,e){"use strict";e.r(a);e(7294);var s=e(8270),u=e(3131),r=e(5444),n=e(3964);a.default=function(){var t=(0,r.K2)("3093855981");return(0,n.tZ)(s.Z,{pageTitle:"study"},(0,n.tZ)(u.Z,{postData:t,link:"study"}))}}}]);
+//# sourceMappingURL=component---src-pages-study-tsx-4eb06a34ef0afb25709f.js.map
