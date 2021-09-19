@@ -1,24 +1,20 @@
 import React, { useContext } from "react"
 import { graphql } from "gatsby"
-import { Container, TocContainer } from "../../styles/markdown"
+import { Container } from "../../styles/markdown"
 import Layout from "../components/Layout"
 import { ThemeContext } from "../theme/ThemeContext"
 import THEME from "../theme/theme"
 import Utterances from "../components/Utterances"
-import TableOfContents from "../components/TOC"
 
 export default function Template({ data }: any) {
   const { markdownRemark } = data
-  const { frontmatter, html, tableOfContents } = markdownRemark
-  const url = frontmatter.slug.split("/")[1]
+  const { frontmatter, html } = markdownRemark
   const [themeMode] = useContext(ThemeContext)
   const theme = THEME[themeMode]
 
   return (
     <>
       <Layout>
-        {/* <TableOfContents items={tableOfContents} /> */}
-        {/* <div css={TocContainer(theme)}></div> */}
         <div css={Container(theme)}>
           <div className="post-box">
             <div className="post-introbox">

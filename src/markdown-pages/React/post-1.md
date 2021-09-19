@@ -1,7 +1,7 @@
 ---
 slug: "/react/post-1/"
 date: "2021-09-01"
-title: "Redux에 대해 알아보자"
+title: "Redux 정리"
 description: "Redux에 대해서 정리하였습니다."
 ---
 

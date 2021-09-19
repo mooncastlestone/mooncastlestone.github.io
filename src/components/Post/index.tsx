@@ -3,14 +3,7 @@ import { PostContainer } from "./Post.style"
 import themeGroup from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
 import { Link } from "gatsby"
-
-type PostProps = {
-  slug: string
-  title: string
-  description: string
-  date: string
-  link: string
-}
+import { PostProps } from '../../types/components'
 
 const Post = ({ slug, title, description, date, link }: PostProps) => {
   const [themeMode] = useContext(ThemeContext)

@@ -1,13 +1,9 @@
 import React, { createRef, useLayoutEffect } from "react"
+import { UtterancesProps } from '../../types/components'
 
 const src = "https://utteranc.es/client.js"
 
-type IUtterancesProps = {
-  repo: string
-  theme: string
-}
-
-const Utterances = React.memo(({ repo, theme }: IUtterancesProps) => {
+const Utterances = React.memo(({ repo, theme }: UtterancesProps) => {
   const containerRef = createRef<HTMLDivElement>()
 
   useLayoutEffect(() => {

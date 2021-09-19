@@ -1,5 +1,5 @@
-import "@fontsource/open-sans"
-import "@fontsource/athiti"
+// import "@fontsource/open-sans"
+// import "@fontsource/athiti"
 
 import Helmet from "react-helmet"
 import React from "react"

@@ -1,18 +1,10 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import { PostListContainer } from "./PostList.style"
 import themeGroup from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
 import Post from "../Post"
 import Preparing from "../Preparing"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-
-type PostListProps = {
-  postData: any
-  link: string
-  handleSideBar: React.Dispatch<React.SetStateAction<boolean>>
-  isOpen: boolean
-}
+import { PostListProps } from '../../types/components'
 
 type frontmatterType = {
   date: string
@@ -27,7 +19,7 @@ type postType = {
   id: string
 }
 
-const PostList = ({ postData, link, handleSideBar, isOpen }: PostListProps) => {
+const PostList = ({ postData, link, isOpen }: PostListProps) => {
   const [themeMode] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
   const postList: postType[] = postData.allMarkdownRemark.nodes
@@ -44,7 +36,7 @@ const PostList = ({ postData, link, handleSideBar, isOpen }: PostListProps) => {
     })
 
     return (
-      <div css={PostListContainer(theme, isOpen)}>
+      <div css={PostListContainer}>
         {sortedPostList.length !== 0 ? (
           sortedPostList.map((el: postType) => (
             <Post
@@ -70,7 +62,7 @@ const PostList = ({ postData, link, handleSideBar, isOpen }: PostListProps) => {
     })
 
     return (
-      <div css={PostListContainer(theme, isOpen)}>
+      <div css={PostListContainer}>
         {postList.map(el =>
           el.frontmatter.slug ? (
             <Post

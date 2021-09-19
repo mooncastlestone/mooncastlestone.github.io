@@ -51,4 +51,8 @@ const Wrapper = (theme: Theme) => css`
     color: ${theme.fontColor};
     font-weight: bold;
   }
+
+  @media (max-width: 375px) {
+    padding: 0;
+  }
 `

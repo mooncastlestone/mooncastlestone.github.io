@@ -20,8 +20,9 @@ code {
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   color: rgb(84, 161, 233);
-  font-size: 1rem;
-  line-height: 1.3rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.5px;
 }
 
 pre {

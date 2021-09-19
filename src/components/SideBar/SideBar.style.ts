@@ -1,4 +1,4 @@
-import { css, keyframes } from "@emotion/react"
+import { css } from "@emotion/react"
 import { Theme } from "../../theme/theme"
 
 export const Container = (theme: Theme, isOpen: boolean) => css`

@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from "react"
-import { Link } from "gatsby"
+import React, { useContext } from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import themeGroup, { Theme } from "../../theme/theme"
+import themeGroup from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
 import { css } from "@emotion/react"
 

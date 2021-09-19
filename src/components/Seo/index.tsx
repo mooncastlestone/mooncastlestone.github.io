@@ -6,24 +6,18 @@
  */
 
 import * as React from "react"
-import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { SeoProps } from '../../types/components'
 
-type Props = {
-  description: string
-  lang: string
-  meta: MetaProps[]
-  title: string
+Seo.defaultProps = {
+  lang: `en`,
+  meta: [],
+  description: ``,
+  title: ``,
 }
 
-type MetaProps = {
-  name: string
-  content: any
-  property: undefined
-}
-
-function Seo({ description, lang, meta, title }: Props) {
+function Seo({ description, lang, meta, title }: SeoProps) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -84,20 +78,6 @@ function Seo({ description, lang, meta, title }: Props) {
       ].concat(meta)}
     />
   )
-}
-
-Seo.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-  title: ``,
-}
-
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
 }
 
 export default Seo

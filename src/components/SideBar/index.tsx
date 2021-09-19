@@ -9,11 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
 import { Link } from 'gatsby'
-
-type SideBarProps = {
-  pageTitle?: string;
-  isOpen: boolean;
-}
+import { SideBarProps } from '../../types/components'
 
 const SideBar = ({pageTitle, isOpen}:SideBarProps) => {
   const [themeMode, onToggle] = useContext(ThemeContext)
@@ -43,7 +39,6 @@ const SideBar = ({pageTitle, isOpen}:SideBarProps) => {
         <CategoryTitle currentPage={currentPage} link="/react">React</CategoryTitle>
         <CategoryTitle currentPage={currentPage} link="/study">Study</CategoryTitle>
         <CategoryTitle currentPage={currentPage} link="/personal">Personal</CategoryTitle>
-        {/* <CategoryTitle link="/about">About</CategoryTitle> */}
       </div>
     </div>
   )

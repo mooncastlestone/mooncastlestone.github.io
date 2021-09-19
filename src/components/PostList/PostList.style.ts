@@ -1,7 +1,7 @@
 import { css } from "@emotion/react"
 import { Theme } from "../../theme/theme"
 
-export const PostListContainer = (theme: Theme, isOpen: boolean) => css`
+export const PostListContainer = () => css`
   width: 83%;
   height: 100%;
   padding: 3rem 0 0 7rem;

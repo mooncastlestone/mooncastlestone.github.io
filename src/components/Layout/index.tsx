@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react"
-import PropTypes from "prop-types"
 import GlobalStyle from "../../../styles/globalStyle"
 import { css, Global } from "@emotion/react"
 import themeGroup from "../../theme/theme"
@@ -10,13 +9,9 @@ import PostList from "../PostList"
 import { graphql, useStaticQuery } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { LayoutProps } from '../../types/components'
 
-type Props = {
-  children?: any
-  pageTitle?: string
-}
-
-const Layout = ({ pageTitle, children }: Props) => {
+const Layout = ({ pageTitle, children }: LayoutProps) => {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
   const [isOpen, setIsOpen] = useState(false)
@@ -53,7 +48,6 @@ const Layout = ({ pageTitle, children }: Props) => {
           <div css={childrenContainer}>
             <PostList
               isOpen={isOpen}
-              handleSideBar={setIsOpen}
               postData={data}
               link="home"
             ></PostList>

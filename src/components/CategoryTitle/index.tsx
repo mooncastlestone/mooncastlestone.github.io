@@ -3,12 +3,7 @@ import { Link } from "gatsby"
 import THEME, { Theme } from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
 import { css } from "@emotion/react"
-
-type CategoryTitleProps = {
-  link: string
-  children: string
-  currentPage: string
-}
+import { CategoryTitleProps } from '../../types/components'
 
 function CategoryTitle({ link, children, currentPage }: CategoryTitleProps) {
   const [themeMode, onToggle] = useContext(ThemeContext)
