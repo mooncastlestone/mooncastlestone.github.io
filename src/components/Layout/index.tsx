@@ -9,7 +9,7 @@ import PostList from "../PostList"
 import { graphql, useStaticQuery } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { LayoutProps } from '../../types/components'
+import { LayoutProps } from "../../types/components"
 
 const Layout = ({ pageTitle, children }: LayoutProps) => {
   const [themeMode, onToggle] = useContext(ThemeContext)
@@ -46,14 +46,17 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
         <SideBar isOpen={isOpen} pageTitle={pageTitle} />
         {pageTitle === "home" ? (
           <div css={childrenContainer}>
-            <PostList
-              isOpen={isOpen}
-              postData={data}
-              link="home"
-            ></PostList>
+            <PostList isOpen={isOpen} postData={data} link="home"></PostList>
           </div>
         ) : (
-          <div css={childrenContainer}>{children}</div>
+          <div
+            onClick={() => {
+              if (isOpen) setIsOpen(false)
+            }}
+            css={childrenContainer}
+          >
+            {children}
+          </div>
         )}
       </div>
     </>

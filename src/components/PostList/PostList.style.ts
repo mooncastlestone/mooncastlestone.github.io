@@ -6,6 +6,13 @@ export const PostListContainer = () => css`
   height: 100%;
   padding: 3rem 0 0 7rem;
 
+  
+  @media (max-width: 768px) {
+    width: 90%;
+    margin-top: 0rem;
+    padding: 1rem;
+  }
+
   @media (max-width: 425px) {
     width: 100%;
     margin-top: 0rem;

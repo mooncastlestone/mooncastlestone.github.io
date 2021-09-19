@@ -49,6 +49,20 @@ export const Container = (theme: Theme, isOpen: boolean) => css`
     }
   }
 
+  @media (max-width: 768px) {
+    width: 60%;
+    position: ${!isOpen ? "absolute" : null};
+    left: ${!isOpen ? "-40rem" : "0rem"};
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: left 0.3s ease;
+
+    .icon-box {
+      width: 20%;
+    }
+  }
+
   @media (max-width: 425px) {
     width: 80%;
     position: ${!isOpen ? "absolute" : null};
@@ -57,4 +71,9 @@ export const Container = (theme: Theme, isOpen: boolean) => css`
     bottom: 0;
     z-index: 1;
     transition: left 0.3s ease;
+
+    .icon-box {
+      width: 25%;
+    }
+  }
 `

@@ -10,17 +10,6 @@ export const PostContainer = (theme: Theme) => css`
   flex-direction: column;
   box-shadow: 0 1.5px 2px -2px gray;
 
-  @media (max-width: 425px) {
-    padding: 0rem;
-    width: 100%;
-    margin-top: 2.5rem;
-  }
-
-  .post {
-    // border: 1px solid red;
-    
-  }
-
   .post.title {
     text-decoration: none;
     font-size: 1.4rem;
@@ -30,18 +19,10 @@ export const PostContainer = (theme: Theme) => css`
     &:hover {
       color: ${theme.hoverEvent};
     }
-
-    @media (max-width: 425px) {
-      font-size: 1.1rem;
-    }
   }
 
   .post.description {
     color: ${theme.fontColor};
-
-    @media (max-width: 425px) {
-      font-size: 0.9rem;
-    }
   }
 
   .post.date {
@@ -50,8 +31,22 @@ export const PostContainer = (theme: Theme) => css`
     margin-bottom: 1rem;
     justify-content: flex-end;
     display: flex;
+  }
 
-    @media (max-width: 425px) {
+  @media (max-width: 425px) {
+    padding: 0rem 1rem;
+    width: 100%;
+    margin-top: 2.5rem;
+
+    .post.title {
+      font-size: 1.1rem;
+    }
+
+    .post.description {
+      font-size: 0.9rem;
+    }
+
+    .post.date {
       font-size: 0.8rem;
     }
   }

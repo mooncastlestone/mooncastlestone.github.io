@@ -11,10 +11,6 @@ export const Container = (theme: Theme) => css`
 
   .post-box {
     width: 70%;
-
-    @media (max-width: 425px) {
-      width: 100%;
-    }
   }
 
   .post-introbox {
@@ -26,10 +22,6 @@ export const Container = (theme: Theme) => css`
   .post-title {
     color: ${theme.mdFontColor};
     margin-top: 1rem;
-
-    @media (max-width: 425px) {
-      font-size: 1.4rem;
-    }
   }
 
   .post-date {
@@ -37,10 +29,6 @@ export const Container = (theme: Theme) => css`
     display: flex;
     align-items: flex-end;
     margin-bottom: 1rem;
-
-    @media (max-width: 425px) {
-      font-size: 0.8rem;
-    }
   }
 
   .post-description {
@@ -48,14 +36,52 @@ export const Container = (theme: Theme) => css`
     margin-top: 2rem;
     color: ${theme.mdFontColor};
     line-height: 2rem;
-
-    @media (max-width: 425px) {
-      font-size: 1rem;
-    }
   }
 
   .comment-box {
     margin: 3rem 0 3rem 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    .post-box {
+      width: 85%;
+    }
+
+    .post-introbox {
+    }
+
+    .post-title {
+    }
+
+    .post-date {
+    }
+
+    .post-description {
+    }
+  }
+
+  @media (max-width: 425px) {
+
+    .post-box {
+      width: 90%;
+    }
+
+    .post-introbox {
+    }
+
+    .post-title {
+      font-size: 1.4rem;
+    }
+
+    .post-date {
+      font-size: 0.8rem;
+    }
+
+    .post-description {
+      font-size: 1rem;
+    }
   }
 `
 
