@@ -2,11 +2,11 @@ import { css } from "@emotion/react"
 import THEME, { Theme } from "../src/theme/theme"
 
 export const Container = css`
-  width: 100%;
-  align-items: center;
-  margin-top: 3rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 3rem;
   border: 1px solid black;
 
   @media (max-width: 425px) {
@@ -15,11 +15,11 @@ export const Container = css`
 `
 
 export const Box = css`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
   text-decoration: none;
   color: black;
 `

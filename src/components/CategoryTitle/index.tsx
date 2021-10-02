@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import THEME, { Theme } from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
 import { css } from "@emotion/react"
-import { CategoryTitleProps } from '../../types/components'
+import { CategoryTitleProps } from "../../types/components"
 
 function CategoryTitle({ link, children, currentPage }: CategoryTitleProps) {
   const [themeMode, onToggle] = useContext(ThemeContext)
@@ -23,15 +23,14 @@ export const Wrapper = (theme: Theme, currentPage: string, link: string) => css`
   margin-top: 0.8rem;
 
   .title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-decoration: none;
-    font-family: "Athiti";
     color: ${currentPage === link ? theme.hoverEvent : theme.fontColor};
     font-weight: ${currentPage === link ? "1000" : null};
 
     &:hover {
       color: ${theme.hoverEvent};
-      font-weight: bolder;
+      font-weight: bold;
     }
   }
 `

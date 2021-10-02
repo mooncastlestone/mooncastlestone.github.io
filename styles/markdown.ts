@@ -3,11 +3,11 @@ import { Theme } from "../src/theme/theme"
 
 export const Container = (theme: Theme) => css`
   display: flex;
-  width: 83%;
-  height: 100vw;
   flex-direction: column;
   align-items: center;
   position: relative;
+  width: 83%;
+  height: 100vw;
 
   .post-box {
     width: 70%;
@@ -63,7 +63,6 @@ export const Container = (theme: Theme) => css`
   }
 
   @media (max-width: 425px) {
-
     .post-box {
       width: 90%;
     }

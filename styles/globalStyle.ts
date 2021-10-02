@@ -2,6 +2,11 @@ import { css } from "@emotion/react"
 import { Theme } from "../src/theme/theme"
 
 const GlobalStyle = (theme: Theme, isOpen: boolean) => css`
+  * {
+    font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+  }
+
   body {
     background-color: ${theme.bgColor};
     transition: 0.3s ease-in-out;
@@ -35,12 +40,12 @@ const GlobalStyle = (theme: Theme, isOpen: boolean) => css`
     left: -1rem;
     color: ${theme.fontColor};
   }
-  
+
   @media (max-width: 768px) {
     .menu-icon {
       position: fixed;
       top: ${isOpen ? "1rem" : null};
-      left: ${isOpen ? '55%' : "1rem"};
+      left: ${isOpen ? "55%" : "1rem"};
       z-index: 3;
       transition: left 0.3s ease;
     }
@@ -50,7 +55,7 @@ const GlobalStyle = (theme: Theme, isOpen: boolean) => css`
     .menu-icon {
       position: fixed;
       top: ${isOpen ? "1rem" : null};
-      left: ${isOpen ? '70%' : "1rem"};
+      left: ${isOpen ? "70%" : "1rem"};
       z-index: 3;
       transition: left 0.3s ease;
     }

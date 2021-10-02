@@ -66,10 +66,10 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
 export default Layout
 
 const childrenContainer = css`
-  margin-top: 4rem;
-  width: 100%;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
+  margin-top: 4rem;
 
   @media (max-width: 425px) {
     justify-content: center;

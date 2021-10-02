@@ -2,21 +2,21 @@ import { css } from "@emotion/react"
 import { Theme } from "../../theme/theme"
 
 export const Container = (theme: Theme, isOpen: boolean) => css`
+  display: flex;
+  flex-direction: column;
   position: fixed;
   width: 17%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   background: ${theme.bgColor};
   transition: 0.3s ease-in-out;
   box-shadow: 1px 0 2px -2px gray;
 
   .sidebar-box {
-    margin-top: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 3rem;
   }
 
   .profile {
@@ -31,9 +31,9 @@ export const Container = (theme: Theme, isOpen: boolean) => css`
   }
 
   .icon-box {
-    width: 35%;
     display: flex;
     justify-content: space-between;
+    width: 35%;
     margin: 1rem 0 1rem 0;
   }
 
