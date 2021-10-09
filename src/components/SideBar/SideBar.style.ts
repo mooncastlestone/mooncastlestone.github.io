@@ -49,13 +49,20 @@ export const Container = (theme: Theme, isOpen: boolean) => css`
     }
   }
 
+  .category-title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
   @media (max-width: 768px) {
-    width: 60%;
     position: ${!isOpen ? "absolute" : null};
-    left: ${!isOpen ? "-40rem" : "0rem"};
     top: 0;
     bottom: 0;
+    left: ${!isOpen ? "-40rem" : "0rem"};
     z-index: 1;
+    width: 60%;
     transition: left 0.3s ease;
 
     .icon-box {
@@ -64,12 +71,12 @@ export const Container = (theme: Theme, isOpen: boolean) => css`
   }
 
   @media (max-width: 425px) {
-    width: 80%;
     position: ${!isOpen ? "absolute" : null};
     left: ${!isOpen ? "-23rem" : "0rem"};
     top: 0;
     bottom: 0;
     z-index: 1;
+    width: 80%;
     transition: left 0.3s ease;
 
     .icon-box {

@@ -20,14 +20,6 @@ const GlobalStyle = (theme: Theme, isOpen: boolean) => css`
     justify-content: space-between;
     padding: 0.5rem 0.5rem 0.3rem 0.5rem;
     z-index: 2;
-
-    @media (max-width: 768px) {
-      background: ${theme.bgColor};
-    }
-
-    @media (max-width: 425px) {
-      background: ${theme.bgColor};
-    }
   }
 
   .home {

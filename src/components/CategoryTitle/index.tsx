@@ -9,11 +9,11 @@ function CategoryTitle({ link, children, currentPage }: CategoryTitleProps) {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = THEME[themeMode]
   return (
-    <div css={Wrapper(theme, currentPage, link)}>
+    <li css={Wrapper(theme, currentPage, link)}>
       <Link className="title" to={link}>
         {children}
       </Link>
-    </div>
+    </li>
   )
 }
 
@@ -21,6 +21,7 @@ export default CategoryTitle
 
 export const Wrapper = (theme: Theme, currentPage: string, link: string) => css`
   margin-top: 0.8rem;
+  list-style-type: none;
 
   .title {
     font-size: 1.1rem;

@@ -40,9 +40,9 @@ const Wrapper = (theme: Theme) => css`
   }
 
   .text-box {
-    text-align: center;
-    margin-top: -1.3rem;
     width: 100%;
+    margin-top: -1.3rem;
+    text-align: center;
 
   }
 

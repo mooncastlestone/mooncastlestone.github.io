@@ -8,10 +8,10 @@ import { StaticImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons"
-import { Link } from 'gatsby'
-import { SideBarProps } from '../../types/components'
+import { Link } from "gatsby"
+import { SideBarProps } from "../../types/components"
 
-const SideBar = ({pageTitle, isOpen}:SideBarProps) => {
+const SideBar = ({ pageTitle, isOpen }: SideBarProps) => {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = THEME[themeMode]
   const [currentPage, setCurrentPage] = useState(`/${pageTitle}`)
@@ -19,7 +19,7 @@ const SideBar = ({pageTitle, isOpen}:SideBarProps) => {
   return (
     <div css={Container(theme, isOpen)}>
       <div className="sidebar-box">
-        <Link to="/"> 
+        <Link to="/">
           <StaticImage
             src="https://res.cloudinary.com/dr4ka7tze/image/upload/v1630397760/me_nqhaci.jpg"
             alt="profile"
@@ -35,10 +35,20 @@ const SideBar = ({pageTitle, isOpen}:SideBarProps) => {
             <FontAwesomeIcon icon={faEnvelope} className="icon" />
           </a>
         </div>
-        <CategoryTitle currentPage={currentPage} link="/javascript">Javascript</CategoryTitle>
-        <CategoryTitle currentPage={currentPage} link="/react">React</CategoryTitle>
-        <CategoryTitle currentPage={currentPage} link="/study">Study</CategoryTitle>
-        <CategoryTitle currentPage={currentPage} link="/personal">Personal</CategoryTitle>
+        <ul className="category-title-box">
+          <CategoryTitle currentPage={currentPage} link="/javascript">
+            Javascript
+          </CategoryTitle>
+          <CategoryTitle currentPage={currentPage} link="/react">
+            React
+          </CategoryTitle>
+          <CategoryTitle currentPage={currentPage} link="/study">
+            Study
+          </CategoryTitle>
+          <CategoryTitle currentPage={currentPage} link="/personal">
+            Personal
+          </CategoryTitle>
+        </ul>
       </div>
     </div>
   )
