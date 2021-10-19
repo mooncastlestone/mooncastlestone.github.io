@@ -15,7 +15,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-remark-images`,
     `gatsby-plugin-gatsby-cloud`,
-    'gatsby-plugin-sitemap',
+    "gatsby-plugin-sitemap",
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
@@ -87,6 +87,14 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://mooon3356.github.io",
+        sitemap: "https://mooon3356.github.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
   ],
