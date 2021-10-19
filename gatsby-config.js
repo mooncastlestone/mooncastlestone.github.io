@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-remark-images`,
     `gatsby-plugin-gatsby-cloud`,
+    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
