@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[764],{8580:function(t,a,e){"use strict";e.r(a);e(7294);var s=e(8179),u=e(3131),r=e(5444),n=e(3964);a.default=function(){var t=(0,r.K2)("3093855981");return(0,n.tZ)(s.Z,{pageTitle:"Study",pageDes:"공부한 것들 정리하는 공간"},(0,n.tZ)(u.Z,{postData:t,link:"study"}))}}}]);
+//# sourceMappingURL=component---src-pages-study-tsx-96cfa106e1d6b9d8ab8b.js.map

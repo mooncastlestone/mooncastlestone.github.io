@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[487],{8548:function(t,a,e){"use strict";e.r(a);e(7294);var r=e(8179),s=e(3131),u=e(5444),n=e(3964);a.default=function(){var t=(0,u.K2)("3487991919");return(0,n.tZ)(r.Z,{pageTitle:"React",pageDes:"리액트 정리하는 공간"},(0,n.tZ)(s.Z,{postData:t,link:"react"}))}}}]);
+//# sourceMappingURL=component---src-pages-react-tsx-019296a1bce863b3e1c1.js.map

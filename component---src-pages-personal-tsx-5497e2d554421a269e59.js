@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[10],{4604:function(t,a,e){"use strict";e.r(a);e(7294);var s=e(8179),r=e(3131),n=e(5444),u=e(3964);a.default=function(){var t=(0,n.K2)("11761127");return(0,u.tZ)(s.Z,{pageTitle:"Personal",pageDes:"개인적인 경험들을 정리하는 공간"},(0,u.tZ)(r.Z,{postData:t,link:"personal"}))}}}]);
+//# sourceMappingURL=component---src-pages-personal-tsx-5497e2d554421a269e59.js.map

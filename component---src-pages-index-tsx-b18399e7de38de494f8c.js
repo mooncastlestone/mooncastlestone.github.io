@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[691],{6738:function(t,e,a){"use strict";a.r(e);a(7294);var u=a(8179),r=a(3964);e.default=function(){return(0,r.tZ)(u.Z,{pageTitle:"Home"})}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-b18399e7de38de494f8c.js.map
