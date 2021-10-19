@@ -10,8 +10,9 @@ import { graphql, useStaticQuery } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { LayoutProps } from "../../types/components"
+import SEO from "../Seo"
 
-const Layout = ({ pageTitle, children }: LayoutProps) => {
+const Layout = ({ pageTitle, pageDes, children }: LayoutProps) => {
   const [themeMode, onToggle] = useContext(ThemeContext)
   const theme = themeGroup[themeMode]
   const [isOpen, setIsOpen] = useState(false)
@@ -36,6 +37,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
   return (
     <>
       <Global styles={GlobalStyle(theme, isOpen)} />
+      <SEO title={pageTitle} description={pageDes} />
       <div className="nav">
         <div onClick={() => setIsOpen(!isOpen)}>
           <FontAwesomeIcon icon={faBars} className="menu-icon" />
@@ -44,7 +46,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
       </div>
       <div>
         <SideBar isOpen={isOpen} pageTitle={pageTitle} />
-        {pageTitle === "home" ? (
+        {pageTitle === "Home" ? (
           <div css={childrenContainer}>
             <PostList isOpen={isOpen} postData={data} link="home"></PostList>
           </div>

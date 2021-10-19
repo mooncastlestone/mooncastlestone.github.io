@@ -24,7 +24,7 @@ const PersonalPage = () => {
   `)
 
   return (
-    <Layout pageTitle="personal">
+    <Layout pageTitle="Personal" pageDes="개인적인 경험들을 정리하는 공간">
       <PostList
         postData={data}
         link="personal"

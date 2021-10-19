@@ -24,11 +24,8 @@ const GatsbyPage = () => {
   `)
 
   return (
-    <Layout pageTitle="study">
-      <PostList
-        postData={data}
-        link="study"
-      ></PostList>
+    <Layout pageTitle="Study" pageDes="공부한 것들 정리하는 공간">
+      <PostList postData={data} link="study"></PostList>
     </Layout>
   )
 }

@@ -11,29 +11,29 @@ function DarkmodeToggle() {
   return (
     <div css={Wrapper}>
       {themeMode === "light" ? (
-        <StaticImage
-          src="../../images/sun.png"
-          width={25}
-          quality={100}
-          formats={["auto", "webp", "avif"]}
-          alt="A Gatsby astronaut"
-          placeholder="blurred"
-          layout="fixed"
-          className="image"
-          onClick={onToggle}
-        />
+        <button type="button" onClick={onToggle}>
+          <StaticImage
+            src="../../images/sun.png"
+            width={25}
+            quality={100}
+            formats={["auto", "webp", "avif"]}
+            alt="darkmode on button"
+            placeholder="blurred"
+            layout="fixed"
+          />
+        </button>
       ) : (
-        <StaticImage
-          src="../../images/moon.png"
-          width={25}
-          quality={100}
-          formats={["auto", "webp", "avif"]}
-          alt="A Gatsby astronaut"
-          placeholder="blurred"
-          layout="fixed"
-          className="image"
-          onClick={onToggle}
-        />
+        <button type="button" onClick={onToggle}>
+          <StaticImage
+            src="../../images/moon.png"
+            width={25}
+            quality={100}
+            formats={["auto", "webp", "avif"]}
+            alt="darkmode off button"
+            placeholder="blurred"
+            layout="fixed"
+          />
+        </button>
       )}
     </div>
   )
@@ -42,10 +42,13 @@ function DarkmodeToggle() {
 export default DarkmodeToggle
 
 const Wrapper = css`
+  button {
+    border: none;
+    background: none;
+  }
 
-  .image {
+  img {
     margin-right: 0.4rem;
     cursor: pointer;
   }
-  
 `

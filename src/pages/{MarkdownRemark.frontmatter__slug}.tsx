@@ -6,7 +6,21 @@ import { ThemeContext } from "../theme/ThemeContext"
 import THEME from "../theme/theme"
 import Utterances from "../components/Utterances"
 
-export default function Template({ data }: any) {
+type templateProps = {
+  data: {
+    markdownRemark: {
+      frontmatter: {
+        date: string
+        slug: string
+        title: string
+        description: string
+      }
+      html: string
+    }
+  }
+}
+
+export default function Template({ data }: templateProps) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   const [themeMode] = useContext(ThemeContext)
@@ -14,7 +28,7 @@ export default function Template({ data }: any) {
 
   return (
     <>
-      <Layout>
+      <Layout pageTitle={frontmatter.title} pageDes={frontmatter.description}>
         <div css={Container(theme)}>
           <div className="post-box">
             <div className="post-introbox">
@@ -42,11 +56,11 @@ export const pageQuery = graphql`
   query ($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
-      tableOfContents
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        description
       }
     }
   }

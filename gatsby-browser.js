@@ -1,6 +1,3 @@
-// import "@fontsource/open-sans"
-// import "@fontsource/athiti"
-
 import Helmet from "react-helmet"
 import React from "react"
 import { ThemeProvider } from "./src/theme/ThemeContext"
@@ -13,7 +10,7 @@ export const wrapRootElement = ({ element }) => (
     {element}
     <Helmet>
       <link rel="icon" href={favicon} />
-      <title>Moon.log</title>
+      <title>Home | Moon.log</title>
     </Helmet>
   </ThemeProvider>
 )

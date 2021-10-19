@@ -24,11 +24,8 @@ const ReactPage = () => {
   `)
 
   return (
-    <Layout pageTitle="react">
-      <PostList
-        postData={data}
-        link="react"
-      ></PostList>
+    <Layout pageTitle="React" pageDes="리액트 정리하는 공간">
+      <PostList postData={data} link="react"></PostList>
     </Layout>
   )
 }

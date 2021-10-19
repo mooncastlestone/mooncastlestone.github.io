@@ -6,7 +6,8 @@ export type CategoryTitleProps = {
 
 export type LayoutProps = {
   children?: any
-  pageTitle?: string
+  pageTitle: string
+  pageDes?: string
 }
 
 export type PostProps = {

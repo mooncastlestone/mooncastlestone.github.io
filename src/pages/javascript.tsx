@@ -24,7 +24,7 @@ const JavascriptPage = () => {
   `)
 
   return (
-    <Layout pageTitle="javascript">
+    <Layout pageTitle="Javascript" pageDes="자바스크립트 정리하는 공간">
       <PostList postData={data} link="javascript"></PostList>
     </Layout>
   )

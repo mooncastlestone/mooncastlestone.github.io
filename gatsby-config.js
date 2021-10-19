@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Moon.log`,
+    description: `프론트엔드 개발 여정을 담은 블로그, Moon.log 입니다.`,
+    author: `Seong seok Moon`,
+    siteUrl: `https://mooon3356.github.io/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -79,7 +79,7 @@ module.exports = {
                     className: `custom-class`,
                     maintainCase: false,
                     removeAccents: true,
-                    elements: [`h1`,`h2`, `h3`, `h4`],
+                    elements: [`h1`, `h2`, `h3`, `h4`],
                   },
                 },
               ],
