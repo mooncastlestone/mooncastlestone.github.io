@@ -4,7 +4,7 @@ import themeGroup from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
 import Post from "../Post"
 import Preparing from "../Preparing"
-import { PostListProps } from '../../types/components'
+import { PostListProps } from "../../types/components"
 
 type frontmatterType = {
   date: string
@@ -62,20 +62,23 @@ const PostList = ({ postData, link, isOpen }: PostListProps) => {
     })
 
     return (
-      <div css={PostListContainer}>
-        {postList.map(el =>
-          el.frontmatter.slug ? (
-            <Post
-              key={el.id}
-              slug={el.frontmatter.slug}
-              title={el.frontmatter.title}
-              description={el.frontmatter.description}
-              date={el.frontmatter.date}
-              link={el.frontmatter.slug.split("/")[1]}
-            ></Post>
-          ) : null
-        )}
-      </div>
+      <main css={PostListContainer}>
+        <h1 className="sr-only">글 목록</h1>
+        <ul>
+          {postList.map(el =>
+            el.frontmatter.slug ? (
+              <Post
+                key={el.id}
+                slug={el.frontmatter.slug}
+                title={el.frontmatter.title}
+                description={el.frontmatter.description}
+                date={el.frontmatter.date}
+                link={el.frontmatter.slug.split("/")[1]}
+              ></Post>
+            ) : null
+          )}
+        </ul>
+      </main>
     )
   }
 }

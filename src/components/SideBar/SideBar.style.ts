@@ -17,17 +17,23 @@ export const Container = (theme: Theme, isOpen: boolean) => css`
     justify-content: center;
     flex-direction: column;
     margin-top: 3rem;
+
+    button {
+      border: none;
+      background: none;
+    }
   }
 
   .profile {
     width: 10rem;
     height: 10rem;
-    border-radius: 70%;
     margin-bottom: 3rem;
+    border-radius: 70%;
   }
 
   .intro {
     color: ${theme.fontColor};
+    font-weight: normal;
   }
 
   .icon-box {
@@ -40,7 +46,6 @@ export const Container = (theme: Theme, isOpen: boolean) => css`
   .icon {
     width: 2rem;
     height: 2rem;
-    cursor: pointer;
     color: ${theme.mdFontColor};
     transition: 0.3s ease-in;
 

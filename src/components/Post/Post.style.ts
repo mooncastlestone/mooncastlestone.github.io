@@ -6,7 +6,6 @@ export const PostContainer = (theme: Theme) => css`
   justify-content: space-between;
   flex-direction: column;
   width: 90%;
-  height: 7rem;
   margin-bottom: 3rem;
   box-shadow: 0 1.5px 2px -2px gray;
 
@@ -30,6 +29,7 @@ export const PostContainer = (theme: Theme) => css`
     justify-content: flex-end;
     margin-bottom: 1rem;
     font-size: 0.9rem;
+    font-weight: normal;
     color: ${theme.fontColor};
   }
 

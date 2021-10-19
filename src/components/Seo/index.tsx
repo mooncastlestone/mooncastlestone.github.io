@@ -22,7 +22,7 @@ const SEO = ({ title, description }: SeoProps) => {
   }
 
   return (
-    <Helmet title={seo.title}>
+    <Helmet title={seo.title} htmlAttributes={{ lang: "ko" }}>
       <title>{title} | Moon.log</title>
       {seo.title && <meta property="og:title" content={seo.title} />}
       <meta name="description" content={seo.description} />

@@ -38,10 +38,14 @@ const Layout = ({ pageTitle, pageDes, children }: LayoutProps) => {
     <>
       <Global styles={GlobalStyle(theme, isOpen)} />
       <SEO title={pageTitle} description={pageDes} />
-      <div className="nav">
-        <div onClick={() => setIsOpen(!isOpen)}>
-          <FontAwesomeIcon icon={faBars} className="menu-icon" />
-        </div>
+      <div className="top">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="menu-button"
+          aria-label="메뉴 오픈"
+        >
+          <FontAwesomeIcon icon={faBars} />
+        </button>
         <DarkmodeToggle />
       </div>
       <div>

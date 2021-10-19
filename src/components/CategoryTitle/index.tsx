@@ -10,7 +10,7 @@ function CategoryTitle({ link, children, currentPage }: CategoryTitleProps) {
   const theme = THEME[themeMode]
   return (
     <li css={Wrapper(theme, currentPage, link)}>
-      <Link className="title" to={link}>
+      <Link className="title" to={link} aria-label={`${link} 페이지로 이동`}>
         {children}
       </Link>
     </li>
@@ -25,13 +25,13 @@ export const Wrapper = (theme: Theme, currentPage: string, link: string) => css`
 
   .title {
     font-size: 1.1rem;
+    font-weight: ${currentPage === link ? "1000" : null};
     text-decoration: none;
     color: ${currentPage === link ? theme.hoverEvent : theme.fontColor};
-    font-weight: ${currentPage === link ? "1000" : null};
 
     &:hover {
-      color: ${theme.hoverEvent};
       font-weight: bold;
+      color: ${theme.hoverEvent};
     }
   }
 `

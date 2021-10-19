@@ -17,7 +17,7 @@ function DarkmodeToggle() {
             width={25}
             quality={100}
             formats={["auto", "webp", "avif"]}
-            alt="darkmode on button"
+            alt="darkmode on"
             placeholder="blurred"
             layout="fixed"
           />
@@ -29,7 +29,7 @@ function DarkmodeToggle() {
             width={25}
             quality={100}
             formats={["auto", "webp", "avif"]}
-            alt="darkmode off button"
+            alt="darkmode off"
             placeholder="blurred"
             layout="fixed"
           />

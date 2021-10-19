@@ -3,7 +3,7 @@ import { PostContainer } from "./Post.style"
 import themeGroup from "../../theme/theme"
 import { ThemeContext } from "../../theme/ThemeContext"
 import { Link } from "gatsby"
-import { PostProps } from '../../types/components'
+import { PostProps } from "../../types/components"
 
 const Post = ({ slug, title, description, date, link }: PostProps) => {
   const [themeMode] = useContext(ThemeContext)
@@ -12,13 +12,15 @@ const Post = ({ slug, title, description, date, link }: PostProps) => {
   const num = postNum[postNum.length - 1]
 
   return (
-    <div css={PostContainer(theme)}>
-      <Link className="post title" to={`/${link}/post-${num}`}>
-        {title}
-      </Link>
-      <div className="post description">{description}</div>
-      <div className="post date">작성일 : {date}</div>
-    </div>
+    <li css={PostContainer(theme)}>
+      <h1>
+        <Link to={`/${link}/post-${num}`} className="post title">
+          {title}
+        </Link>
+      </h1>
+      <p className="post description">{description}</p>
+      <strong className="post date">작성일 : {date}</strong>
+    </li>
   )
 }
 

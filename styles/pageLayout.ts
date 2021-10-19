@@ -25,8 +25,8 @@ export const Box = css`
 `
 
 export const Title = (theme: Theme) => css`
-  font-size: 2.5rem;
   padding-bottom: 0.5rem;
+  font-size: 2.5rem;
   text-align: center;
   color: ${theme.fontColor};
   border-bottom: 1px solid ${theme.fontColor};

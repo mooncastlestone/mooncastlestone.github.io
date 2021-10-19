@@ -29,11 +29,16 @@ export default function Template({ data }: templateProps) {
   return (
     <>
       <Layout pageTitle={frontmatter.title} pageDes={frontmatter.description}>
-        <div css={Container(theme)}>
+        <article css={Container(theme)}>
           <div className="post-box">
             <div className="post-introbox">
               <h1 className="post-title">{frontmatter.title}</h1>
-              <div className="post-date">{frontmatter.date}</div>
+              <strong
+                className="post-date"
+                aria-label={`${frontmatter.date} 작성됨.`}
+              >
+                {frontmatter.date}
+              </strong>
             </div>
             <div
               className="post-description"
@@ -46,7 +51,7 @@ export default function Template({ data }: templateProps) {
               ></Utterances>
             </div>
           </div>
-        </div>
+        </article>
       </Layout>
     </>
   )

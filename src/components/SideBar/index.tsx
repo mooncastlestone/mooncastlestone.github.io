@@ -17,23 +17,37 @@ const SideBar = ({ pageTitle, isOpen }: SideBarProps) => {
   const [currentPage, setCurrentPage] = useState(`/${pageTitle}`)
 
   return (
-    <div css={Container(theme, isOpen)}>
+    <nav css={Container(theme, isOpen)}>
       <div className="sidebar-box">
-        <Link to="/">
-          <StaticImage
-            src="https://res.cloudinary.com/dr4ka7tze/image/upload/v1630397760/me_nqhaci.jpg"
-            alt="profile"
-            className="profile"
-          ></StaticImage>
-        </Link>
-        <div className="intro">FE Developer</div>
+        <button type="button">
+          <Link to="/" aria-label="메인 페이지 이동">
+            <StaticImage
+              src="https://res.cloudinary.com/dr4ka7tze/image/upload/v1630397760/me_nqhaci.jpg"
+              alt="profile"
+              className="profile"
+            ></StaticImage>
+          </Link>
+        </button>
+        <strong className="intro">FE Developer</strong>
         <div className="icon-box">
-          <a href="https://github.com/mooon3356">
-            <FontAwesomeIcon icon={faGithub} className="icon" />
-          </a>
-          <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=mooon3356@gmail.com">
-            <FontAwesomeIcon icon={faEnvelope} className="icon" />
-          </a>
+          <button type="button">
+            <Link
+              to="https://github.com/mooon3356"
+              aria-label="유저 깃허브로 이동"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faGithub} className="icon" />
+            </Link>
+          </button>
+          <button type="button">
+            <Link
+              to="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=mooon3356@gmail.com"
+              aria-label="유저에게 이메일 보내기"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faEnvelope} className="icon" />
+            </Link>
+          </button>
         </div>
         <ul className="category-title-box">
           <CategoryTitle currentPage={currentPage} link="/javascript">
@@ -50,7 +64,7 @@ const SideBar = ({ pageTitle, isOpen }: SideBarProps) => {
           </CategoryTitle>
         </ul>
       </div>
-    </div>
+    </nav>
   )
 }
 
